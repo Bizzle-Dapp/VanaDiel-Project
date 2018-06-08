@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Engine
+{
+    public class Item
+    {
+
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string NamePlural { get; set; }
+        public int Price { get; set; }
+        
+
+        public Item(int id, string itemName, string namePlural, int price)
+        {
+            ID = id;
+            Name = itemName;
+            NamePlural = namePlural;
+            Price = price;
+            
+
+        }
+    }
+}
