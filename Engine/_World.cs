@@ -18,15 +18,10 @@ namespace Engine
         public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
-
-
         //Item Grouping
-
         //Spare IDs (0-30)
         public const int UNSELLABLE_ITEM = 0;
-
         public const int ITEM_ID_BEASTCOIN = 1;
-
 
         //Weapon IDs (50-79)
         //Swords
@@ -125,9 +120,6 @@ namespace Engine
         public const int MONSTER_ID_BOMB_08 = 12;
         public const int MONSTER_ID_ENCHANTED_BONES = 13;
         public const int MONSTER_ID_TAINTED_HOUND = 14;
-
-
-
 
         //Quest IDs
         public const int QUEST_BECOME_CHAMPION = 1;
