@@ -122,9 +122,13 @@ namespace Engine
         public const int MONSTER_ID_TAINTED_HOUND = 14;
 
         //Quest IDs
+        /*
         public const int QUEST_BECOME_CHAMPION = 1;
         public const int QUEST_LORDS_REQUEST = 2;
+        */
 
+        //Zone : Sandoria
+        public const int QUEST_001_EXPLOSIVE_REQUEST = 1;
 
         //Location IDs
         //Zone : San d'Oria
@@ -409,26 +413,29 @@ namespace Engine
 
         private static void PopulateQuests()
         {
-           /*
-            //BecomeChampion <MAIN QUEST>
-            Quest becomeChampion = new Quest(QUEST_BECOME_CHAMPION, "Become The Ultimate Warrior", "You have always desired to become the most revered warrior in all of the land. " +
-                "It's time to achieve that dream. Seek out the Black Dragon of Dark Mist Mountain and return its head to your home. ", 10000, 0);
-            becomeChampion.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BLACKDRAGONHEAD), 1));
-            //becomeChampion..RewardItem = ItemByID();
+            /*
+             //BecomeChampion <MAIN QUEST>
+             Quest becomeChampion = new Quest(QUEST_BECOME_CHAMPION, "Become The Ultimate Warrior", "You have always desired to become the most revered warrior in all of the land. " +
+                 "It's time to achieve that dream. Seek out the Black Dragon of Dark Mist Mountain and return its head to your home. ", 10000, 0);
+             becomeChampion.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BLACKDRAGONHEAD), 1));
+             //becomeChampion..RewardItem = ItemByID();
 
-            //Lord's Request
-            Quest lordsRequest = new Quest(QUEST_LORDS_REQUEST, "The Lords Request", "The Grand Lord of Kol has employed you to defeat Rats in his basement. He has agreed to issue you " +
-                "an Adventurers Pass if you bring him back proof of your deeds. Bring back 5 Rat Tails to receive your reward.", 0, 0);
-            lordsRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RAT_TAIL), 5));
-            lordsRequest.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
+             //Lord's Request
+             Quest lordsRequest = new Quest(QUEST_LORDS_REQUEST, "The Lords Request", "The Grand Lord of Kol has employed you to defeat Rats in his basement. He has agreed to issue you " +
+                 "an Adventurers Pass if you bring him back proof of your deeds. Bring back 5 Rat Tails to receive your reward.", 0, 0);
+             lordsRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RAT_TAIL), 5));
+             lordsRequest.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
-
-
-
-            //Static list
-            Quests.Add(becomeChampion);
-            Quests.Add(lordsRequest);
-            */
+             //Static list
+             Quests.Add(becomeChampion);
+             Quests.Add(lordsRequest);
+             */
+            
+            // Sandoria
+            //001 Explosive Request
+            Quest explosiveRequest = new Quest(QUEST_001_EXPLOSIVE_REQUEST, "Explosive Request", "You've been asked to retrieve Bomb Ash from a Bomb and return it to the Lion Springs", 200, 90);
+            explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
+            explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_FIEND_BLOOD), 2));
 
         }
 
@@ -450,7 +457,8 @@ namespace Engine
             Location sandoriaStreets1 = new Location(LOCATION_ID_SANDORIA_STREETS_1, "Streets of San d'Oria - Outside Mog House", "The narrow avenue that links the residential area with San d'Oria's bustling Lion Square." + Environment.NewLine + "People come and go quickly through the cobbled archways.", 0);
             Location sandoriaStreets2 = new Location(LOCATION_ID_SANDORIA_STREETS_2, "Lion Square Eastern Steps", "The eastern steps peer across the Lion Square fountain to the Lion Springs tavern to the West. The avenue that leads to the residential area lays through cobbled archways to the North." + Environment.NewLine + "Children play around the fountain while others converse and gamble.", 0);
             Location sandoriaStreets3 = new Location(LOCATION_ID_SANDORIA_STREETS_3, "Lion Square", "A fountain fills the air with moisture as folk cast dice against a table cheering at their victories." + Environment.NewLine + "To the West stands the door to the Lion Springs tavern." + Environment.NewLine + "To the South curves Squire Alley towards the East Gate." + Environment.NewLine + "To the East the steps rise before the residential areas cobble archway.", 0);
-            Location sandoriaLionSprings = new Location(LOCATION_ID_SANDORIA_LIONSPRINGSTAVERN_4, "", "", 0);
+            Location sandoriaLionSprings = new Location(LOCATION_ID_SANDORIA_LIONSPRINGSTAVERN_4, "Lion Springs Tavern", "", 0);
+            sandoriaLionSprings.QuestAvailableHere = QuestByID(QUEST_001_EXPLOSIVE_REQUEST);
             Location sandoriaStreets5 = new Location(LOCATION_ID_SANDORIA_STREETS_5, "Streets of San d'Oria - Squire Alley", "Dusty, busy cobbled streets connect the Lion Square fountain to the North with Cavalry Way to the South." + Environment.NewLine + "There is very little of interest usually found in this through fare.", 0);
             Location sandoriaStreets6 = new Location(LOCATION_ID_SANDORIA_STREETS_6, "Streets of San d'Oria - Cavalry Way", "The steps here rise at a curve from the Trade Stands of Cavelry Way to the West to Squire Alley at the North." + Environment.NewLine + "Sometimes - often during festivals - sales people who are unable to acquire stall-space can be found squatting on the steps vending from boxes.", 0);
             Location sandoriaStreets7 = new Location(LOCATION_ID_SANDORIA_STREETS_7, "Streets of San d'Oria - Cavalry Way Trade Stands North Wall", "Here trade stands sell items procured from various distant lands." + Environment.NewLine + "To the South more stands line the cobbled archway towards the East Gate House.", 0);
@@ -467,8 +475,6 @@ namespace Engine
             sandoriaNorthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_BAT_WING), 10);
             sandoriaNorthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_FIEND_BLOOD), 10);
             sandoriaNorthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_ROCK_SALT), 10);
-            sandoriaNorthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_BOMB_ASH), 10);
-
             sandoriaStreets7.VendorWorkingHere = sandoriaNorthWallTradeStands;
 
             Location sandoriaStreets8 = new Location(LOCATION_ID_SANDORIA_STREETS_8, "Streets of San d'Oria - Cavalry Way Trade Stands South Wall", "Here trade stands sell items procured from various local and distant lands." + Environment.NewLine + "The cobbled archway to the South leads to the East Gate House." + Environment.NewLine + "To the North more traders reside." + Environment.NewLine + "To the West, Victory Square and the local auction house draw folks and adventurers alike to unimaginable treasures and revelry.", 0);
@@ -483,7 +489,6 @@ namespace Engine
             sandoriaSouthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_COTTON_CLOTH), 10);
             sandoriaSouthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 10);
             sandoriaSouthWallTradeStands.AddItemToInventory(ItemByID(ITEM_ID_WOLF_HIDE), 10);
-
             sandoriaStreets8.VendorWorkingHere = sandoriaSouthWallTradeStands;
 
             Location sandoriaStreets9 = new Location(LOCATION_ID_SANDORIA_STREETS_9, "Streets of San d'Oria - East Gate Rendevous Point", "The archway of the East Gate lays to the South. Two San d'Orian guards stand with spears keeping watch. " + Environment.NewLine + "To the North lays the cobbled archway to the trade stands of Cavalry Way.", 0);
