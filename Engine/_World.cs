@@ -435,7 +435,7 @@ namespace Engine
             //001 Explosive Request
             Quest explosiveRequest = new Quest(QUEST_001_EXPLOSIVE_REQUEST, "Explosive Request", "You've been asked to retrieve Bomb Ash from a Bomb and return it to the Lion Springs", 200, 90);
             explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
-            explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_FIEND_BLOOD), 2));
+            explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
 
         }
 

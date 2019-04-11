@@ -398,14 +398,8 @@ namespace Vanadiel
                     //not yet completed
                     if (!playerAlreadyCompeletedQuest)
                     {
-
-
-
                         //see if player has all items needed to complete quest
                         bool playerHasAllItemsToCompleteQuest = _player.HasAllQuestCompletionItems(newLocation.QuestAvailableHere);
-
-
-
 
                         if (playerHasAllItemsToCompleteQuest)
                         {
