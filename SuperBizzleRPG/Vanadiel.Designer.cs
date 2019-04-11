@@ -424,7 +424,7 @@
             this.Name = "Vanadiel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adventure In Text Form! ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SuperBizzleRPG_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vanadiel_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);
