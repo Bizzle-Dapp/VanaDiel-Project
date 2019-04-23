@@ -58,6 +58,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cboArmour = new System.Windows.Forms.ComboBox();
             this.cboAccessory = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblRank = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -384,6 +386,25 @@
             this.cboAccessory.Size = new System.Drawing.Size(121, 21);
             this.cboAccessory.TabIndex = 27;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(179, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Rank:";
+            // 
+            // lblRank
+            // 
+            this.lblRank.AutoSize = true;
+            this.lblRank.BackColor = System.Drawing.SystemColors.Info;
+            this.lblRank.Location = new System.Drawing.Point(248, 20);
+            this.lblRank.Name = "lblRank";
+            this.lblRank.Size = new System.Drawing.Size(0, 13);
+            this.lblRank.TabIndex = 29;
+            // 
             // Vanadiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +414,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnEast;
             this.ClientSize = new System.Drawing.Size(1184, 651);
+            this.Controls.Add(this.lblRank);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.cboAccessory);
             this.Controls.Add(this.cboArmour);
             this.Controls.Add(this.label10);
@@ -469,6 +492,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboArmour;
         private System.Windows.Forms.ComboBox cboAccessory;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblRank;
     }
 }
 
