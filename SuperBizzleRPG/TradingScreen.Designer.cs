@@ -80,9 +80,9 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::VanaDiel.Properties.Resources.ButtonBack;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Location = new System.Drawing.Point(441, 274);
+            this.btnClose.Location = new System.Drawing.Point(225, 271);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -104,9 +104,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VanaDiel.Properties.Resources.TradeBackground;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(528, 310);
+            this.ClientSize = new System.Drawing.Size(524, 306);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);

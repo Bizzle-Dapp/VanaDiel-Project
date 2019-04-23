@@ -11,6 +11,11 @@ namespace Engine
 
     public static class _World
     {
+        private static Player Player { get; set; }
+        public static void SetPlayer(Player player)
+        {
+            Player = player;
+        }
 
         //Game list initialisation
         public static readonly List<Item> Items = new List<Item>();
@@ -492,6 +497,8 @@ namespace Engine
             sandoriaStreets8.VendorWorkingHere = sandoriaSouthWallTradeStands;
 
             Location sandoriaStreets9 = new Location(LOCATION_ID_SANDORIA_STREETS_9, "Streets of San d'Oria - East Gate Rendevous Point", "The archway of the East Gate lays to the South. Two San d'Orian guards stand with spears keeping watch. " + Environment.NewLine + "To the North lays the cobbled archway to the trade stands of Cavalry Way.", 0);
+            //Initial Ranked Missions Available Here
+
             Location sandoriaEastGate = new Location(LOCATION_ID_SANDORIA_EASTGATE_10, "San d'Oria East Gate", "Tall, mossy stone walls protect the city of San d'Oria. The city it tucked on the outskirts of a mountain range and in turn is a well defended capital." + Environment.NewLine + "To the South the forest of Ronfaure crawls with an ever constant flow of deadly beasts and occassionally a stray Orcish Scout hoping to waylay an unprepared adventurer." + Environment.NewLine + "(Recommended Level: 1-4)", 0);
             Location sandoriaStreets11 = new Location(LOCATION_ID_SANDORIA_STREETS_11, "Streets if San d'Oria - Victory Square SE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaAuctionHouse = new Location(LOCATION_ID_SANDORIA_AUCTION_HOUSE_12, "Streets of San d'Oria - Victory Square Auction House", "Trade windows line the front of the huge stone building, open all day and all night - all of the time." + Environment.NewLine + "Surrounding the auction house is the expanse of Victory Square.", 0);
