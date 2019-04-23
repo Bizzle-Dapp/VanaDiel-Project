@@ -419,7 +419,7 @@ namespace Vanadiel
                             rtbMessages.Text += "You receive: " + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine;
 
-                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gold" + Environment.NewLine;
+                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gil" + Environment.NewLine;
 
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
                             rtbMessages.Text += Environment.NewLine;
@@ -651,7 +651,7 @@ namespace Vanadiel
 
                 //Give Gold for killing monster
                 _player.Gold += _currentMonster.RewardGold;
-                rtbMessages.Text += "You receive " + _currentMonster.RewardGold.ToString() + " gold" + Environment.NewLine;
+                rtbMessages.Text += "You receive " + _currentMonster.RewardGold.ToString() + " gil" + Environment.NewLine;
 
                 //Get random loot items from the monster
                 List<InventoryItem> lootedItems = new List<InventoryItem>();

@@ -80,9 +80,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(18, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(22, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Gold:";
+            this.label2.Text = "Gil:";
             // 
             // label3
             // 
@@ -176,6 +176,7 @@
             this.btnUseWeapon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUseWeapon.BackgroundImage")));
             this.btnUseWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUseWeapon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnUseWeapon.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnUseWeapon.Location = new System.Drawing.Point(978, 415);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
@@ -189,6 +190,7 @@
             this.btnUsePotion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsePotion.BackgroundImage")));
             this.btnUsePotion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUsePotion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnUsePotion.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnUsePotion.Location = new System.Drawing.Point(978, 449);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
@@ -202,6 +204,7 @@
             this.btnNorth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNorth.BackgroundImage")));
             this.btnNorth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNorth.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNorth.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnNorth.Location = new System.Drawing.Point(1009, 344);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 23);
@@ -215,6 +218,7 @@
             this.btnEast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEast.BackgroundImage")));
             this.btnEast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEast.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEast.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnEast.Location = new System.Drawing.Point(1087, 359);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 23);
@@ -227,6 +231,7 @@
             // 
             this.btnSouth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSouth.BackgroundImage")));
             this.btnSouth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSouth.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnSouth.Location = new System.Drawing.Point(1009, 373);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 23);
@@ -240,6 +245,7 @@
             this.btnWest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWest.BackgroundImage")));
             this.btnWest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnWest.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnWest.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnWest.Location = new System.Drawing.Point(928, 359);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 23);
@@ -308,6 +314,7 @@
             this.btnTrade.BackColor = System.Drawing.Color.Transparent;
             this.btnTrade.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrade.BackgroundImage")));
             this.btnTrade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTrade.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnTrade.Location = new System.Drawing.Point(811, 334);
             this.btnTrade.Name = "btnTrade";
             this.btnTrade.Size = new System.Drawing.Size(76, 23);

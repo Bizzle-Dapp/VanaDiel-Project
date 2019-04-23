@@ -43,7 +43,7 @@
             // 
             this.lblMyInventory.AutoSize = true;
             this.lblMyInventory.BackColor = System.Drawing.Color.Transparent;
-            this.lblMyInventory.Location = new System.Drawing.Point(94, 8);
+            this.lblMyInventory.Location = new System.Drawing.Point(25, 10);
             this.lblMyInventory.Name = "lblMyInventory";
             this.lblMyInventory.Size = new System.Drawing.Size(68, 13);
             this.lblMyInventory.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.lblVendorInventory.AutoSize = true;
             this.lblVendorInventory.BackColor = System.Drawing.Color.Transparent;
-            this.lblVendorInventory.Location = new System.Drawing.Point(349, 8);
+            this.lblVendorInventory.Location = new System.Drawing.Point(323, 10);
             this.lblVendorInventory.Name = "lblVendorInventory";
             this.lblVendorInventory.Size = new System.Drawing.Size(95, 13);
             this.lblVendorInventory.TabIndex = 1;
@@ -63,18 +63,18 @@
             // 
             this.dgvMyItems.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgvMyItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMyItems.Location = new System.Drawing.Point(13, 43);
+            this.dgvMyItems.Location = new System.Drawing.Point(326, 26);
             this.dgvMyItems.Name = "dgvMyItems";
-            this.dgvMyItems.Size = new System.Drawing.Size(240, 216);
+            this.dgvMyItems.Size = new System.Drawing.Size(274, 248);
             this.dgvMyItems.TabIndex = 2;
             // 
             // dgvVendorItems
             // 
             this.dgvVendorItems.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgvVendorItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendorItems.Location = new System.Drawing.Point(276, 43);
+            this.dgvVendorItems.Location = new System.Drawing.Point(28, 26);
             this.dgvVendorItems.Name = "dgvVendorItems";
-            this.dgvVendorItems.Size = new System.Drawing.Size(240, 216);
+            this.dgvVendorItems.Size = new System.Drawing.Size(274, 248);
             this.dgvVendorItems.TabIndex = 3;
             // 
             // btnClose
@@ -82,7 +82,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.Location = new System.Drawing.Point(225, 271);
+            this.btnClose.Location = new System.Drawing.Point(28, 335);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(117, 24);
+            this.label1.Location = new System.Drawing.Point(228, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(524, 306);
+            this.ClientSize = new System.Drawing.Size(639, 370);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);

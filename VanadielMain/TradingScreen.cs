@@ -153,7 +153,7 @@ namespace Vanadiel
                 }
                 else
                 {
-                    MessageBox.Show("You do not have enough gold to buy the " + itemBeingBought.Name);
+                    MessageBox.Show("You do not have enough gil to buy the " + itemBeingBought.Name);
                 }
             }
         }
