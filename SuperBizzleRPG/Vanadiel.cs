@@ -152,6 +152,7 @@ namespace Vanadiel
             //Updates labels for each player statistic
             
             lblLevel.Text = _player.Level.ToString();
+            lblRank.Text = _player.Rank.ToString();
 
         }
 
