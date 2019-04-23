@@ -69,7 +69,7 @@ namespace Engine
         public const int ITEM_ID_X_POTION = 95;
 
         //Key Item IDs (100-149)
-        public const int ITEM_ID_ADVENTURER_PASS = 100;
+        public const int ITEM_ID_BAMBOO_FISHING_ROD = 100;
 
         public const int ITEM_ID_BLACKDRAGONHEAD = 199;
 
@@ -128,6 +128,7 @@ namespace Engine
         //Quest IDs
         //Zone : Sandoria
         public const int QUEST_001_EXPLOSIVE_REQUEST = 1;
+        public const int QUEST_002_FATHER_AND_SON = 2;
 
         //Mission IDs
         public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
@@ -334,7 +335,7 @@ namespace Engine
 
 
             //Populate key items
-            Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer Pass", "Adventurer Passes", UNSELLABLE_ITEM));
+            Items.Add(new Item(ITEM_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
             Items.Add(new Item(ITEM_ID_BLACKDRAGONHEAD, "Black Dragon head", "Black Dragon heads", UNSELLABLE_ITEM));
 
             //Populate Armour
@@ -428,6 +429,9 @@ namespace Engine
             Quest explosiveRequest = new Quest(QUEST_001_EXPLOSIVE_REQUEST, "Explosive Request", "You've been asked to retrieve Bomb Ash from a Bomb and return it to the Lion Springs", 200, 90);
             explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
             explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
+            //002 Father and Son
+            Quest fatherAndSon = new Quest(QUEST_002_FATHER_AND_SON, "Father and Son", "A gentleman named Ailbeche approaches you and asks if you have seen his son. He mentions he carries a fishing rod everywhere he goes - a gift from his Grandfather in Selbina.", 100, 0);
+            fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BAMBOO_FISHING_ROD), 1));
 
 
             // Sandoria Missions
@@ -437,14 +441,15 @@ namespace Engine
             smashTheOrcishScouts.RankUpValue = 1;
             smashTheOrcishScouts.RequiredRank = 0;
 
+
+
             // Populate Quest List
             Quests.Add(explosiveRequest);
-
+            Quests.Add(fatherAndSon);
             
             Quests.Add(smashTheOrcishScouts);
 
         }
-
 
         private static void PopulateLocations()
         {
@@ -494,6 +499,8 @@ namespace Engine
 
             Location sandoriaEastGate = new Location(LOCATION_ID_SANDORIA_EASTGATE_10, "San d'Oria East Gate", "Tall, mossy stone walls protect the city of San d'Oria. The city it tucked on the outskirts of a mountain range and in turn is a well defended capital." + Environment.NewLine + "To the South the forest of Ronfaure crawls with an ever constant flow of deadly beasts and occassionally a stray Orcish Scout hoping to waylay an unprepared adventurer." + Environment.NewLine + "(Recommended Level: 1-4)", 0);
             Location sandoriaStreets11 = new Location(LOCATION_ID_SANDORIA_STREETS_11, "Streets if San d'Oria - Victory Square SE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
+            sandoriaStreets11.QuestAvailableHere = QuestByID(QUEST_002_FATHER_AND_SON);
+
             Location sandoriaAuctionHouse = new Location(LOCATION_ID_SANDORIA_AUCTION_HOUSE_12, "Streets of San d'Oria - Victory Square Auction House", "Trade windows line the front of the huge stone building, open all day and all night - all of the time." + Environment.NewLine + "Surrounding the auction house is the expanse of Victory Square.", 0);
             Vendor sandoriaAuctionHouseSales = new Vendor("San d'Oria Auction House");
             sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_POTION), 10);
@@ -510,6 +517,8 @@ namespace Engine
 
             Location sandoriaStreets13 = new Location(LOCATION_ID_SANDORIA_STREETS_13, "Streets of San d'Oria - Victory Square SW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets14 = new Location(LOCATION_ID_SANDORIA_STREETS_14, "Streets of San d'Oria - Victory Square NW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
+            sandoriaStreets14.NPCHere = new NPC("Ailbeche's Son", QuestByID(QUEST_002_FATHER_AND_SON), "A young child holding a fishing rod approaches you. You explain his father is looking for him and he assures you he is fine, he asks for you to take his fishing rod to his father as he wishes to buy a gift for him and cannot carry it.", ItemByID(ITEM_ID_BAMBOO_FISHING_ROD));
+
             Location sandoriaStreets15 = new Location(LOCATION_ID_SANDORIA_STREETS_15, "Streets of San d'Oria - Victory Square N", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area." + Environment.NewLine + "To the North of here is the draw bridge which leads to the San d'Orian Palace. Only renown adventurers with invitations, noble knights and royality may enter.", 0);
             Location sandoriaStreets16 = new Location(LOCATION_ID_SANDORIA_STREETS_16, "Streets of San d'Oria - Victory Square NE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets17 = new Location(LOCATION_ID_SANDORIA_STREETS_17, "Streets of San d'Oria - West Gate Rendevous Point", "The archway of the West Gate lays to the South. A San d'Orian guard stands with a sword and shield keeping watch." + Environment.NewLine + "To the North is a large footpath which leads towards Taumila's Saundries, the Tanners Guild and further to Count Caffaule's Manor.", 0);

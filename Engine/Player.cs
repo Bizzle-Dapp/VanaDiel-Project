@@ -248,6 +248,33 @@ namespace Engine
             return false;
         }
 
+        public bool DisplayNPCDialog(NPC npc)
+        {
+            var displayNPCDialog = false;
+
+            if (npc != null)
+            {
+                // See if player has NPC trigger quest
+                foreach (PlayerQuest qq in Quests)
+                {
+                    if (qq.Name == npc.TriggerQuest.Name && qq.IsCompleted == false)
+                    {
+                        displayNPCDialog = true;
+                    }
+                }
+                // See if the player has NPC Key Item
+                foreach (InventoryItem ii in Inventory)
+                {
+                    if (ii.Details.ID == npc.GivesItem.ID)
+                    {
+                        //We found the NPC key item, so don't display dialog again
+                        displayNPCDialog = false;
+                    }
+                }
+            }
+            return displayNPCDialog;
+        }
+
         public bool HasThisQuest(Quest quest)
         {
             foreach(PlayerQuest playerQuest in Quests)
