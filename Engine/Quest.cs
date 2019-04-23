@@ -15,7 +15,9 @@ namespace Engine
         public int RewardGold { get; set; }
         public Item RewardItem { get; set; }
         public List<QuestCompletionItem> QuestCompletionItems { get; set; }
-
+        public int RankUpValue { get; set; }
+        public int RequiredLevel { get; set; }
+        public int RequiredRank { get; set; }
 
         public Quest(int id, string questName, string description, int rewardExperiencePoints, int rewardGold)
         {
@@ -25,7 +27,9 @@ namespace Engine
             RewardExperiencePoints = rewardExperiencePoints;
             RewardGold = rewardGold;
             QuestCompletionItems = new List<QuestCompletionItem>();
-
+            RankUpValue = 0;
+            RequiredLevel = 0;
+            RequiredRank = 0;
         }
     }
 }

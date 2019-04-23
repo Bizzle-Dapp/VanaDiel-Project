@@ -141,7 +141,6 @@ namespace Vanadiel
                 DataPropertyName = "IsCompleted"
             });
 
-            Engine._World.SetPlayer(_player);
             //Player Level Updater run
             UpdatePlayerLevelText();
 
@@ -373,7 +372,7 @@ namespace Vanadiel
             }
 
 
-            //Show/Hide available movemetn buttons
+            //Show/Hide available movement buttons
             btnNorth.Visible = (newLocation.LocationToNorth != null);
             btnEast.Visible = (newLocation.LocationToEast != null);
             btnWest.Visible = (newLocation.LocationToWest != null);
@@ -394,6 +393,8 @@ namespace Vanadiel
                 //See if the player already has the quest, and if they've completed it
                 bool playerAlreadyHasQuest = _player.HasThisQuest(newLocation.QuestAvailableHere);
                 bool playerAlreadyCompeletedQuest = _player.CompletedThisQuest(newLocation.QuestAvailableHere);
+                bool playerSufficientLevel = _player.SufficientLevelForQuest(newLocation.QuestAvailableHere);
+                bool playerSufficientRank = _player.SufficientRankForMission(newLocation.QuestAvailableHere);
 
                 //_player already has the quest?
                 if (playerAlreadyHasQuest)
@@ -430,6 +431,15 @@ namespace Vanadiel
                             // Add the reward item to the player's inventory
                             _player.AddItemToInventory(newLocation.QuestAvailableHere.RewardItem);
 
+                            // Increase rank by quest value
+                            _player.Rank = _player.Rank + newLocation.QuestAvailableHere.RankUpValue;
+                            if(newLocation.QuestAvailableHere.RankUpValue > 0)
+                            {
+                                rtbMessages.Text += "Your Rank increases by " + newLocation.QuestAvailableHere.RankUpValue.ToString();
+                                rtbMessages.Text += Environment.NewLine;
+                            }
+
+
                             // Mark the quest as completed
                             _player.MarkQuestCompleted(newLocation.QuestAvailableHere);
                         }
@@ -439,29 +449,31 @@ namespace Vanadiel
                     else
                     {
                     // The player does not already have the quest! 
-
-                    //Display the messages
-                    
-                        rtbMessages.Text += Environment.NewLine + "You receive the " + newLocation.QuestAvailableHere.Name + " quest." + Environment.NewLine;
-                        rtbMessages.Text += Environment.NewLine + newLocation.QuestAvailableHere.Description + Environment.NewLine;
-
-                        rtbMessages.Text += Environment.NewLine + "To complete it, return with:" + Environment.NewLine;
-                        foreach (QuestCompletionItem qci in newLocation.QuestAvailableHere.QuestCompletionItems)
+                    //Check they are the correct Level and or Rank for the Quest/Mission
+                        if (playerSufficientLevel && playerSufficientRank)
                         {
-                            if (qci.Quantity == 1)
+                            //Display the messages
+
+                            rtbMessages.Text += Environment.NewLine + "You receive the " + newLocation.QuestAvailableHere.Name + " quest." + Environment.NewLine;
+                            rtbMessages.Text += Environment.NewLine + newLocation.QuestAvailableHere.Description + Environment.NewLine;
+
+                            rtbMessages.Text += Environment.NewLine + "To complete it, return with:" + Environment.NewLine;
+                            foreach (QuestCompletionItem qci in newLocation.QuestAvailableHere.QuestCompletionItems)
                             {
-                                rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.Name + Environment.NewLine;
+                                if (qci.Quantity == 1)
+                                {
+                                    rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.Name + Environment.NewLine;
+                                }
+                                else
+                                {
+                                    rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.NamePlural + Environment.NewLine;
+                                }
                             }
-                            else
-                            {
-                                rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.NamePlural + Environment.NewLine;
-                            }
+                            rtbMessages.Text += Environment.NewLine;
+
+                            //Add quest to player quest tracker
+                            _player.Quests.Add(new PlayerQuest(newLocation.QuestAvailableHere));
                         }
-                        rtbMessages.Text += Environment.NewLine;
-
-                        //Add quest to player quest tracker
-                        _player.Quests.Add(new PlayerQuest(newLocation.QuestAvailableHere));
-
                     }
                 
             }
@@ -517,7 +529,7 @@ namespace Vanadiel
                     btnUseWeapon.Visible = false;
                     
 
-                //Show/Hide available movemetn buttons
+                //Show/Hide available movement buttons
                 btnNorth.Visible = (newLocation.LocationToNorth != null);
                 btnEast.Visible = (newLocation.LocationToEast != null);
                 btnWest.Visible = (newLocation.LocationToWest != null);
@@ -813,23 +825,6 @@ namespace Vanadiel
         {
             _player.CurrentPotion = (HealingPotion)cboPotions.SelectedItem;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //

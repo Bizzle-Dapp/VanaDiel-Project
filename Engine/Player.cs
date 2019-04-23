@@ -225,9 +225,6 @@ namespace Engine
             }
         }
 
-
-
-
         public bool HasRequiredItemToEnterThisLocation(Location location)
         {
             
@@ -251,10 +248,6 @@ namespace Engine
             return false;
         }
 
-
-
-
-
         public bool HasThisQuest(Quest quest)
         {
             foreach(PlayerQuest playerQuest in Quests)
@@ -267,8 +260,23 @@ namespace Engine
             return false;
         }
 
+        public bool SufficientLevelForQuest(Quest quest)
+        {
+            if(Level > quest.RequiredLevel)
+            {
+                return true;
+            }
+            return false;
+        }
 
-
+        public bool SufficientRankForMission(Quest quest)
+        {
+            if (Rank > quest.RequiredRank)
+            {
+                return true;
+            }
+            return false;
+        }
 
 
         public bool CompletedThisQuest(Quest quest)
