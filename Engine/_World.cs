@@ -442,6 +442,8 @@ namespace Engine
             explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
             explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
 
+            Quests.Add(explosiveRequest);
+
         }
 
 
