@@ -142,7 +142,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(623, 459);
+            this.label5.Location = new System.Drawing.Point(981, 399);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 8;
@@ -153,7 +153,7 @@
             this.cboWeapons.BackColor = System.Drawing.SystemColors.Info;
             this.cboWeapons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.Location = new System.Drawing.Point(409, 475);
+            this.cboWeapons.Location = new System.Drawing.Point(851, 417);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(121, 21);
             this.cboWeapons.TabIndex = 9;
@@ -163,7 +163,7 @@
             this.cboPotions.BackColor = System.Drawing.SystemColors.Info;
             this.cboPotions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.Location = new System.Drawing.Point(409, 509);
+            this.cboPotions.Location = new System.Drawing.Point(851, 451);
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(121, 21);
             this.cboPotions.TabIndex = 10;
@@ -173,7 +173,8 @@
             this.btnUseWeapon.BackColor = System.Drawing.SystemColors.Menu;
             this.btnUseWeapon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUseWeapon.BackgroundImage")));
             this.btnUseWeapon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUseWeapon.Location = new System.Drawing.Point(620, 475);
+            this.btnUseWeapon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnUseWeapon.Location = new System.Drawing.Point(978, 415);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
             this.btnUseWeapon.TabIndex = 11;
@@ -185,7 +186,8 @@
             // 
             this.btnUsePotion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsePotion.BackgroundImage")));
             this.btnUsePotion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUsePotion.Location = new System.Drawing.Point(620, 509);
+            this.btnUsePotion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnUsePotion.Location = new System.Drawing.Point(978, 449);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
             this.btnUsePotion.TabIndex = 12;
@@ -197,7 +199,8 @@
             // 
             this.btnNorth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNorth.BackgroundImage")));
             this.btnNorth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNorth.Location = new System.Drawing.Point(491, 346);
+            this.btnNorth.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNorth.Location = new System.Drawing.Point(1009, 344);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 23);
             this.btnNorth.TabIndex = 13;
@@ -209,7 +212,8 @@
             // 
             this.btnEast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEast.BackgroundImage")));
             this.btnEast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEast.Location = new System.Drawing.Point(576, 374);
+            this.btnEast.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEast.Location = new System.Drawing.Point(1087, 359);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 23);
             this.btnEast.TabIndex = 14;
@@ -221,7 +225,7 @@
             // 
             this.btnSouth.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSouth.BackgroundImage")));
             this.btnSouth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSouth.Location = new System.Drawing.Point(491, 401);
+            this.btnSouth.Location = new System.Drawing.Point(1009, 373);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 23);
             this.btnSouth.TabIndex = 15;
@@ -233,7 +237,8 @@
             // 
             this.btnWest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWest.BackgroundImage")));
             this.btnWest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWest.Location = new System.Drawing.Point(406, 374);
+            this.btnWest.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnWest.Location = new System.Drawing.Point(928, 359);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 23);
             this.btnWest.TabIndex = 16;
@@ -243,9 +248,9 @@
             // 
             // rtbLocation
             // 
-            this.rtbLocation.BackColor = System.Drawing.Color.Tan;
+            this.rtbLocation.BackColor = System.Drawing.SystemColors.Menu;
             this.rtbLocation.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbLocation.Location = new System.Drawing.Point(347, 19);
+            this.rtbLocation.Location = new System.Drawing.Point(811, 19);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
             this.rtbLocation.Size = new System.Drawing.Size(360, 300);
@@ -254,9 +259,9 @@
             // 
             // rtbMessages
             // 
-            this.rtbMessages.BackColor = System.Drawing.Color.Tan;
+            this.rtbMessages.BackColor = System.Drawing.SystemColors.Menu;
             this.rtbMessages.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbMessages.Location = new System.Drawing.Point(730, 19);
+            this.rtbMessages.Location = new System.Drawing.Point(345, 19);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
             this.rtbMessages.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
@@ -270,7 +275,7 @@
             this.dgvInventory.AllowUserToAddRows = false;
             this.dgvInventory.AllowUserToDeleteRows = false;
             this.dgvInventory.AllowUserToResizeRows = false;
-            this.dgvInventory.BackgroundColor = System.Drawing.Color.Tan;
+            this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvInventory.Location = new System.Drawing.Point(16, 130);
@@ -286,7 +291,7 @@
             this.dgvQuests.AllowUserToAddRows = false;
             this.dgvQuests.AllowUserToDeleteRows = false;
             this.dgvQuests.AllowUserToResizeRows = false;
-            this.dgvQuests.BackgroundColor = System.Drawing.Color.Tan;
+            this.dgvQuests.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuests.Location = new System.Drawing.Point(16, 446);
@@ -299,11 +304,11 @@
             // btnTrade
             // 
             this.btnTrade.BackColor = System.Drawing.Color.Transparent;
-            this.btnTrade.BackgroundImage = global::VanaDiel.Properties.Resources.ButtonBack;
+            this.btnTrade.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrade.BackgroundImage")));
             this.btnTrade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTrade.Location = new System.Drawing.Point(493, 437);
+            this.btnTrade.Location = new System.Drawing.Point(811, 334);
             this.btnTrade.Name = "btnTrade";
-            this.btnTrade.Size = new System.Drawing.Size(75, 23);
+            this.btnTrade.Size = new System.Drawing.Size(76, 23);
             this.btnTrade.TabIndex = 21;
             this.btnTrade.Text = "Trade";
             this.btnTrade.UseVisualStyleBackColor = false;
@@ -313,7 +318,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(358, 479);
+            this.label6.Location = new System.Drawing.Point(800, 421);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 21;
@@ -323,7 +328,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(369, 513);
+            this.label7.Location = new System.Drawing.Point(811, 455);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 22;
@@ -333,7 +338,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(479, 327);
+            this.label8.Location = new System.Drawing.Point(997, 325);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 23;
@@ -343,7 +348,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(367, 546);
+            this.label9.Location = new System.Drawing.Point(809, 488);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 24;
@@ -353,7 +358,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(351, 579);
+            this.label10.Location = new System.Drawing.Point(793, 521);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 13);
             this.label10.TabIndex = 25;
@@ -364,7 +369,7 @@
             this.cboArmour.BackColor = System.Drawing.SystemColors.Info;
             this.cboArmour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboArmour.FormattingEnabled = true;
-            this.cboArmour.Location = new System.Drawing.Point(409, 543);
+            this.cboArmour.Location = new System.Drawing.Point(851, 485);
             this.cboArmour.Name = "cboArmour";
             this.cboArmour.Size = new System.Drawing.Size(121, 21);
             this.cboArmour.TabIndex = 26;
@@ -374,7 +379,7 @@
             this.cboAccessory.BackColor = System.Drawing.SystemColors.Info;
             this.cboAccessory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAccessory.FormattingEnabled = true;
-            this.cboAccessory.Location = new System.Drawing.Point(409, 576);
+            this.cboAccessory.Location = new System.Drawing.Point(851, 518);
             this.cboAccessory.Name = "cboAccessory";
             this.cboAccessory.Size = new System.Drawing.Size(121, 21);
             this.cboAccessory.TabIndex = 27;
@@ -383,9 +388,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::VanaDiel.Properties.Resources.Background2;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnEast;
             this.ClientSize = new System.Drawing.Size(1184, 651);
             this.Controls.Add(this.cboAccessory);
             this.Controls.Add(this.cboArmour);
@@ -423,7 +429,7 @@
             this.MinimumSize = new System.Drawing.Size(1200, 690);
             this.Name = "Vanadiel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Adventure In Text Form! ";
+            this.Text = "Vanadiel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vanadiel_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();

@@ -25,7 +25,7 @@ namespace Vanadiel
         private Player _player;
         private Monster _currentMonster;
         private const string PLAYER_DATA_FILE_NAME = "PlayerData.xml";
-
+        
 
         
         
@@ -141,12 +141,13 @@ namespace Vanadiel
                 DataPropertyName = "IsCompleted"
             });
 
+            Engine._World.SetPlayer(_player);
             //Player Level Updater run
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
         }
 
-        private void UpdatePlayerLevel()
+        private void UpdatePlayerLevelText()
         {
             //Updates labels for each player statistic
             
@@ -154,7 +155,7 @@ namespace Vanadiel
 
         }
 
-        private void updatePlayerLevel()
+        private void UpdatePlayerLevel()
         {
             //Lvl 2
             if(_player.ExperiencePoints >= 11 && _player.Level != 2 && _player.NextLevel == 2)
@@ -281,6 +282,7 @@ namespace Vanadiel
                 lblExperience.Text = _player.ExperiencePoints.ToString();
                 lblLevel.Text = _player.Level.ToString();
             }
+
         }
 
 
@@ -334,7 +336,7 @@ namespace Vanadiel
 
         private void MoveTo(Location newLocation)
         {
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
             
 
@@ -689,7 +691,7 @@ namespace Vanadiel
                     }
                 }
 
-                updatePlayerLevel();
+                UpdatePlayerLevel();
 
                 // Refresh player information and inventory controls
                 lblHitPoints.Text = _player.CurrentHitPoints.ToString();
@@ -945,7 +947,7 @@ namespace Vanadiel
             }
 
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
         } //End of Use Potion Block
 

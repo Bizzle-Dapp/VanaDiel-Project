@@ -106,6 +106,8 @@ namespace Engine
 
         public int Level { get; set; }
         public int NextLevel { get; set; }
+
+        public int Rank { get; set; }
         
 
         public Location CurrentLocation { get; set; }
@@ -118,13 +120,13 @@ namespace Engine
         public BindingList<PlayerQuest> Quests { get; set; }
 
 
-        private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level, int nextLevel) : base(currentHitPoints, maximumHitPoints)
+        private Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level, int nextLevel, int rank) : base(currentHitPoints, maximumHitPoints)
         {
             Gold = gold;
             ExperiencePoints = experiencePoints;
             Level = level;
             NextLevel = nextLevel;
-            
+            Rank = rank;
 
 
             Inventory = new BindingList<InventoryItem>();
@@ -133,7 +135,7 @@ namespace Engine
 
         public static Player CreateDefaultPlayer()
         {
-            Player player = new Player(10, 10, 20, 0, 1, 2);
+            Player player = new Player(10, 10, 20, 0, 1, 2, 1);
 
             player.CurrentLocation = _World.LocationByID(_World.LOCATION_ID_MOG_HOUSE_MH);
             player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ITEM_ID_ONION_SWORD), 1));
@@ -160,8 +162,9 @@ namespace Engine
                 int experiencePoints = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/ExperiencePoints").InnerText);
                 int level = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Level").InnerText);
                 int nextLevel = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/NextLevel").InnerText);
+                int rank = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/Rank").InnerText);
 
-                Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints, level, nextLevel);
+                Player player = new Player(currentHitPoints, maximumHitPoints, gold, experiencePoints, level, nextLevel, rank);
 
                 int currentLocationID = Convert.ToInt32(playerData.SelectSingleNode("/Player/Stats/CurrentLocation").InnerText);
                 player.CurrentLocation = _World.LocationByID(currentLocationID);
@@ -420,6 +423,10 @@ namespace Engine
             XmlNode nextLevel = playerData.CreateElement("NextLevel");
             nextLevel.AppendChild(playerData.CreateTextNode(this.NextLevel.ToString()));
             stats.AppendChild(nextLevel);
+
+            XmlNode rank = playerData.CreateElement("Rank");
+            rank.AppendChild(playerData.CreateTextNode(this.Rank.ToString()));
+            stats.AppendChild(rank);
 
             XmlNode currentLocation = playerData.CreateElement("CurrentLocation");
             currentLocation.AppendChild(playerData.CreateTextNode(this.CurrentLocation.ID.ToString()));
