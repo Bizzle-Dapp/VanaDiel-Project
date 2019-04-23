@@ -49,6 +49,7 @@
     <Compile Include="Location.cs" />
     <Compile Include="LootItem.cs" />
     <Compile Include="Monster.cs" />
+    <Compile Include="NPC.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerQuest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

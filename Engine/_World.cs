@@ -11,18 +11,13 @@ namespace Engine
 
     public static class _World
     {
-        private static Player Player { get; set; }
-        public static void SetPlayer(Player player)
-        {
-            Player = player;
-        }
-
         //Game list initialisation
         public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Monster> Monsters = new List<Monster>();
         public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
+        #region Items
         //Item Grouping
         //Spare IDs (0-30)
         public const int UNSELLABLE_ITEM = 0;
@@ -74,7 +69,7 @@ namespace Engine
         public const int ITEM_ID_X_POTION = 95;
 
         //Key Item IDs (100-149)
-        public const int ITEM_ID_ADVENTURER_PASS = 100;
+        public const int ITEM_ID_BAMBOO_FISHING_ROD = 100;
 
         public const int ITEM_ID_BLACKDRAGONHEAD = 199;
 
@@ -107,8 +102,9 @@ namespace Engine
         public const int ITEM_ID_BONE_CHIP = 189;
         public const int ITEM_ID_REVIVAL_TREE_ROOT = 190;
         public const int ITEM_ID_WOLF_HIDE = 191;
+        #endregion
 
-
+        #region Monsters
         //Monster IDs
         //Ronfaure
         public const int MONSTER_ID_TUNNEL_WORM = 1;
@@ -126,15 +122,21 @@ namespace Engine
         public const int MONSTER_ID_ENCHANTED_BONES = 13;
         public const int MONSTER_ID_TAINTED_HOUND = 14;
 
-        //Quest IDs
-        /*
-        public const int QUEST_BECOME_CHAMPION = 1;
-        public const int QUEST_LORDS_REQUEST = 2;
-        */
+        #endregion
 
+        #region Mission/QuestIDs
+        //Quest IDs
         //Zone : Sandoria
         public const int QUEST_001_EXPLOSIVE_REQUEST = 1;
+        public const int QUEST_002_FATHER_AND_SON = 2;
 
+        //Mission IDs
+        public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
+
+
+        #endregion
+
+        #region LocationIDs
         //Location IDs
         //Zone : San d'Oria
         public const int LOCATION_ID_MOG_HOUSE_MH = 1;
@@ -236,6 +238,10 @@ namespace Engine
         public const int LOCATION_ID_RONFAURE_63_93 = 93;
         public const int LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94 = 94;
 
+        #endregion
+
+
+        #region World Logic
 
         //Setting the fields within the Items, Weapons, Monsters and Locations Lists
         static _World()
@@ -329,7 +335,7 @@ namespace Engine
 
 
             //Populate key items
-            Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer Pass", "Adventurer Passes", UNSELLABLE_ITEM));
+            Items.Add(new Item(ITEM_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
             Items.Add(new Item(ITEM_ID_BLACKDRAGONHEAD, "Black Dragon head", "Black Dragon heads", UNSELLABLE_ITEM));
 
             //Populate Armour
@@ -418,49 +424,37 @@ namespace Engine
 
         private static void PopulateQuests()
         {
-            /*
-             //BecomeChampion <MAIN QUEST>
-             Quest becomeChampion = new Quest(QUEST_BECOME_CHAMPION, "Become The Ultimate Warrior", "You have always desired to become the most revered warrior in all of the land. " +
-                 "It's time to achieve that dream. Seek out the Black Dragon of Dark Mist Mountain and return its head to your home. ", 10000, 0);
-             becomeChampion.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BLACKDRAGONHEAD), 1));
-             //becomeChampion..RewardItem = ItemByID();
-
-             //Lord's Request
-             Quest lordsRequest = new Quest(QUEST_LORDS_REQUEST, "The Lords Request", "The Grand Lord of Kol has employed you to defeat Rats in his basement. He has agreed to issue you " +
-                 "an Adventurers Pass if you bring him back proof of your deeds. Bring back 5 Rat Tails to receive your reward.", 0, 0);
-             lordsRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RAT_TAIL), 5));
-             lordsRequest.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
-
-             //Static list
-             Quests.Add(becomeChampion);
-             Quests.Add(lordsRequest);
-             */
-            
-            // Sandoria
+            // Sandoria Quests
             //001 Explosive Request
             Quest explosiveRequest = new Quest(QUEST_001_EXPLOSIVE_REQUEST, "Explosive Request", "You've been asked to retrieve Bomb Ash from a Bomb and return it to the Lion Springs", 200, 90);
             explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
             explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
+            //002 Father and Son
+            Quest fatherAndSon = new Quest(QUEST_002_FATHER_AND_SON, "Father and Son", "A gentleman named Ailbeche approaches you and asks if you have seen his son. He mentions he carries a fishing rod everywhere he goes - a gift from his Grandfather in Selbina.", 100, 0);
+            fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BAMBOO_FISHING_ROD), 1));
 
+
+            // Sandoria Missions
+            //M01 Smash The Orcish Scouts
+            Quest smashTheOrcishScouts = new Quest(MISSION_01_SMASH_THE_ORCISH_SCOUTS, "Smash The Orcish Scouts", "The San d'orian Guard have requested you to thin the ranks of the Orcish found roaming Ronfaure. Return with an Orcish Axe as proof of your deeds.", 200, 50);
+            smashTheOrcishScouts.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ORCISH_AXE), 1));
+            smashTheOrcishScouts.RankUpValue = 1;
+            smashTheOrcishScouts.RequiredRank = 0;
+
+
+
+            // Populate Quest List
             Quests.Add(explosiveRequest);
+            Quests.Add(fatherAndSon);
+            
+            Quests.Add(smashTheOrcishScouts);
 
         }
 
-
         private static void PopulateLocations()
         {
-
-            //
-            //Generate location parameters
-            //
-            //home.QuestAvailableHere = QuestByID(QUEST_BECOME_CHAMPION);
-            //guardPost.ItemRequiredToEnter = ItemByID(ITEM_ID_ADVENTURER_PASS);
-            //alchemistsGarden.MonsterLivingHere = MonsterByID(MONSTER_ID_RAT);
-
             //Zone : San d'Oria
             Location mogHouse = new Location(LOCATION_ID_MOG_HOUSE_MH, "Mog House", "Your residence as an adventurer of San d'Oria." + Environment.NewLine + "A fire burns lightly in the corner. The room is furnished with a bed, a chest of drawers, a desk and a bookcase." + Environment.NewLine + "Your own Moogle flutters around cleaning and maintaining the fire for you...", 0);
-            //home.QuestAvailableHere = QuestByID(QUEST_BECOME_CHAMPION);
-
             Location sandoriaStreets1 = new Location(LOCATION_ID_SANDORIA_STREETS_1, "Streets of San d'Oria - Outside Mog House", "The narrow avenue that links the residential area with San d'Oria's bustling Lion Square." + Environment.NewLine + "People come and go quickly through the cobbled archways.", 0);
             Location sandoriaStreets2 = new Location(LOCATION_ID_SANDORIA_STREETS_2, "Lion Square Eastern Steps", "The eastern steps peer across the Lion Square fountain to the Lion Springs tavern to the West. The avenue that leads to the residential area lays through cobbled archways to the North." + Environment.NewLine + "Children play around the fountain while others converse and gamble.", 0);
             Location sandoriaStreets3 = new Location(LOCATION_ID_SANDORIA_STREETS_3, "Lion Square", "A fountain fills the air with moisture as folk cast dice against a table cheering at their victories." + Environment.NewLine + "To the West stands the door to the Lion Springs tavern." + Environment.NewLine + "To the South curves Squire Alley towards the East Gate." + Environment.NewLine + "To the East the steps rise before the residential areas cobble archway.", 0);
@@ -500,9 +494,13 @@ namespace Engine
 
             Location sandoriaStreets9 = new Location(LOCATION_ID_SANDORIA_STREETS_9, "Streets of San d'Oria - East Gate Rendevous Point", "The archway of the East Gate lays to the South. Two San d'Orian guards stand with spears keeping watch. " + Environment.NewLine + "To the North lays the cobbled archway to the trade stands of Cavalry Way.", 0);
             //Initial Ranked Missions Available Here
+            sandoriaStreets9.QuestAvailableHere = QuestByID(MISSION_01_SMASH_THE_ORCISH_SCOUTS);
+            
 
             Location sandoriaEastGate = new Location(LOCATION_ID_SANDORIA_EASTGATE_10, "San d'Oria East Gate", "Tall, mossy stone walls protect the city of San d'Oria. The city it tucked on the outskirts of a mountain range and in turn is a well defended capital." + Environment.NewLine + "To the South the forest of Ronfaure crawls with an ever constant flow of deadly beasts and occassionally a stray Orcish Scout hoping to waylay an unprepared adventurer." + Environment.NewLine + "(Recommended Level: 1-4)", 0);
             Location sandoriaStreets11 = new Location(LOCATION_ID_SANDORIA_STREETS_11, "Streets if San d'Oria - Victory Square SE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
+            sandoriaStreets11.QuestAvailableHere = QuestByID(QUEST_002_FATHER_AND_SON);
+
             Location sandoriaAuctionHouse = new Location(LOCATION_ID_SANDORIA_AUCTION_HOUSE_12, "Streets of San d'Oria - Victory Square Auction House", "Trade windows line the front of the huge stone building, open all day and all night - all of the time." + Environment.NewLine + "Surrounding the auction house is the expanse of Victory Square.", 0);
             Vendor sandoriaAuctionHouseSales = new Vendor("San d'Oria Auction House");
             sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_POTION), 10);
@@ -519,6 +517,8 @@ namespace Engine
 
             Location sandoriaStreets13 = new Location(LOCATION_ID_SANDORIA_STREETS_13, "Streets of San d'Oria - Victory Square SW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets14 = new Location(LOCATION_ID_SANDORIA_STREETS_14, "Streets of San d'Oria - Victory Square NW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
+            sandoriaStreets14.NPCHere = new NPC("Ailbeche's Son", QuestByID(QUEST_002_FATHER_AND_SON), "A young child holding a fishing rod approaches you. You explain his father is looking for him and he assures you he is fine, he asks for you to take his fishing rod to his father as he wishes to buy a gift for him and cannot carry it.", ItemByID(ITEM_ID_BAMBOO_FISHING_ROD));
+
             Location sandoriaStreets15 = new Location(LOCATION_ID_SANDORIA_STREETS_15, "Streets of San d'Oria - Victory Square N", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area." + Environment.NewLine + "To the North of here is the draw bridge which leads to the San d'Orian Palace. Only renown adventurers with invitations, noble knights and royality may enter.", 0);
             Location sandoriaStreets16 = new Location(LOCATION_ID_SANDORIA_STREETS_16, "Streets of San d'Oria - Victory Square NE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets17 = new Location(LOCATION_ID_SANDORIA_STREETS_17, "Streets of San d'Oria - West Gate Rendevous Point", "The archway of the West Gate lays to the South. A San d'Orian guard stands with a sword and shield keeping watch." + Environment.NewLine + "To the North is a large footpath which leads towards Taumila's Saundries, the Tanners Guild and further to Count Caffaule's Manor.", 0);
@@ -654,33 +654,7 @@ namespace Engine
 
 
 
-            /*
-            Location KolTownStore = new Location(LOCATION_ID_KOL_STORE, "Kol General Store", "The only shop in town, the place is huge and full of items, equipment, food and trinkets. Behind the counter stands a bald, bearded man.", 0);
-            Vendor garyVendor = new Vendor("Gary The Vendor");
-            garyVendor.AddItemToInventory(ItemByID(ITEM_ID_PIECE_OF_FUR), 5);
-
-            Location kolTownNorthWest = new Location(LOCATION_ID_KOL_1_1, "Kol Town North West", " des ", 0);
-            Location kolTownNorth = new Location(LOCATION_ID_KOL_1_2, "Kol Town North", " des ", 0);
-            Location kolTownNorthEast = new Location(LOCATION_ID_KOL_1_3, "Kol Town North East", " des ", 1);
-            kolTownNorthEast.MonsterLivingHere = MonsterByID(MONSTER_ID_SNAKE);
-            Location kolTownWest = new Location(LOCATION_ID_KOL_2_1, "Kol Town West", " des ", 0);
-            Location kolTownCentre = new Location(LOCATION_ID_KOL_2_2, "Kol Town Centre", " des ", 0);
-            Location kolTownEast = new Location(LOCATION_ID_KOL_2_3, "Kol Town East", " des ", 0);
-            Location kolTownGate = new Location(LOCATION_ID_KOL_2_4, "Kol Town Gate", " des ", 0);
-            kolTownGate.ItemRequiredToEnter = ItemByID(ITEM_ID_ADVENTURER_PASS);
-            Location kolTownSouthWest = new Location(LOCATION_ID_KOL_3_1, "Kol Town South West", " des ", 0);
-            Location kolTownSouth = new Location(LOCATION_ID_KOL_3_2, "Kol Town South", " des ", 0);
-            Location kolTownSouthEast = new Location(LOCATION_ID_KOL_3_3, "Kol Town South East", " des ", 0);
-
-            Location kolLordsMansionHall = new Location(LOCATION_ID_KOL_LORDS_MANSION_1_3, "Kol Lords Mansion - Hall", " des ", 0);
-            kolLordsMansionHall.QuestAvailableHere = QuestByID(QUEST_LORDS_REQUEST);
-            Location kolLordsMansionCorridor = new Location(LOCATION_ID_KOL_LORDS_MANSION_1_2, "Kol Lords Mansion - Corridor", " des ", 0);
-            Location kolLordsMansionStairway = new Location(LOCATION_ID_KOL_LORDS_MANSION_1_1, "Kol Lords Mansion - Stairway", " des ", 0);
-            Location kolLordsMansionDiningHall = new Location(LOCATION_ID_KOL_LORDS_MANSION_2_2, "Kol Lords Mansion - Dining Hall", " des ", 0);
-            Location kolLordsMansionBasement = new Location(LOCATION_ID_KOL_LORDS_MANSION_2_1, "Kol Lords Mansion - Basement", " des ", 2);
-            kolLordsMansionBasement.MonsterLivingHere = MonsterByID(MONSTER_ID_RAT);
-            */
-
+           
             //
             //Location Connections
             //
@@ -1019,9 +993,7 @@ namespace Engine
             
 
 
-            //
-            //Static List
-            //
+            //Populate Locations List
             //Zone : San d'Oria
             Locations.Add(mogHouse);
             Locations.Add(sandoriaStreets1);
@@ -1121,7 +1093,9 @@ namespace Engine
             Locations.Add(ronfaureEntranceToKingRanperresTomb);
 
         }
+        #endregion
 
+        #region Binding IDs
 
         public static Item ItemByID(int id)
         {
@@ -1170,6 +1144,6 @@ namespace Engine
             }
             return null;
         }
-
+        #endregion
     }
 }

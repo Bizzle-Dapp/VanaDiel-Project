@@ -141,7 +141,6 @@ namespace Vanadiel
                 DataPropertyName = "IsCompleted"
             });
 
-            Engine._World.SetPlayer(_player);
             //Player Level Updater run
             UpdatePlayerLevelText();
 
@@ -338,8 +337,8 @@ namespace Vanadiel
         private void MoveTo(Location newLocation)
         {
             UpdatePlayerLevelText();
-
-            
+            //Update Hit Points in UI
+            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
 
             // Check if respawning monsters: if so, reduces enemies available
             if (newLocation != _player.CurrentLocation)
@@ -373,7 +372,7 @@ namespace Vanadiel
             }
 
 
-            //Show/Hide available movemetn buttons
+            //Show/Hide available movement buttons
             btnNorth.Visible = (newLocation.LocationToNorth != null);
             btnEast.Visible = (newLocation.LocationToEast != null);
             btnWest.Visible = (newLocation.LocationToWest != null);
@@ -384,9 +383,20 @@ namespace Vanadiel
             rtbLocation.Text += newLocation.Description + Environment.NewLine;
 
             
+            //Check if an NPC is here and if so whether the player already has their key item
+            if (newLocation.NPCHere != null && _player.DisplayNPCDialog(newLocation.NPCHere))
+            {
+                rtbMessages.Text += newLocation.NPCHere.Dialog;
 
-            //Update Hit Points in UI
-            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                if(newLocation.NPCHere.GivesItem != null)
+                {
+                    _player.AddItemToInventory(newLocation.NPCHere.GivesItem);
+
+                    rtbMessages.Text += Environment.NewLine + "You recieve " + newLocation.NPCHere.GivesItem.Name + "." + Environment.NewLine;
+
+                }
+            }
+            
 
             //Quest available here?
             if (newLocation.QuestAvailableHere != null)
@@ -394,6 +404,8 @@ namespace Vanadiel
                 //See if the player already has the quest, and if they've completed it
                 bool playerAlreadyHasQuest = _player.HasThisQuest(newLocation.QuestAvailableHere);
                 bool playerAlreadyCompeletedQuest = _player.CompletedThisQuest(newLocation.QuestAvailableHere);
+                bool playerSufficientLevel = _player.SufficientLevelForQuest(newLocation.QuestAvailableHere);
+                bool playerSufficientRank = _player.SufficientRankForMission(newLocation.QuestAvailableHere);
 
                 //_player already has the quest?
                 if (playerAlreadyHasQuest)
@@ -419,16 +431,27 @@ namespace Vanadiel
                             rtbMessages.Text += "You receive: " + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine;
 
-                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gold" + Environment.NewLine;
+                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gil" + Environment.NewLine;
 
-                            rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
-                            rtbMessages.Text += Environment.NewLine;
+                            if (newLocation.QuestAvailableHere.RewardItem != null)
+                            {
+                                rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
+                                rtbMessages.Text += Environment.NewLine;
+                                // Add the reward item to the player's inventory
+                                _player.AddItemToInventory(newLocation.QuestAvailableHere.RewardItem);
+                            }
 
                             _player.ExperiencePoints += newLocation.QuestAvailableHere.RewardExperiencePoints;
                             _player.Gold += newLocation.QuestAvailableHere.RewardGold;
 
-                            // Add the reward item to the player's inventory
-                            _player.AddItemToInventory(newLocation.QuestAvailableHere.RewardItem);
+                            // Increase rank by quest value
+                            _player.Rank = _player.Rank + newLocation.QuestAvailableHere.RankUpValue;
+                            if(newLocation.QuestAvailableHere.RankUpValue > 0)
+                            {
+                                rtbMessages.Text += "Your Rank increases by " + newLocation.QuestAvailableHere.RankUpValue.ToString();
+                                rtbMessages.Text += Environment.NewLine;
+                            }
+
 
                             // Mark the quest as completed
                             _player.MarkQuestCompleted(newLocation.QuestAvailableHere);
@@ -439,89 +462,91 @@ namespace Vanadiel
                     else
                     {
                     // The player does not already have the quest! 
-
-                    //Display the messages
-                    
-                        rtbMessages.Text += Environment.NewLine + "You receive the " + newLocation.QuestAvailableHere.Name + " quest." + Environment.NewLine;
-                        rtbMessages.Text += Environment.NewLine + newLocation.QuestAvailableHere.Description + Environment.NewLine;
-
-                        rtbMessages.Text += Environment.NewLine + "To complete it, return with:" + Environment.NewLine;
-                        foreach (QuestCompletionItem qci in newLocation.QuestAvailableHere.QuestCompletionItems)
+                    //Check they are the correct Level and or Rank for the Quest/Mission
+                        if (playerSufficientLevel && playerSufficientRank)
                         {
-                            if (qci.Quantity == 1)
+                            //Display the messages
+
+                            rtbMessages.Text += Environment.NewLine + "You receive the " + newLocation.QuestAvailableHere.Name + " quest." + Environment.NewLine;
+                            rtbMessages.Text += Environment.NewLine + newLocation.QuestAvailableHere.Description + Environment.NewLine;
+
+                            rtbMessages.Text += Environment.NewLine + "To complete it, return with:" + Environment.NewLine;
+                            foreach (QuestCompletionItem qci in newLocation.QuestAvailableHere.QuestCompletionItems)
                             {
-                                rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.Name + Environment.NewLine;
+                                if (qci.Quantity == 1)
+                                {
+                                    rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.Name + Environment.NewLine;
+                                }
+                                else
+                                {
+                                    rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.NamePlural + Environment.NewLine;
+                                }
                             }
-                            else
-                            {
-                                rtbMessages.Text += qci.Quantity.ToString() + " " + qci.Details.NamePlural + Environment.NewLine;
-                            }
+                            rtbMessages.Text += Environment.NewLine;
+
+                            //Add quest to player quest tracker
+                            _player.Quests.Add(new PlayerQuest(newLocation.QuestAvailableHere));
                         }
-                        rtbMessages.Text += Environment.NewLine;
-
-                        //Add quest to player quest tracker
-                        _player.Quests.Add(new PlayerQuest(newLocation.QuestAvailableHere));
-
                     }
                 
             }
 
-                if (newLocation.MonsterLivingHere != null && newLocation.MonstersRemaining > 0)
-                {
-                rtbMessages.Text += Environment.NewLine;
-                rtbMessages.Text += "You look around for any enemies at this location..." + Environment.NewLine;
-                Thread.Sleep(1000);
-                    rtbMessages.Text += "You see a " + newLocation.MonsterLivingHere.Name + Environment.NewLine;
+            if (newLocation.MonsterLivingHere != null && newLocation.MonstersRemaining > 0)
+            {
+            rtbMessages.Text += Environment.NewLine;
+            rtbMessages.Text += "You look around for any enemies at this location..." + Environment.NewLine;
+            Thread.Sleep(1000);
+                rtbMessages.Text += "You see a " + newLocation.MonsterLivingHere.Name + Environment.NewLine;
 
-                if(RandomNumberGenerator.NumberBetween(1, 100) >= 50 && newLocation.MonsterLivingHere.IsSignature == false)
-                {
-                    rtbMessages.Text += "The " + newLocation.MonsterLivingHere.Name + " leaves room for you to escape." + Environment.NewLine;
-                    //Show/Hide available movemetn buttons
-                    btnNorth.Visible = (newLocation.LocationToNorth != null);
-                    btnEast.Visible = (newLocation.LocationToEast != null);
-                    btnWest.Visible = (newLocation.LocationToWest != null);
-                    btnSouth.Visible = (newLocation.LocationToSouth != null);
-                }
-                else
-                {
-                    rtbMessages.Text += "The " + newLocation.MonsterLivingHere.Name + " locks you into combat." + Environment.NewLine + "There is no option but to fight!" + Environment.NewLine;
-                    btnNorth.Visible = false;
-                    btnEast.Visible = false;
-                    btnWest.Visible = false;
-                    btnSouth.Visible = false;
-
-                }
-
-                    //Make a new instance of Monster using values from _World.Monster list
-                    Monster standardMonster = _World.MonsterByID(newLocation.MonsterLivingHere.ID);
-
-                    _currentMonster = new Monster(standardMonster.ID, standardMonster.Name, standardMonster.EvadeChance, standardMonster.MaximumDamage, standardMonster.RewardExperiencePoints, standardMonster.RewardGold, standardMonster.IsSignature, standardMonster.CurrentHitPoints, standardMonster.MaximumHitPoints);
-
-                    foreach (LootItem lootItem in standardMonster.LootTable)
-                    {
-                        _currentMonster.LootTable.Add(lootItem);
-                    }
-
-                    
-                    btnUseWeapon.Visible = true;
-                    
-                }
-                else
-                {
-                rtbMessages.Text += Environment.NewLine;
-                rtbMessages.Text += "You feel a sense of safety at this location." + Environment.NewLine;
-
-                    _currentMonster = null;
-
-                    
-                    btnUseWeapon.Visible = false;
-                    
-
+            if(RandomNumberGenerator.NumberBetween(1, 100) >= 50 && newLocation.MonsterLivingHere.IsSignature == false)
+            {
+                rtbMessages.Text += "The " + newLocation.MonsterLivingHere.Name + " leaves room for you to escape." + Environment.NewLine;
                 //Show/Hide available movemetn buttons
                 btnNorth.Visible = (newLocation.LocationToNorth != null);
                 btnEast.Visible = (newLocation.LocationToEast != null);
                 btnWest.Visible = (newLocation.LocationToWest != null);
                 btnSouth.Visible = (newLocation.LocationToSouth != null);
+            }
+            else
+            {
+                rtbMessages.Text += "The " + newLocation.MonsterLivingHere.Name + " locks you into combat." + Environment.NewLine + "There is no option but to fight!" + Environment.NewLine;
+                btnNorth.Visible = false;
+                btnEast.Visible = false;
+                btnWest.Visible = false;
+                btnSouth.Visible = false;
+
+            }
+
+                //Make a new instance of Monster using values from _World.Monster list
+                Monster standardMonster = _World.MonsterByID(newLocation.MonsterLivingHere.ID);
+
+                _currentMonster = new Monster(standardMonster.ID, standardMonster.Name, standardMonster.EvadeChance, standardMonster.MaximumDamage, standardMonster.RewardExperiencePoints, standardMonster.RewardGold, standardMonster.IsSignature, standardMonster.CurrentHitPoints, standardMonster.MaximumHitPoints);
+
+                foreach (LootItem lootItem in standardMonster.LootTable)
+                {
+                    _currentMonster.LootTable.Add(lootItem);
+                }
+
+                    
+                btnUseWeapon.Visible = true;
+                    
+            }
+            else
+            {
+            rtbMessages.Text += Environment.NewLine;
+            rtbMessages.Text += "You feel a sense of safety at this location." + Environment.NewLine;
+
+                _currentMonster = null;
+
+                    
+                btnUseWeapon.Visible = false;
+                    
+
+            //Show/Hide available movement buttons
+            btnNorth.Visible = (newLocation.LocationToNorth != null);
+            btnEast.Visible = (newLocation.LocationToEast != null);
+            btnWest.Visible = (newLocation.LocationToWest != null);
+            btnSouth.Visible = (newLocation.LocationToSouth != null);
             }
             
                 //Full heal if newLocation is Home
@@ -582,19 +607,6 @@ namespace Vanadiel
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         //
         //
         // WEAPON BUTTON CLICK!!!
@@ -651,7 +663,7 @@ namespace Vanadiel
 
                 //Give Gold for killing monster
                 _player.Gold += _currentMonster.RewardGold;
-                rtbMessages.Text += "You receive " + _currentMonster.RewardGold.ToString() + " gold" + Environment.NewLine;
+                rtbMessages.Text += "You receive " + _currentMonster.RewardGold.ToString() + " gil" + Environment.NewLine;
 
                 //Get random loot items from the monster
                 List<InventoryItem> lootedItems = new List<InventoryItem>();
@@ -813,23 +825,6 @@ namespace Vanadiel
         {
             _player.CurrentPotion = (HealingPotion)cboPotions.SelectedItem;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //

@@ -103,7 +103,6 @@
     <None Include="images\ButtonBack.png" />
     <None Include="images\Background2.png" />
     <None Include="images\TradeBackground.png" />
-    <Content Include="TESTRELEASE_ICON.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
