@@ -15,7 +15,7 @@ using System.Timers;
 namespace Vanadiel
 {
    
-
+    //comment 
     public partial class Vanadiel : Form
     {
         //
@@ -25,7 +25,7 @@ namespace Vanadiel
         private Player _player;
         private Monster _currentMonster;
         private const string PLAYER_DATA_FILE_NAME = "PlayerData.xml";
-
+        
 
         
         
@@ -141,12 +141,13 @@ namespace Vanadiel
                 DataPropertyName = "IsCompleted"
             });
 
+            Engine._World.SetPlayer(_player);
             //Player Level Updater run
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
         }
 
-        private void UpdatePlayerLevel()
+        private void UpdatePlayerLevelText()
         {
             //Updates labels for each player statistic
             
@@ -154,14 +155,14 @@ namespace Vanadiel
 
         }
 
-        private void updatePlayerLevel()
+        private void UpdatePlayerLevel()
         {
             //Lvl 2
             if(_player.ExperiencePoints >= 11 && _player.Level != 2 && _player.NextLevel == 2)
             {
                 rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 2!" + Environment.NewLine;
-                rtbMessages.Text += "Hit Points increased to: 15" + Environment.NewLine + Environment.NewLine;
-                _player.MaximumHitPoints = 16;
+                rtbMessages.Text += "Hit Points increased to: 20" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 20;
                 _player.Level = 2;
                 _player.NextLevel = 3;
 
@@ -174,8 +175,8 @@ namespace Vanadiel
             if(_player.ExperiencePoints >= 45 && _player.Level != 3 && _player.NextLevel == 3)
             {
                 rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 3!" + Environment.NewLine;
-                rtbMessages.Text += "Hit Points increased to: 24" + Environment.NewLine + Environment.NewLine;
-                _player.MaximumHitPoints = 24;
+                rtbMessages.Text += "Hit Points increased to: 32" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 32;
                 _player.Level = 3;
                 _player.NextLevel = 4;
 
@@ -185,11 +186,11 @@ namespace Vanadiel
             }
 
             //Lvl 4
-            if (_player.ExperiencePoints >= 80 && _player.Level != 4 && _player.NextLevel == 5)
+            if (_player.ExperiencePoints >= 80 && _player.Level != 4 && _player.NextLevel == 4)
             {
                 rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 4!" + Environment.NewLine;
-                rtbMessages.Text += "Hit Points increased to: 35" + Environment.NewLine + Environment.NewLine;
-                _player.MaximumHitPoints = 35;
+                rtbMessages.Text += "Hit Points increased to: 44" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 44;
                 _player.Level = 4;
                 _player.NextLevel = 5;
 
@@ -199,11 +200,11 @@ namespace Vanadiel
             }
 
             //Lvl 5
-            if (_player.ExperiencePoints >= 150 && _player.Level != 5 && _player.NextLevel == 6)
+            if (_player.ExperiencePoints >= 150 && _player.Level != 5 && _player.NextLevel == 5)
             {
                 rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 5!" + Environment.NewLine;
-                rtbMessages.Text += "Hit Points increased to: 50" + Environment.NewLine + Environment.NewLine;
-                _player.MaximumHitPoints = 50;
+                rtbMessages.Text += "Hit Points increased to: 58" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 58;
                 _player.Level = 5;
                 _player.NextLevel = 6;
 
@@ -211,6 +212,77 @@ namespace Vanadiel
                 lblExperience.Text = _player.ExperiencePoints.ToString();
                 lblLevel.Text = _player.Level.ToString();
             }
+
+            //Lvl 6
+            if (_player.ExperiencePoints >= 220 && _player.Level != 6 && _player.NextLevel == 6)
+            {
+                rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 6!" + Environment.NewLine;
+                rtbMessages.Text += "Hit Points increased to: 70" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 70;
+                _player.Level = 6;
+                _player.NextLevel = 7;
+
+                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                lblExperience.Text = _player.ExperiencePoints.ToString();
+                lblLevel.Text = _player.Level.ToString();
+            }
+
+            //Lvl 7
+            if (_player.ExperiencePoints >= 350 && _player.Level != 7 && _player.NextLevel == 7)
+            {
+                rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 7!" + Environment.NewLine;
+                rtbMessages.Text += "Hit Points increased to: 90" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 90;
+                _player.Level = 7;
+                _player.NextLevel = 8;
+
+                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                lblExperience.Text = _player.ExperiencePoints.ToString();
+                lblLevel.Text = _player.Level.ToString();
+            }
+
+            //Lvl 8
+            if (_player.ExperiencePoints >= 500 && _player.Level != 8 && _player.NextLevel == 8)
+            {
+                rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 8!" + Environment.NewLine;
+                rtbMessages.Text += "Hit Points increased to: 100" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 100;
+                _player.Level = 8;
+                _player.NextLevel = 9;
+
+                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                lblExperience.Text = _player.ExperiencePoints.ToString();
+                lblLevel.Text = _player.Level.ToString();
+            }
+
+            //Lvl 9
+            if (_player.ExperiencePoints >= 700 && _player.Level != 9 && _player.NextLevel == 9)
+            {
+                rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 9!" + Environment.NewLine;
+                rtbMessages.Text += "Hit Points increased to: 113" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 113;
+                _player.Level = 9;
+                _player.NextLevel = 10;
+
+                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                lblExperience.Text = _player.ExperiencePoints.ToString();
+                lblLevel.Text = _player.Level.ToString();
+            }
+
+            //Lvl 10
+            if (_player.ExperiencePoints >= 1000 && _player.Level != 10 && _player.NextLevel == 10)
+            {
+                rtbMessages.Text += Environment.NewLine + "YOU HAVE LEVELED UP TO LEVEL 10!" + Environment.NewLine;
+                rtbMessages.Text += "Hit Points increased to: 128" + Environment.NewLine + Environment.NewLine;
+                _player.MaximumHitPoints = 128;
+                _player.Level = 10;
+                _player.NextLevel = 11;
+
+                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
+                lblExperience.Text = _player.ExperiencePoints.ToString();
+                lblLevel.Text = _player.Level.ToString();
+            }
+
         }
 
 
@@ -264,7 +336,7 @@ namespace Vanadiel
 
         private void MoveTo(Location newLocation)
         {
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
             
 
@@ -328,14 +400,8 @@ namespace Vanadiel
                     //not yet completed
                     if (!playerAlreadyCompeletedQuest)
                     {
-
-
-
                         //see if player has all items needed to complete quest
                         bool playerHasAllItemsToCompleteQuest = _player.HasAllQuestCompletionItems(newLocation.QuestAvailableHere);
-
-
-
 
                         if (playerHasAllItemsToCompleteQuest)
                         {
@@ -625,7 +691,7 @@ namespace Vanadiel
                     }
                 }
 
-                updatePlayerLevel();
+                UpdatePlayerLevel();
 
                 // Refresh player information and inventory controls
                 lblHitPoints.Text = _player.CurrentHitPoints.ToString();
@@ -881,7 +947,7 @@ namespace Vanadiel
             }
 
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
-            UpdatePlayerLevel();
+            UpdatePlayerLevelText();
 
         } //End of Use Potion Block
 
@@ -924,7 +990,7 @@ namespace Vanadiel
             }
         }
 
-        private void SuperBizzleRPG_FormClosing(object sender, FormClosingEventArgs e)
+        private void Vanadiel_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
         }
