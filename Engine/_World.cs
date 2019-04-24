@@ -745,8 +745,6 @@ namespace Engine
             Location krt32 = new Location(LOCATION_ID_KRT_32_TO_JUGNER_FOREST, "King Ranperre's Tomb Hidden Exit", "Dark, damp cave walls surround you. A light shine bright to the East." + Environment.NewLine + "A possible way out..?", 1);
 
 
-
-
             ////////////////////////
             //Location Connections//
             ////////////////////////
@@ -1086,10 +1084,110 @@ namespace Engine
             ronfaure63.LocationToNorth = ronfaure59;
 
             ronfaureEntranceToKingRanperresTomb.LocationToNorth = ronfaure61;
+            ronfaureEntranceToKingRanperresTomb.LocationToSouth = krt1;
 
             ////////////////////////
             //King Ranperre's Tomb//
             ////////////////////////
+            krt1.LocationToNorth = ronfaureEntranceToKingRanperresTomb;
+            krt1.LocationToSouth = krt2;
+
+            krt2.LocationToNorth = krt1;
+            krt2.LocationToSouth = krt3;
+
+            krt3.LocationToWest = krt4;
+            krt3.LocationToNorth = krt2;
+            krt3.LocationToSouth = krt5;
+
+            krt4.LocationToEast = krt3;
+
+            krt5.LocationToNorth = krt3;
+            krt5.LocationToWest = krt6;
+
+            krt6.LocationToEast = krt5;
+            krt6.LocationToWest = krt7;
+
+            krt7.LocationToEast = krt6;
+            krt7.LocationToSouth = krt8;
+
+            krt8.LocationToNorth = krt7;
+            krt8.LocationToEast = krt9;
+
+            krt9.LocationToEast = krt10;
+            krt9.LocationToWest = krt8;
+
+            krt10.LocationToWest = krt9;
+            krt10.LocationToSouth = krt11;
+
+            krt11.LocationToNorth = krt10;
+            krt11.LocationToSouth = krt12;
+
+            krt12.LocationToNorth = krt11;
+            krt12.LocationToEast = krt15;
+            krt12.LocationToSouth = krt13;
+
+            krt13.LocationToNorth = krt12;
+            krt13.LocationToEast = krt14;
+
+            krt14.LocationToEast = krt17;
+            krt14.LocationToNorth = krt15;
+            krt14.LocationToWest = krt13;
+
+            krt15.LocationToWest = krt12;
+            krt15.LocationToSouth = krt14;
+            krt15.LocationToEast = krt16;
+
+            krt16.LocationToWest = krt15;
+            krt16.LocationToNorth = krt18;
+            krt16.LocationToSouth = krt17;
+
+            krt17.LocationToNorth = krt16;
+            krt17.LocationToWest = krt14;
+
+            krt18.LocationToSouth = krt16;
+            krt18.LocationToNorth = krt19;
+
+            krt19.LocationToSouth = krt18;
+            krt19.LocationToEast = krt20;
+
+            krt20.LocationToWest = krt19;
+            krt20.LocationToEast = krt21;
+
+            krt21.LocationToWest = krt20;
+            krt21.LocationToNorth = krt22;
+
+            krt22.LocationToSouth = krt21;
+            krt22.LocationToNorth = krt23;
+
+            krt23.LocationToSouth = krt22;
+            krt23.LocationToWest = krt24;
+
+            krt24.LocationToEast = krt23;
+            krt24.LocationToWest = krt25;
+
+            krt25.LocationToEast = krt24;
+            krt25.LocationToWest = krt28;
+            krt25.LocationToNorth = krt29;
+
+            krt26.LocationToWest = krt27;
+
+            krt27.LocationToEast = krt26;
+            krt27.LocationToNorth = krt28;
+
+            krt28.LocationToSouth = krt27;
+            krt28.LocationToEast = krt25;
+
+            krt29.LocationToSouth = krt25;
+            krt29.LocationToEast = krt31;
+            krt29.LocationToNorth = krt30;
+
+            krt30.LocationToSouth = krt29;
+
+            krt31.LocationToEast = krt32;
+            krt31.LocationToWest = krt29;
+
+            krt32.LocationToWest = krt31;
+            //krt32.LocationToEast = Jugner Forest...
 
 
 
