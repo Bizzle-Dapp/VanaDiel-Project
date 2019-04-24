@@ -1293,7 +1293,38 @@ namespace Engine
             Locations.Add(ronfaureEntranceToKingRanperresTomb);
 
             //Zone: King Ranperre's Tomb
-
+            Locations.Add(krt1);
+            Locations.Add(krt2);
+            Locations.Add(krt3);
+            Locations.Add(krt4);
+            Locations.Add(krt5);
+            Locations.Add(krt6);
+            Locations.Add(krt7);
+            Locations.Add(krt8);
+            Locations.Add(krt9);
+            Locations.Add(krt10);
+            Locations.Add(krt11);
+            Locations.Add(krt12);
+            Locations.Add(krt13);
+            Locations.Add(krt14);
+            Locations.Add(krt15);
+            Locations.Add(krt16);
+            Locations.Add(krt17);
+            Locations.Add(krt18);
+            Locations.Add(krt19);
+            Locations.Add(krt20);
+            Locations.Add(krt21);
+            Locations.Add(krt22);
+            Locations.Add(krt23);
+            Locations.Add(krt24);
+            Locations.Add(krt25);
+            Locations.Add(krt26);
+            Locations.Add(krt27);
+            Locations.Add(krt28);
+            Locations.Add(krt29);
+            Locations.Add(krt30);
+            Locations.Add(krt31);
+            Locations.Add(krt32);
 
         }
         #endregion
