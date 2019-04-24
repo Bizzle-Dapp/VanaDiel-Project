@@ -19,89 +19,93 @@ namespace Engine
 
         #region Items
         //Item Grouping
-        //Spare IDs (0-30)
+        //Spare IDs (0-300)
         public const int UNSELLABLE_ITEM = 0;
-        public const int ITEM_ID_BEASTCOIN = 1;
+        
 
-        //Weapon IDs (50-79)
+        //Weapon IDs (500-790)
         //Swords
-        public const int ITEM_ID_ONION_SWORD = 50;
-        public const int ITEM_ID_BRONZE_SWORD = 51;
-        public const int ITEM_ID_SAPARA = 52;
-        public const int ITEM_ID_XIPHOS = 53;
-        public const int ITEM_ID_SPATHA = 54;
-        public const int ITEM_ID_ROYAL_ARCHERS_SWORD = 55;
-        public const int ITEM_ID_BILBO = 56;
-        public const int ITEM_ID_KINGDOM_SWORD = 57;
-        public const int ITEM_ID_SANDORIAN_SIGNET_SWORD = 58;
-        public const int ITEM_ID_MYTHRIL_SWORD = 59;
-        public const int ITEM_ID_ANCIENT_SWORD = 60;
-        public const int ITEM_ID_SAVE_THE_QUEEN = 61;
+        public const int ITEM_ID_ONION_SWORD = 500;
+        public const int ITEM_ID_BRONZE_SWORD = 510;
+        public const int ITEM_ID_SAPARA = 520;
+        public const int ITEM_ID_XIPHOS = 530;
+        public const int ITEM_ID_SPATHA = 540;
+        public const int ITEM_ID_ROYAL_ARCHERS_SWORD = 550;
+        public const int ITEM_ID_BILBO = 560;
+        public const int ITEM_ID_KINGDOM_SWORD = 570;
+        public const int ITEM_ID_SANDORIAN_SIGNET_SWORD = 580;
+        public const int ITEM_ID_MYTHRIL_SWORD = 590;
+        public const int ITEM_ID_ANCIENT_SWORD = 600;
+        public const int ITEM_ID_SAVE_THE_QUEEN = 610;
 
         //Great Swords
-        public const int ITEM_ID_RUSTY_GREATSWORD = 62;
-        public const int ITEM_ID_CLAYMORE = 63;
-        public const int ITEM_ID_VULCAN_CLAYMORE = 64;
-        public const int ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE = 65;
-        public const int ITEM_ID_COBRA_UNIT_CLAYMORE = 66;
-        public const int ITEM_ID_DARKSTEEL_CLAYMORE = 67;
-        public const int ITEM_ID_MYTHRIL_CLAYMORE = 68;
-        public const int ITEM_ID_FLAME_CLAYMORE = 69;
-        public const int ITEM_ID_RAGNAROK = 70;
+        public const int ITEM_ID_RUSTY_GREATSWORD = 620;
+        public const int ITEM_ID_CLAYMORE = 630;
+        public const int ITEM_ID_VULCAN_CLAYMORE = 640;
+        public const int ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE = 650;
+        public const int ITEM_ID_COBRA_UNIT_CLAYMORE = 660;
+        public const int ITEM_ID_DARKSTEEL_CLAYMORE = 670;
+        public const int ITEM_ID_MYTHRIL_CLAYMORE = 680;
+        public const int ITEM_ID_FLAME_CLAYMORE = 690;
+        public const int ITEM_ID_RAGNAROK = 700;
 
         //Bows
-        public const int ITEM_ID_SHORTBOW = 71;
-        public const int ITEM_ID_FREESWORD_BOW = 72;
-        public const int ITEM_ID_POWER_BOW = 73;
-        public const int ITEM_ID_PLATOON_BOW = 74;
-        public const int ITEM_ID_KINGDOM_BOW = 75;
-        public const int ITEM_ID_GREAT_BOW = 76;
-        public const int ITEM_ID_BATTLE_BOW = 77;
-        public const int ITEM_ID_LIGHTNING_BOW = 78;
+        public const int ITEM_ID_SHORTBOW = 710;
+        public const int ITEM_ID_FREESWORD_BOW = 720;
+        public const int ITEM_ID_POWER_BOW = 730;
+        public const int ITEM_ID_PLATOON_BOW = 740;
+        public const int ITEM_ID_KINGDOM_BOW = 750;
+        public const int ITEM_ID_GREAT_BOW = 760;
+        public const int ITEM_ID_BATTLE_BOW = 770;
+        public const int ITEM_ID_LIGHTNING_BOW = 780;
 
 
-        //Potion IDs (90-99)
-        public const int ITEM_ID_POTION = 90;
-        public const int ITEM_ID_HI_POTION = 91;
-        public const int ITEM_ID_HI_POTION_PLUS = 92;
-        public const int ITEM_ID_MEGA_POTION = 93;
-        public const int ITEM_ID_MEGA_POTION_PLUS = 94;
-        public const int ITEM_ID_X_POTION = 95;
+        //Potion IDs (900-990)
+        public const int ITEM_ID_POTION = 900;
+        public const int ITEM_ID_HI_POTION = 910;
+        public const int ITEM_ID_HI_POTION_PLUS = 920;
+        public const int ITEM_ID_MEGA_POTION = 930;
+        public const int ITEM_ID_MEGA_POTION_PLUS = 940;
+        public const int ITEM_ID_X_POTION = 950;
 
-        //Key Item IDs (100-149)
-        public const int ITEM_ID_BAMBOO_FISHING_ROD = 100;
+        //Key Item IDs (1000-1490)
+        public const int ITEM_ID_BAMBOO_FISHING_ROD = 1000;
 
-        public const int ITEM_ID_BLACKDRAGONHEAD = 199;
+        public const int ITEM_ID_BLACKDRAGONHEAD = 1099;
 
-        //Armour IDs (150-159)
-        public const int ITEM_ID_COMMON_CLOTHES = 150;
+        //Armour IDs (1500-1590)
+        public const int ITEM_ID_COMMON_CLOTHES = 1500;
+        public const int ITEM_ID_LEATHER_ARMOUR = 1510;
+        public const int ITEM_ID_SCALE_MAIL = 1520;
+        public const int ITEM_ID_CHAIN_DOUBLET = 1530;
 
-        //Accessory IDs (160-169)
-        public const int ITEM_ID_SANDORIAN_RING = 160;
+        //Accessory IDs (1600-1690)
+        public const int ITEM_ID_SANDORIAN_RING = 1600;
 
-        //Item ID's (170+)
-        public const int ITEM_ID_RABBIT_MEAT = 170;
-        public const int ITEM_ID_COPPER_ORE = 171;
-        public const int ITEM_ID_RABBIT_HIDE = 172;
-        public const int ITEM_ID_SLEEPSHROOM = 173;
-        public const int ITEM_ID_WOOZYSHROOM = 174;
-        public const int ITEM_ID_FLINT_STONE = 175;
-        public const int ITEM_ID_ZINC_ORE = 176;
-        public const int ITEM_ID_BEETLE_JAW = 177;
-        public const int ITEM_ID_INSECT_WING = 178;
-        public const int ITEM_ID_BEETLE_SHELL = 179;
-        public const int ITEM_ID_GRASS_THREAD = 180;
-        public const int ITEM_ID_GRASS_CLOTH = 181;
-        public const int ITEM_ID_COTTON_THREAD = 182;
-        public const int ITEM_ID_COTTON_CLOTH = 183;
-        public const int ITEM_ID_BAT_WING = 184;
-        public const int ITEM_ID_FIEND_BLOOD = 185;
-        public const int ITEM_ID_ROCK_SALT = 186;
-        public const int ITEM_ID_ORCISH_AXE = 187;
-        public const int ITEM_ID_BOMB_ASH = 188;
-        public const int ITEM_ID_BONE_CHIP = 189;
-        public const int ITEM_ID_REVIVAL_TREE_ROOT = 190;
-        public const int ITEM_ID_WOLF_HIDE = 191;
+        //Item ID's (1700+)
+        public const int ITEM_ID_RABBIT_MEAT = 1700;
+        public const int ITEM_ID_BEASTCOIN = 1701;
+        public const int ITEM_ID_COPPER_ORE = 1710;
+        public const int ITEM_ID_RABBIT_HIDE = 1720;
+        public const int ITEM_ID_SLEEPSHROOM = 1730;
+        public const int ITEM_ID_WOOZYSHROOM = 1740;
+        public const int ITEM_ID_FLINT_STONE = 1750;
+        public const int ITEM_ID_ZINC_ORE = 1760;
+        public const int ITEM_ID_BEETLE_JAW = 1770;
+        public const int ITEM_ID_INSECT_WING = 1780;
+        public const int ITEM_ID_BEETLE_SHELL = 1790;
+        public const int ITEM_ID_GRASS_THREAD = 1800;
+        public const int ITEM_ID_GRASS_CLOTH = 1810;
+        public const int ITEM_ID_COTTON_THREAD = 1820;
+        public const int ITEM_ID_COTTON_CLOTH = 1830;
+        public const int ITEM_ID_BAT_WING = 1840;
+        public const int ITEM_ID_FIEND_BLOOD = 1850;
+        public const int ITEM_ID_ROCK_SALT = 1860;
+        public const int ITEM_ID_ORCISH_AXE = 1870;
+        public const int ITEM_ID_BOMB_ASH = 1880;
+        public const int ITEM_ID_BONE_CHIP = 1890;
+        public const int ITEM_ID_REVIVAL_TREE_ROOT = 1900;
+        public const int ITEM_ID_WOLF_HIDE = 1910;
         #endregion
 
         #region Monsters
@@ -121,6 +125,7 @@ namespace Engine
         public const int MONSTER_ID_BOMB_08 = 12;
         public const int MONSTER_ID_ENCHANTED_BONES = 13;
         public const int MONSTER_ID_TAINTED_HOUND = 14;
+        public const int MONSTER_ID_GHOST = 15;
 
         #endregion
 
@@ -129,6 +134,7 @@ namespace Engine
         //Zone : Sandoria
         public const int QUEST_001_EXPLOSIVE_REQUEST = 1;
         public const int QUEST_002_FATHER_AND_SON = 2;
+        public const int QUEST_003_A_SQUIRES_TEST = 3;
 
         //Mission IDs
         public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
@@ -238,8 +244,41 @@ namespace Engine
         public const int LOCATION_ID_RONFAURE_63_93 = 93;
         public const int LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94 = 94;
 
-        #endregion
+        // Zone: King Ranperre's Tomb
+        public const int LOCATION_ID_KRT_1_TO_EAST_RONFAURE_1 = 95;
+        public const int LOCATION_ID_KRT_2 = 96;
+        public const int LOCATION_ID_KRT_3 = 97;
+        public const int LOCATION_ID_KRT_4 = 98;
+        public const int LOCATION_ID_KRT_5 = 99;
+        public const int LOCATION_ID_KRT_6 = 100;
+        public const int LOCATION_ID_KRT_7 = 101;
+        public const int LOCATION_ID_KRT_8 = 102;
+        public const int LOCATION_ID_KRT_9 = 103;
+        public const int LOCATION_ID_KRT_10 = 104;
+        public const int LOCATION_ID_KRT_11 = 105;
+        public const int LOCATION_ID_KRT_12 = 106;
+        public const int LOCATION_ID_KRT_13 = 107;
+        public const int LOCATION_ID_KRT_14 = 108;
+        public const int LOCATION_ID_KRT_15 = 109;
+        public const int LOCATION_ID_KRT_16 = 110;
+        public const int LOCATION_ID_KRT_17 = 111;
+        public const int LOCATION_ID_KRT_18 = 112;
+        public const int LOCATION_ID_KRT_19 = 113;
+        public const int LOCATION_ID_KRT_20 = 114;
+        public const int LOCATION_ID_KRT_21 = 115;
+        public const int LOCATION_ID_KRT_22 = 116;
+        public const int LOCATION_ID_KRT_23 = 117;
+        public const int LOCATION_ID_KRT_24 = 118;
+        public const int LOCATION_ID_KRT_25 = 119;
+        public const int LOCATION_ID_KRT_26 = 120;
+        public const int LOCATION_ID_KRT_27 = 121;
+        public const int LOCATION_ID_KRT_28 = 122;
+        public const int LOCATION_ID_KRT_29 = 123;
+        public const int LOCATION_ID_KRT_30 = 124;
+        public const int LOCATION_ID_KRT_31 = 124;
+        public const int LOCATION_ID_KRT_32_TO_JUGNER_FOREST = 125;
 
+        #endregion
 
         #region World Logic
 
@@ -405,6 +444,10 @@ namespace Engine
             Monster taintedHound = new Monster(MONSTER_ID_TAINTED_HOUND, "Tainted Hound", 25, 6, 15, 0, false, 12, 12);
             taintedHound.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOLF_HIDE), 30, false));
 
+            Monster Ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
+            Ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
+
+
             //static list
             Monsters.Add(tunnelWorm);
             Monsters.Add(forestRabbit);
@@ -419,6 +462,7 @@ namespace Engine
             Monsters.Add(bomb08);
             Monsters.Add(enchantedBones);
             Monsters.Add(taintedHound);
+            Monsters.Add(Ghost);
 
         }
 
@@ -432,7 +476,11 @@ namespace Engine
             //002 Father and Son
             Quest fatherAndSon = new Quest(QUEST_002_FATHER_AND_SON, "Father and Son", "A gentleman named Ailbeche approaches you and asks if you have seen his son. He mentions he carries a fishing rod everywhere he goes - a gift from his Grandfather in Selbina.", 100, 0);
             fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BAMBOO_FISHING_ROD), 1));
-
+            //003 A Squire's Test
+            Quest aSquiresTest = new Quest(QUEST_003_A_SQUIRES_TEST, "A Squire's Test", "A knight named Balasiel is openly declaring that the first adventurer to bring him a Revival Tree Root will recieve his sword as thanks.", 330, 350);
+            aSquiresTest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 1));
+            aSquiresTest.RewardItem = ItemByID(ITEM_ID_SPATHA);
+            aSquiresTest.RequiredLevel = 4;
 
             // Sandoria Missions
             //M01 Smash The Orcish Scouts
@@ -443,17 +491,21 @@ namespace Engine
 
 
 
-            // Populate Quest List
+            // Quests To List
             Quests.Add(explosiveRequest);
             Quests.Add(fatherAndSon);
-            
+            Quests.Add(aSquiresTest);
+
+            // Missions To List
             Quests.Add(smashTheOrcishScouts);
 
         }
 
         private static void PopulateLocations()
         {
-            //Zone : San d'Oria
+            ////////////
+            //Sandoria//
+            ////////////
             Location mogHouse = new Location(LOCATION_ID_MOG_HOUSE_MH, "Mog House", "Your residence as an adventurer of San d'Oria." + Environment.NewLine + "A fire burns lightly in the corner. The room is furnished with a bed, a chest of drawers, a desk and a bookcase." + Environment.NewLine + "Your own Moogle flutters around cleaning and maintaining the fire for you...", 0);
             Location sandoriaStreets1 = new Location(LOCATION_ID_SANDORIA_STREETS_1, "Streets of San d'Oria - Outside Mog House", "The narrow avenue that links the residential area with San d'Oria's bustling Lion Square." + Environment.NewLine + "People come and go quickly through the cobbled archways.", 0);
             Location sandoriaStreets2 = new Location(LOCATION_ID_SANDORIA_STREETS_2, "Lion Square Eastern Steps", "The eastern steps peer across the Lion Square fountain to the Lion Springs tavern to the West. The avenue that leads to the residential area lays through cobbled archways to the North." + Environment.NewLine + "Children play around the fountain while others converse and gamble.", 0);
@@ -528,137 +580,178 @@ namespace Engine
             Location sandoriaTaumilaSaundries = new Location(LOCATION_ID_SANDORIA_TAUMILAS_SUNDRIES_21, "Taumila's Saundries", "Taumila was formerly an adventurer who served the San d'Orian King during the Crystal War. Now retired, he runs a store that provides key resources to adventurers." + Environment.NewLine + "Inside the shop, Taumila sits quietly reading a book awaiting customers." + Environment.NewLine + "To the North, an alley leads to the San d'Orian Knights training grounds." + Environment.NewLine + "The building connected on the West is the San d'Orian Tanners' Guild.", 0);
             Location sandoriaTannersGuild = new Location(LOCATION_ID_SANDORIA_TANNERS_GUILD_22, "Tanners' Guild", "The Tanners Guild is an ancient guild almost as old as San d'Oria itself. Since long before San d'oria was a bustling city of trade and fortune the area of Ronfaure was a prime location of hunting for animal resource that could be used by folk."  + Environment.NewLine + "Inside the ground floor is the guild merchant. Armour and Accessories line the counter which are available for purchase." + Environment.NewLine + "To the North is Pikeman's Way." + Environment.NewLine + "To the East is Taumila's Sundries.", 0);
             Location sandoriaStreets23 = new Location(LOCATION_ID_SANDORIA_STREETS_23, "Streets of San d'Oria - Knight's Grounds Training Grounds", "Here Knights of San d'Oria casually practice the finest swordsmanship in Vana'diel. Straw dummies accept blows and arrows without protest." + Environment.NewLine + "To the South a roofed alleyway leads back out onto the guild walk outside Taumila's Sundries" + Environment.NewLine + "To the West through another roofed alleyway lays a section of Pikeman's Way", 0);
+            sandoriaStreets23.QuestAvailableHere = QuestByID(QUEST_003_A_SQUIRES_TEST);
+
             Location sandoriaStreets24 = new Location(LOCATION_ID_SANDORIA_STREETS_24, "Streets of San d'Oria - Pikeman's Way", "Pikeman's Way claimed is name as being the the road that connects the San d'Orian Knights Training Grounds and Count Caffaule's Manor. Count Caffaule, while alive was a renown Knight of the San d'Orian Army, regularly found training if not allocated missions." + Environment.NewLine + "To the North a road curves from South to West towards Count Caffaule's Manor" + Environment.NewLine + "To the East through a roofed alley lays the San d'Orian Knights Training Grounds." + Environment.NewLine + "To the South is the Tanners' Guild.", 0);
             Location sandoriaStreets25 = new Location(LOCATION_ID_SANDORIA_STREETS_25, "Streets of San d'Oria - Pikeman's Way", "Here the road connects Pikeman's Way from the South to the East." + Environment.NewLine + "This area of San d'Oria is of higher class than the Eastern Residential Area and is often quieter. Flower beds and flags line the tall stone walls of the San d'Orian streets.", 0);
             Location sandoriaStreets26 = new Location(LOCATION_ID_SANDORIA_STREETS_26, "Streets of San d'Oria - Pikeman's Way", "Here the road connects Count Caffaule's Manor to the East with the rest of Pikeman's Way." + Environment.NewLine + "A stone wall seperates the front garden of the Manor from the rest of the area with large wooden doors as the entry way.", 0);
             Location sandoriaCountCaffaulesManor27 = new Location(LOCATION_ID_SANDORIA_COUNT_CAFFAULES_MANOR_27, "Count Caffaule's Manor", "The Manor is large, with a paired staircase leading up to the communial room of the Manor." + Environment.NewLine + "Iron chandeliers hang from the rafters and the floor is topped with a soft, red rug that follows the walkways.", 0);
             Location sandoriaPalace28 = new Location(LOCATION_ID_SANDORIA_PALACE_28, "San d'Oria Palace", "The doors are closed...", 0);
-
-            //Ronfaure
+            
+            ////////////
+            //Ronfaure//
+            ////////////
             Location ronfaureGhelsbaEntrance = new Location(LOCATION_ID_RONFAURE_1_ENTRANCE_TO_GHELSBA_OUTPOST_31, "West Ronfaure - Tunnel To Ghelsba Outpost", "<At the moment, you may travel no further...>", 0);
-            Location ronfaure2 = new Location(LOCATION_ID_RONFAURE_2_32, "West Ronfaure", "", 2);
+            Location ronfaure2 = new Location(LOCATION_ID_RONFAURE_2_32, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure2.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FODDER);
-            Location ronfaure3 = new Location(LOCATION_ID_RONFAURE_3_33, "West Ronfaure", "", 0);
-            Location ronfaure4 = new Location(LOCATION_ID_RONFAURE_4_34, "West Ronfaure", "", 1);
+            Location ronfaure3 = new Location(LOCATION_ID_RONFAURE_3_33, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure4 = new Location(LOCATION_ID_RONFAURE_4_34, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure4.MonsterLivingHere = MonsterByID(MONSTER_ID_TUNNEL_WORM);
-            Location ronfaure5 = new Location(LOCATION_ID_RONFAURE_5_35, "West Ronfaure", "", 1);
+            Location ronfaure5 = new Location(LOCATION_ID_RONFAURE_5_35, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure5.MonsterLivingHere = MonsterByID(MONSTER_ID_TUNNEL_WORM);
-            Location ronfaure6 = new Location(LOCATION_ID_RONFAURE_6_36, "West Ronfaure", "", 1);
+            Location ronfaure6 = new Location(LOCATION_ID_RONFAURE_6_36, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure6.MonsterLivingHere = MonsterByID(MONSTER_ID_TUNNEL_WORM);
-            Location ronfaure7 = new Location(LOCATION_ID_RONFAURE_7_37, "West Ronfaure", "", 1);
+            Location ronfaure7 = new Location(LOCATION_ID_RONFAURE_7_37, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure7.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure8 = new Location(LOCATION_ID_RONFAURE_8_38, "West Ronfaure", "", 2);
+            Location ronfaure8 = new Location(LOCATION_ID_RONFAURE_8_38, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure8.MonsterLivingHere = MonsterByID(MONSTER_ID_TUNNEL_WORM);
             Location ronfaureSandoriaWestgate = new Location(LOCATION_ID_RONFAURE_9_SANDORIA_WESTGATE_39, "West Ronfaure - San d'Oria West Gate", "", 0);
-            Location ronfaure10 = new Location(LOCATION_ID_RONFAURE_10_40, "West Ronfaure", "", 3);
+            Location ronfaure10 = new Location(LOCATION_ID_RONFAURE_10_40, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure10.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure11 = new Location(LOCATION_ID_RONFAURE_11_41, "West Ronfaure", "", 1);
+            Location ronfaure11 = new Location(LOCATION_ID_RONFAURE_11_41, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure11.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure12 = new Location(LOCATION_ID_RONFAURE_12_42, "West Ronfaure", "", 2);
+            Location ronfaure12 = new Location(LOCATION_ID_RONFAURE_12_42, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure12.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure13 = new Location(LOCATION_ID_RONFAURE_13_43, "West Ronfaure", "", 1);
+            Location ronfaure13 = new Location(LOCATION_ID_RONFAURE_13_43, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure13.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaureToEastRonfaureN = new Location(LOCATION_ID_RONFAURE_14_TO_EAST_RONFAURE_N_44, "West Ronfaure", "", 0);
-            Location ronfaure15 = new Location(LOCATION_ID_RONFAURE_15_45, "West Ronfaure", "", 3);
+            Location ronfaureToEastRonfaureN = new Location(LOCATION_ID_RONFAURE_14_TO_EAST_RONFAURE_N_44, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure15 = new Location(LOCATION_ID_RONFAURE_15_45, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure15.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_FUNGUAR);
-            Location ronfaure16 = new Location(LOCATION_ID_RONFAURE_16_46, "West Ronfaure", "", 1);
+            Location ronfaure16 = new Location(LOCATION_ID_RONFAURE_16_46, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure16.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_FUNGUAR);
-            Location ronfaure17 = new Location(LOCATION_ID_RONFAURE_17_47, "West Ronfaure", "", 0);
-            Location ronfaure18 = new Location(LOCATION_ID_RONFAURE_18_48, "West Ronfaure", "", 2);
+            Location ronfaure17 = new Location(LOCATION_ID_RONFAURE_17_47, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure18 = new Location(LOCATION_ID_RONFAURE_18_48, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure18.MonsterLivingHere = MonsterByID(MONSTER_ID_SCARAB_BEETLE);
-            Location ronfaure19 = new Location(LOCATION_ID_RONFAURE_19_49, "West Ronfaure", "", 1);
+            Location ronfaure19 = new Location(LOCATION_ID_RONFAURE_19_49, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure19.MonsterLivingHere = MonsterByID(MONSTER_ID_GOBLIN_WEAVER);
-            Location ronfaure20 = new Location(LOCATION_ID_RONFAURE_20_50, "West Ronfaure", "", 1);
+            Location ronfaure20 = new Location(LOCATION_ID_RONFAURE_20_50, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure20.MonsterLivingHere = MonsterByID(MONSTER_ID_GOBLIN_WEAVER);
-            Location ronfaure21 = new Location(LOCATION_ID_RONFAURE_21_51, "West Ronfaure", "", 1);
+            Location ronfaure21 = new Location(LOCATION_ID_RONFAURE_21_51, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure21.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure22 = new Location(LOCATION_ID_RONFAURE_22_52, "West Ronfaure", "", 1);
+            Location ronfaure22 = new Location(LOCATION_ID_RONFAURE_22_52, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure22.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_MESMERIZER);
-            Location ronfaureToEastRonfaureS = new Location(LOCATION_ID_RONFAURE_23_TO_EAST_RONFAURE_S_53, "West Ronfaure", "", 0);
-            Location ronfaure24 = new Location(LOCATION_ID_RONFAURE_24_54, "West Ronfaure", "", 2);
+            Location ronfaureToEastRonfaureS = new Location(LOCATION_ID_RONFAURE_23_TO_EAST_RONFAURE_S_53, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure24 = new Location(LOCATION_ID_RONFAURE_24_54, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure24.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_GRAPPLER);
-            Location ronfaure25 = new Location(LOCATION_ID_RONFAURE_25_55, "West Ronfaure", "", 1);
+            Location ronfaure25 = new Location(LOCATION_ID_RONFAURE_25_55, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure25.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FODDER);
-            Location ronfaure26 = new Location(LOCATION_ID_RONFAURE_26_56, "West Ronfaure", "", 2);
+            Location ronfaure26 = new Location(LOCATION_ID_RONFAURE_26_56, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure26.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_GRAPPLER);
-            Location ronfaure27 = new Location(LOCATION_ID_RONFAURE_27_57, "West Ronfaure", "", 3);
+            Location ronfaure27 = new Location(LOCATION_ID_RONFAURE_27_57, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure27.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_MESMERIZER);
-            Location ronfaure28 = new Location(LOCATION_ID_RONFAURE_28_58, "West Ronfaure", "", 2);
+            Location ronfaure28 = new Location(LOCATION_ID_RONFAURE_28_58, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure28.MonsterLivingHere = MonsterByID(MONSTER_ID_SCARAB_BEETLE);
-            Location ronfaure29 = new Location(LOCATION_ID_RONFAURE_29_59, "West Ronfaure", "", 1);
+            Location ronfaure29 = new Location(LOCATION_ID_RONFAURE_29_59, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure29.MonsterLivingHere = MonsterByID(MONSTER_ID_ENCHANTED_BONES);
-            Location ronfaure30 = new Location(LOCATION_ID_RONFAURE_30_60, "West Ronfaure", "", 2);
+            Location ronfaure30 = new Location(LOCATION_ID_RONFAURE_30_60, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure30.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT);
-            Location ronfaure31 = new Location(LOCATION_ID_RONFAURE_31_61, "West Ronfaure", "", 1);
+            Location ronfaure31 = new Location(LOCATION_ID_RONFAURE_31_61, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure31.MonsterLivingHere = MonsterByID(MONSTER_ID_GOBLIN_WEAVER);
-            Location ronfaure32 = new Location(LOCATION_ID_RONFAURE_32_62, "West Ronfaure", "", 1);
+            Location ronfaure32 = new Location(LOCATION_ID_RONFAURE_32_62, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure32.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT);
             Location ronfaureToLaTheinePlateau = new Location(LOCATION_ID_RONFAURE_33_TO_LA_THEINE_PLATEAU_63, "West Ronfaure - Trail to La Theine Plateau", "<At the moment, you may travel no further...>", 0);
 
             Location ronfaureToRanguemontPass = new Location(LOCATION_ID_RONFAURE_34_TO_RANGUEMONT_PASS_64, "East Ronfaure - Tunnel to Ranguemont Pass", "<At the moment, you may travel no further...>", 0);
-            Location ronfaure35 = new Location(LOCATION_ID_RONFAURE_35_65, "East Ronfaure", "", 1);
+            Location ronfaure35 = new Location(LOCATION_ID_RONFAURE_35_65, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure35.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure36 = new Location(LOCATION_ID_RONFAURE_36_66, "East Ronfaure", "", 2);
+            Location ronfaure36 = new Location(LOCATION_ID_RONFAURE_36_66, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure36.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure37 = new Location(LOCATION_ID_RONFAURE_37_67, "East Ronfaure", "", 2);
+            Location ronfaure37 = new Location(LOCATION_ID_RONFAURE_37_67, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure37.MonsterLivingHere = MonsterByID(MONSTER_ID_TUNNEL_WORM);
-            Location ronfaure38 = new Location(LOCATION_ID_RONFAURE_38_68, "East Ronfaure", "", 1);
+            Location ronfaure38 = new Location(LOCATION_ID_RONFAURE_38_68, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure38.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure39 = new Location(LOCATION_ID_RONFAURE_39_69, "East Ronfaure", "", 1);
+            Location ronfaure39 = new Location(LOCATION_ID_RONFAURE_39_69, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             Location ronfaureSandoriaEastgate = new Location(LOCATION_ID_RONFAURE_40_SANDORIA_EASTGATE_70, "East Ronfaure - San d'oria East Gate", "", 0);
-            Location ronfaure41 = new Location(LOCATION_ID_RONFAURE_41_71, "East Ronfaure", "", 2);
+            Location ronfaure41 = new Location(LOCATION_ID_RONFAURE_41_71, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure41.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure42 = new Location(LOCATION_ID_RONFAURE_42_72, "East Ronfaure", "", 1);
+            Location ronfaure42 = new Location(LOCATION_ID_RONFAURE_42_72, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure42.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_MESMERIZER);
-            Location ronfaure43 = new Location(LOCATION_ID_RONFAURE_43_73, "East Ronfaure", "", 4);
+            Location ronfaure43 = new Location(LOCATION_ID_RONFAURE_43_73, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 4);
             ronfaure43.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
-            Location ronfaureToWestRonfaureN = new Location(LOCATION_ID_RONFAURE_44_TO_WEST_RONFAURE_N_74, "East Ronfaure", "", 0);
-            Location ronfaure45 = new Location(LOCATION_ID_RONFAURE_45_75, "East Ronfaure", "", 2);
+            Location ronfaureToWestRonfaureN = new Location(LOCATION_ID_RONFAURE_44_TO_WEST_RONFAURE_N_74, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure45 = new Location(LOCATION_ID_RONFAURE_45_75, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure45.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure46 = new Location(LOCATION_ID_RONFAURE_46_76, "East Ronfaure", "", 2);
+            Location ronfaure46 = new Location(LOCATION_ID_RONFAURE_46_76, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure46.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
-            Location ronfaure47 = new Location(LOCATION_ID_RONFAURE_47_77, "East Ronfaure", "", 2);
+            Location ronfaure47 = new Location(LOCATION_ID_RONFAURE_47_77, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure47.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
-            Location ronfaure48 = new Location(LOCATION_ID_RONFAURE_48_78, "East Ronfaure", "", 3);
+            Location ronfaure48 = new Location(LOCATION_ID_RONFAURE_48_78, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure48.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
-            Location ronfaure49 = new Location(LOCATION_ID_RONFAURE_49_79, "East Ronfaure", "", 3);
+            Location ronfaure49 = new Location(LOCATION_ID_RONFAURE_49_79, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure49.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
-            Location ronfaure50 = new Location(LOCATION_ID_RONFAURE_50_80, "East Ronfaure", "", 2);
+            Location ronfaure50 = new Location(LOCATION_ID_RONFAURE_50_80, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure50.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FODDER);
-            Location ronfaure51 = new Location(LOCATION_ID_RONFAURE_51_81, "East Ronfaure", "", 2);
+            Location ronfaure51 = new Location(LOCATION_ID_RONFAURE_51_81, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure51.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
-            Location ronfaureToWestRonfaureS = new Location(LOCATION_ID_RONFAURE_52_TO_WEST_RONFAURE_S_82, "East Ronfaure", "", 0);
-            Location ronfaure53 = new Location(LOCATION_ID_RONFAURE_53_83, "East Ronfaure", "", 2);
+            Location ronfaureToWestRonfaureS = new Location(LOCATION_ID_RONFAURE_52_TO_WEST_RONFAURE_S_82, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
+            Location ronfaure53 = new Location(LOCATION_ID_RONFAURE_53_83, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure53.MonsterLivingHere = MonsterByID(MONSTER_ID_GOBLIN_WEAVER);
-            Location ronfaure54 = new Location(LOCATION_ID_RONFAURE_54_84, "East Ronfaure", "", 2);
+            Location ronfaure54 = new Location(LOCATION_ID_RONFAURE_54_84, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure54.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT);
-            Location ronfaure55 = new Location(LOCATION_ID_RONFAURE_55_85, "East Ronfaure", "", 2);
+            Location ronfaure55 = new Location(LOCATION_ID_RONFAURE_55_85, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure55.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
-            Location ronfaure56 = new Location(LOCATION_ID_RONFAURE_56_86, "East Ronfaure", "", 2);
+            Location ronfaure56 = new Location(LOCATION_ID_RONFAURE_56_86, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure56.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_GRAPPLER);
-            Location ronfaure57 = new Location(LOCATION_ID_RONFAURE_57_87, "East Ronfaure", "", 2);
+            Location ronfaure57 = new Location(LOCATION_ID_RONFAURE_57_87, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure57.MonsterLivingHere = MonsterByID(MONSTER_ID_SCARAB_BEETLE);
-            Location ronfaure58 = new Location(LOCATION_ID_RONFAURE_58_88, "East Ronfaure", "", 3);
+            Location ronfaure58 = new Location(LOCATION_ID_RONFAURE_58_88, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure58.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
-            Location ronfaure59 = new Location(LOCATION_ID_RONFAURE_59_89, "East Ronfaure", "", 5);
+            Location ronfaure59 = new Location(LOCATION_ID_RONFAURE_59_89, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 5);
             ronfaure59.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT);
-            Location ronfaure60 = new Location(LOCATION_ID_RONFAURE_60_90, "East Ronfaure", "", 5);
-            ronfaure60.MonsterLivingHere = MonsterByID(MONSTER_ID_ENCHANTED_BONES);
-            Location ronfaure61 = new Location(LOCATION_ID_RONFAURE_61_91, "East Ronfaure", "", 5);
+            Location ronfaure60 = new Location(LOCATION_ID_RONFAURE_60_90, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 5);
+            ronfaure60.MonsterLivingHere = MonsterByID(MONSTER_ID_GHOST);
+            Location ronfaure61 = new Location(LOCATION_ID_RONFAURE_61_91, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 5);
             ronfaure61.MonsterLivingHere = MonsterByID(MONSTER_ID_ENCHANTED_BONES);
-            Location ronfaure62 = new Location(LOCATION_ID_RONFAURE_62_92, "East Ronfaure", "", 4);
+            Location ronfaure62 = new Location(LOCATION_ID_RONFAURE_62_92, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 4);
             ronfaure62.MonsterLivingHere = MonsterByID(MONSTER_ID_TAINTED_HOUND);
-            Location ronfaure63 = new Location(LOCATION_ID_RONFAURE_63_93, "East Ronfaure", "", 1);
+            Location ronfaure63 = new Location(LOCATION_ID_RONFAURE_63_93, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure63.MonsterLivingHere = MonsterByID(MONSTER_ID_BOMB_08);
             Location ronfaureEntranceToKingRanperresTomb = new Location(LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94, "East Ronfaure - Entrance to King Ranperres Tomb", "<At the moment, you may travel no further...>", 0);
 
+            ////////////////////////
+            //King Ranperre's Tomb//
+            ////////////////////////
+            Location krt1 = new Location(LOCATION_ID_KRT_1_TO_EAST_RONFAURE_1, "King Ranperre's Tomb Entrance", "The high stone walls have an open roof and lead into a maze like pattern of walled in undergrowth.\n To the North is the dense forest of East Ronfaure", 0);
+            Location krt2 = new Location(LOCATION_ID_KRT_2, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt3 = new Location(LOCATION_ID_KRT_3, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt4 = new Location(LOCATION_ID_KRT_4, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt5 = new Location(LOCATION_ID_KRT_5, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt6 = new Location(LOCATION_ID_KRT_6, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt7 = new Location(LOCATION_ID_KRT_7, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt8 = new Location(LOCATION_ID_KRT_8, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt9 = new Location(LOCATION_ID_KRT_9, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt10 = new Location(LOCATION_ID_KRT_10, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt11 = new Location(LOCATION_ID_KRT_11, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt12 = new Location(LOCATION_ID_KRT_12, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt13 = new Location(LOCATION_ID_KRT_13, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt14 = new Location(LOCATION_ID_KRT_14, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt15 = new Location(LOCATION_ID_KRT_15, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt16 = new Location(LOCATION_ID_KRT_16, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt17 = new Location(LOCATION_ID_KRT_17, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt18 = new Location(LOCATION_ID_KRT_18, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt19 = new Location(LOCATION_ID_KRT_19, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt20 = new Location(LOCATION_ID_KRT_20, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt21 = new Location(LOCATION_ID_KRT_21, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt22 = new Location(LOCATION_ID_KRT_22, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt23 = new Location(LOCATION_ID_KRT_23, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt24 = new Location(LOCATION_ID_KRT_24, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt25 = new Location(LOCATION_ID_KRT_25, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt26 = new Location(LOCATION_ID_KRT_26, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt27 = new Location(LOCATION_ID_KRT_27, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt28 = new Location(LOCATION_ID_KRT_28, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt29 = new Location(LOCATION_ID_KRT_29, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt30 = new Location(LOCATION_ID_KRT_30, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt31 = new Location(LOCATION_ID_KRT_31, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt32 = new Location(LOCATION_ID_KRT_32_TO_JUGNER_FOREST, "King Ranperre's Tomb Hidden Exit", "Dark, damp cave walls surround you. A light shine bright to the East." + Environment.NewLine + "A possible way out..?", 1);
 
 
-           
-            //
-            //Location Connections
-            //
-            //Zone : San d'Oria
+            ////////////////////////
+            //Location Connections//
+            ////////////////////////
+
+            ////////////
+            //Sandoria//
+            ////////////
             mogHouse.LocationToSouth = sandoriaStreets1;
 
             sandoriaStreets1.LocationToNorth = mogHouse;
@@ -749,7 +842,9 @@ namespace Engine
 
             sandoriaPalace28.LocationToSouth = sandoriaStreets15;
 
-            //Zone: Ronfaure
+            ////////////
+            //Ronfaure//
+            ////////////
             ronfaureGhelsbaEntrance.LocationToEast = ronfaure2;
 
             ronfaure2.LocationToWest = ronfaureGhelsbaEntrance;
@@ -989,11 +1084,116 @@ namespace Engine
             ronfaure63.LocationToNorth = ronfaure59;
 
             ronfaureEntranceToKingRanperresTomb.LocationToNorth = ronfaure61;
+            ronfaureEntranceToKingRanperresTomb.LocationToSouth = krt1;
 
-            
+            ////////////////////////
+            //King Ranperre's Tomb//
+            ////////////////////////
+            krt1.LocationToNorth = ronfaureEntranceToKingRanperresTomb;
+            krt1.LocationToSouth = krt2;
+
+            krt2.LocationToNorth = krt1;
+            krt2.LocationToSouth = krt3;
+
+            krt3.LocationToWest = krt4;
+            krt3.LocationToNorth = krt2;
+            krt3.LocationToSouth = krt5;
+
+            krt4.LocationToEast = krt3;
+
+            krt5.LocationToNorth = krt3;
+            krt5.LocationToWest = krt6;
+
+            krt6.LocationToEast = krt5;
+            krt6.LocationToWest = krt7;
+
+            krt7.LocationToEast = krt6;
+            krt7.LocationToSouth = krt8;
+
+            krt8.LocationToNorth = krt7;
+            krt8.LocationToEast = krt9;
+
+            krt9.LocationToEast = krt10;
+            krt9.LocationToWest = krt8;
+
+            krt10.LocationToWest = krt9;
+            krt10.LocationToSouth = krt11;
+
+            krt11.LocationToNorth = krt10;
+            krt11.LocationToSouth = krt12;
+
+            krt12.LocationToNorth = krt11;
+            krt12.LocationToEast = krt15;
+            krt12.LocationToSouth = krt13;
+
+            krt13.LocationToNorth = krt12;
+            krt13.LocationToEast = krt14;
+
+            krt14.LocationToEast = krt17;
+            krt14.LocationToNorth = krt15;
+            krt14.LocationToWest = krt13;
+
+            krt15.LocationToWest = krt12;
+            krt15.LocationToSouth = krt14;
+            krt15.LocationToEast = krt16;
+
+            krt16.LocationToWest = krt15;
+            krt16.LocationToNorth = krt18;
+            krt16.LocationToSouth = krt17;
+
+            krt17.LocationToNorth = krt16;
+            krt17.LocationToWest = krt14;
+
+            krt18.LocationToSouth = krt16;
+            krt18.LocationToNorth = krt19;
+
+            krt19.LocationToSouth = krt18;
+            krt19.LocationToEast = krt20;
+
+            krt20.LocationToWest = krt19;
+            krt20.LocationToEast = krt21;
+
+            krt21.LocationToWest = krt20;
+            krt21.LocationToNorth = krt22;
+
+            krt22.LocationToSouth = krt21;
+            krt22.LocationToNorth = krt23;
+
+            krt23.LocationToSouth = krt22;
+            krt23.LocationToWest = krt24;
+
+            krt24.LocationToEast = krt23;
+            krt24.LocationToWest = krt25;
+
+            krt25.LocationToEast = krt24;
+            krt25.LocationToWest = krt28;
+            krt25.LocationToNorth = krt29;
+
+            krt26.LocationToWest = krt27;
+
+            krt27.LocationToEast = krt26;
+            krt27.LocationToNorth = krt28;
+
+            krt28.LocationToSouth = krt27;
+            krt28.LocationToEast = krt25;
+
+            krt29.LocationToSouth = krt25;
+            krt29.LocationToEast = krt31;
+            krt29.LocationToNorth = krt30;
+
+            krt30.LocationToSouth = krt29;
+
+            krt31.LocationToEast = krt32;
+            krt31.LocationToWest = krt29;
+
+            krt32.LocationToWest = krt31;
+            //krt32.LocationToEast = Jugner Forest...
 
 
-            //Populate Locations List
+
+            ///////////////////////////
+            //Populate Locations List//
+            ///////////////////////////
             //Zone : San d'Oria
             Locations.Add(mogHouse);
             Locations.Add(sandoriaStreets1);
@@ -1091,6 +1291,40 @@ namespace Engine
             Locations.Add(ronfaure62);
             Locations.Add(ronfaure63);
             Locations.Add(ronfaureEntranceToKingRanperresTomb);
+
+            //Zone: King Ranperre's Tomb
+            Locations.Add(krt1);
+            Locations.Add(krt2);
+            Locations.Add(krt3);
+            Locations.Add(krt4);
+            Locations.Add(krt5);
+            Locations.Add(krt6);
+            Locations.Add(krt7);
+            Locations.Add(krt8);
+            Locations.Add(krt9);
+            Locations.Add(krt10);
+            Locations.Add(krt11);
+            Locations.Add(krt12);
+            Locations.Add(krt13);
+            Locations.Add(krt14);
+            Locations.Add(krt15);
+            Locations.Add(krt16);
+            Locations.Add(krt17);
+            Locations.Add(krt18);
+            Locations.Add(krt19);
+            Locations.Add(krt20);
+            Locations.Add(krt21);
+            Locations.Add(krt22);
+            Locations.Add(krt23);
+            Locations.Add(krt24);
+            Locations.Add(krt25);
+            Locations.Add(krt26);
+            Locations.Add(krt27);
+            Locations.Add(krt28);
+            Locations.Add(krt29);
+            Locations.Add(krt30);
+            Locations.Add(krt31);
+            Locations.Add(krt32);
 
         }
         #endregion

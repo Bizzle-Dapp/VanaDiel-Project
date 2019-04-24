@@ -60,6 +60,7 @@
             this.cboAccessory = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblRank = new System.Windows.Forms.Label();
+            this.gbPlayerStats = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -412,6 +413,16 @@
             this.lblRank.Size = new System.Drawing.Size(0, 13);
             this.lblRank.TabIndex = 29;
             // 
+            // gbPlayerStats
+            // 
+            this.gbPlayerStats.BackColor = System.Drawing.Color.Transparent;
+            this.gbPlayerStats.Location = new System.Drawing.Point(16, 3);
+            this.gbPlayerStats.Name = "gbPlayerStats";
+            this.gbPlayerStats.Size = new System.Drawing.Size(312, 121);
+            this.gbPlayerStats.TabIndex = 30;
+            this.gbPlayerStats.TabStop = false;
+            this.gbPlayerStats.Text = "Statistics:";
+            // 
             // Vanadiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,6 +463,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.gbPlayerStats);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -501,6 +513,7 @@
         private System.Windows.Forms.ComboBox cboAccessory;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblRank;
+        private System.Windows.Forms.GroupBox gbPlayerStats;
     }
 }
 
