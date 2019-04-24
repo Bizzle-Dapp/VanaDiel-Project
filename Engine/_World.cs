@@ -244,6 +244,40 @@ namespace Engine
         public const int LOCATION_ID_RONFAURE_63_93 = 93;
         public const int LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94 = 94;
 
+        // Zone: King Ranperre's Tomb
+        public const int LOCATION_ID_KRT_1_TO_EAST_RONFAURE_1 = 95;
+        public const int LOCATION_ID_KRT_2 = 96;
+        public const int LOCATION_ID_KRT_3 = 97;
+        public const int LOCATION_ID_KRT_4 = 98;
+        public const int LOCATION_ID_KRT_5 = 99;
+        public const int LOCATION_ID_KRT_6 = 100;
+        public const int LOCATION_ID_KRT_7 = 101;
+        public const int LOCATION_ID_KRT_8 = 102;
+        public const int LOCATION_ID_KRT_9 = 103;
+        public const int LOCATION_ID_KRT_10 = 104;
+        public const int LOCATION_ID_KRT_11 = 105;
+        public const int LOCATION_ID_KRT_12 = 106;
+        public const int LOCATION_ID_KRT_13 = 107;
+        public const int LOCATION_ID_KRT_14 = 108;
+        public const int LOCATION_ID_KRT_15 = 109;
+        public const int LOCATION_ID_KRT_16 = 110;
+        public const int LOCATION_ID_KRT_17 = 111;
+        public const int LOCATION_ID_KRT_18 = 112;
+        public const int LOCATION_ID_KRT_19 = 113;
+        public const int LOCATION_ID_KRT_20 = 114;
+        public const int LOCATION_ID_KRT_21 = 115;
+        public const int LOCATION_ID_KRT_22 = 116;
+        public const int LOCATION_ID_KRT_23 = 117;
+        public const int LOCATION_ID_KRT_24 = 118;
+        public const int LOCATION_ID_KRT_25 = 119;
+        public const int LOCATION_ID_KRT_26 = 120;
+        public const int LOCATION_ID_KRT_27 = 121;
+        public const int LOCATION_ID_KRT_28 = 122;
+        public const int LOCATION_ID_KRT_29 = 123;
+        public const int LOCATION_ID_KRT_30 = 124;
+        public const int LOCATION_ID_KRT_31 = 124;
+        public const int LOCATION_ID_KRT_32_TO_JUGNER_FOREST = 125;
+
         #endregion
 
         #region World Logic
@@ -469,7 +503,9 @@ namespace Engine
 
         private static void PopulateLocations()
         {
-            //Zone : San d'Oria
+            ////////////
+            //Sandoria//
+            ////////////
             Location mogHouse = new Location(LOCATION_ID_MOG_HOUSE_MH, "Mog House", "Your residence as an adventurer of San d'Oria." + Environment.NewLine + "A fire burns lightly in the corner. The room is furnished with a bed, a chest of drawers, a desk and a bookcase." + Environment.NewLine + "Your own Moogle flutters around cleaning and maintaining the fire for you...", 0);
             Location sandoriaStreets1 = new Location(LOCATION_ID_SANDORIA_STREETS_1, "Streets of San d'Oria - Outside Mog House", "The narrow avenue that links the residential area with San d'Oria's bustling Lion Square." + Environment.NewLine + "People come and go quickly through the cobbled archways.", 0);
             Location sandoriaStreets2 = new Location(LOCATION_ID_SANDORIA_STREETS_2, "Lion Square Eastern Steps", "The eastern steps peer across the Lion Square fountain to the Lion Springs tavern to the West. The avenue that leads to the residential area lays through cobbled archways to the North." + Environment.NewLine + "Children play around the fountain while others converse and gamble.", 0);
@@ -551,8 +587,10 @@ namespace Engine
             Location sandoriaStreets26 = new Location(LOCATION_ID_SANDORIA_STREETS_26, "Streets of San d'Oria - Pikeman's Way", "Here the road connects Count Caffaule's Manor to the East with the rest of Pikeman's Way." + Environment.NewLine + "A stone wall seperates the front garden of the Manor from the rest of the area with large wooden doors as the entry way.", 0);
             Location sandoriaCountCaffaulesManor27 = new Location(LOCATION_ID_SANDORIA_COUNT_CAFFAULES_MANOR_27, "Count Caffaule's Manor", "The Manor is large, with a paired staircase leading up to the communial room of the Manor." + Environment.NewLine + "Iron chandeliers hang from the rafters and the floor is topped with a soft, red rug that follows the walkways.", 0);
             Location sandoriaPalace28 = new Location(LOCATION_ID_SANDORIA_PALACE_28, "San d'Oria Palace", "The doors are closed...", 0);
-
-            //Ronfaure
+            
+            ////////////
+            //Ronfaure//
+            ////////////
             Location ronfaureGhelsbaEntrance = new Location(LOCATION_ID_RONFAURE_1_ENTRANCE_TO_GHELSBA_OUTPOST_31, "West Ronfaure - Tunnel To Ghelsba Outpost", "<At the moment, you may travel no further...>", 0);
             Location ronfaure2 = new Location(LOCATION_ID_RONFAURE_2_32, "West Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure2.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FODDER);
@@ -670,13 +708,52 @@ namespace Engine
             ronfaure63.MonsterLivingHere = MonsterByID(MONSTER_ID_BOMB_08);
             Location ronfaureEntranceToKingRanperresTomb = new Location(LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94, "East Ronfaure - Entrance to King Ranperres Tomb", "<At the moment, you may travel no further...>", 0);
 
+            ////////////////////////
+            //King Ranperre's Tomb//
+            ////////////////////////
+            Location krt1 = new Location(LOCATION_ID_KRT_1_TO_EAST_RONFAURE_1, "King Ranperre's Tomb Entrance", "The high stone walls have an open roof and lead into a maze like pattern of walled in undergrowth.\n To the North is the dense forest of East Ronfaure", 0);
+            Location krt2 = new Location(LOCATION_ID_KRT_2, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt3 = new Location(LOCATION_ID_KRT_3, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt4 = new Location(LOCATION_ID_KRT_4, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt5 = new Location(LOCATION_ID_KRT_5, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            Location krt6 = new Location(LOCATION_ID_KRT_6, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt7 = new Location(LOCATION_ID_KRT_7, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt8 = new Location(LOCATION_ID_KRT_8, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt9 = new Location(LOCATION_ID_KRT_9, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt10 = new Location(LOCATION_ID_KRT_10, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt11 = new Location(LOCATION_ID_KRT_11, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt12 = new Location(LOCATION_ID_KRT_12, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt13 = new Location(LOCATION_ID_KRT_13, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt14 = new Location(LOCATION_ID_KRT_14, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt15 = new Location(LOCATION_ID_KRT_15, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt16 = new Location(LOCATION_ID_KRT_16, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt17 = new Location(LOCATION_ID_KRT_17, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt18 = new Location(LOCATION_ID_KRT_18, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt19 = new Location(LOCATION_ID_KRT_19, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt20 = new Location(LOCATION_ID_KRT_20, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt21 = new Location(LOCATION_ID_KRT_21, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt22 = new Location(LOCATION_ID_KRT_22, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt23 = new Location(LOCATION_ID_KRT_23, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt24 = new Location(LOCATION_ID_KRT_24, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt25 = new Location(LOCATION_ID_KRT_25, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt26 = new Location(LOCATION_ID_KRT_26, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt27 = new Location(LOCATION_ID_KRT_27, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt28 = new Location(LOCATION_ID_KRT_28, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt29 = new Location(LOCATION_ID_KRT_29, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt30 = new Location(LOCATION_ID_KRT_30, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt31 = new Location(LOCATION_ID_KRT_31, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            Location krt32 = new Location(LOCATION_ID_KRT_32_TO_JUGNER_FOREST, "King Ranperre's Tomb Hidden Exit", "Dark, damp cave walls surround you. A light shine bright to the East." + Environment.NewLine + "A possible way out..?", 1);
 
 
-           
-            //
-            //Location Connections
-            //
-            //Zone : San d'Oria
+
+
+            ////////////////////////
+            //Location Connections//
+            ////////////////////////
+
+            ////////////
+            //Sandoria//
+            ////////////
             mogHouse.LocationToSouth = sandoriaStreets1;
 
             sandoriaStreets1.LocationToNorth = mogHouse;
@@ -767,7 +844,9 @@ namespace Engine
 
             sandoriaPalace28.LocationToSouth = sandoriaStreets15;
 
-            //Zone: Ronfaure
+            ////////////
+            //Ronfaure//
+            ////////////
             ronfaureGhelsbaEntrance.LocationToEast = ronfaure2;
 
             ronfaure2.LocationToWest = ronfaureGhelsbaEntrance;
@@ -1008,10 +1087,15 @@ namespace Engine
 
             ronfaureEntranceToKingRanperresTomb.LocationToNorth = ronfaure61;
 
-            
+            ////////////////////////
+            //King Ranperre's Tomb//
+            ////////////////////////
 
 
-            //Populate Locations List
+
+            ///////////////////////////
+            //Populate Locations List//
+            ///////////////////////////
             //Zone : San d'Oria
             Locations.Add(mogHouse);
             Locations.Add(sandoriaStreets1);
@@ -1109,6 +1193,9 @@ namespace Engine
             Locations.Add(ronfaure62);
             Locations.Add(ronfaure63);
             Locations.Add(ronfaureEntranceToKingRanperresTomb);
+
+            //Zone: King Ranperre's Tomb
+
 
         }
         #endregion
