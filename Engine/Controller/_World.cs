@@ -7,13 +7,6 @@ using System.Threading.Tasks;
 
 namespace Engine.Controller
 {
-    
-
-    
-
-    
-
-
     public static partial class _World
     {
         //Game list initialisation
