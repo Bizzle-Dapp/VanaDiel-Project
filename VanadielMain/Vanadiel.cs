@@ -126,6 +126,7 @@ namespace Vanadiel
 
             dgvQuests.RowHeadersVisible = false;
             dgvQuests.AutoGenerateColumns = false;
+            dgvQuests.CellContentClick += DgvQuests_CellContentClick;
 
             dgvQuests.DataSource = _player.Quests;
 
@@ -146,6 +147,19 @@ namespace Vanadiel
             UpdatePlayerLevelText();
 
         }
+
+        private void DgvQuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                System.Windows.Forms.MessageBox.Show(e.ToString());
+            }
+            catch
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 
         private void UpdatePlayerLevelText()
         {
