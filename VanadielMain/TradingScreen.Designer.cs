@@ -63,7 +63,7 @@
             // 
             this.dgvMyItems.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgvMyItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMyItems.Location = new System.Drawing.Point(326, 26);
+            this.dgvMyItems.Location = new System.Drawing.Point(28, 26);
             this.dgvMyItems.Name = "dgvMyItems";
             this.dgvMyItems.Size = new System.Drawing.Size(274, 248);
             this.dgvMyItems.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.dgvVendorItems.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dgvVendorItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendorItems.Location = new System.Drawing.Point(28, 26);
+            this.dgvVendorItems.Location = new System.Drawing.Point(326, 26);
             this.dgvVendorItems.Name = "dgvVendorItems";
             this.dgvVendorItems.Size = new System.Drawing.Size(274, 248);
             this.dgvVendorItems.TabIndex = 3;
@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(639, 370);
+            this.ClientSize = new System.Drawing.Size(635, 366);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
