@@ -61,7 +61,7 @@
             // 
             // dgvMyItems
             // 
-            this.dgvMyItems.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dgvMyItems.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvMyItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMyItems.Location = new System.Drawing.Point(28, 26);
             this.dgvMyItems.Name = "dgvMyItems";
@@ -70,7 +70,7 @@
             // 
             // dgvVendorItems
             // 
-            this.dgvVendorItems.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dgvVendorItems.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvVendorItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVendorItems.Location = new System.Drawing.Point(326, 26);
             this.dgvVendorItems.Name = "dgvVendorItems";
