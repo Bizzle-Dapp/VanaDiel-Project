@@ -647,7 +647,7 @@ namespace Vanadiel
             }
            else
             {
-                rtbMessages.Text += "You miss the " + _currentMonster.Name + " with your " + currentWeapon.Name + "!" + Environment.NewLine + Environment.NewLine;
+                rtbMessages.Text += Environment.NewLine + "You miss the " + _currentMonster.Name + " with your " + currentWeapon.Name + "!" + Environment.NewLine + Environment.NewLine;
             }
 
             //Check if monster is dead
