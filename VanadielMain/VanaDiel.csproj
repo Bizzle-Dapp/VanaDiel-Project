@@ -100,9 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="xi_killer_moogle_GdB_icon.ico" />
-    <None Include="images\ButtonBack.png" />
-    <None Include="images\Background2.png" />
-    <None Include="images\TradeBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Timers;
+using Engine.Controller;
 
 namespace Vanadiel
 {
@@ -125,6 +126,7 @@ namespace Vanadiel
 
             dgvQuests.RowHeadersVisible = false;
             dgvQuests.AutoGenerateColumns = false;
+            dgvQuests.CellMouseClick += DgvQuests_CellMouseClick;
 
             dgvQuests.DataSource = _player.Quests;
 
@@ -145,6 +147,8 @@ namespace Vanadiel
             UpdatePlayerLevelText();
 
         }
+
+        
 
         private void UpdatePlayerLevelText()
         {
@@ -646,7 +650,7 @@ namespace Vanadiel
             }
            else
             {
-                rtbMessages.Text += "You miss the " + _currentMonster.Name + " with your " + currentWeapon.Name + "!" + Environment.NewLine + Environment.NewLine;
+                rtbMessages.Text += Environment.NewLine + "You miss the " + _currentMonster.Name + " with your " + currentWeapon.Name + "!" + Environment.NewLine + Environment.NewLine;
             }
 
             //Check if monster is dead
@@ -957,6 +961,31 @@ namespace Vanadiel
             rtbMessages.ScrollToCaret();
         }
 
+        private void DgvQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Quest selectedQuest = null;
+            List<Quest> questArchive = _World.Quests;
+            try
+            {
+                if (dgvQuests.CurrentCell != null)
+                {
+                    dgvQuests.CurrentCell = dgvQuests.Rows[e.RowIndex].Cells[0];
+                    foreach (Quest quest in questArchive)
+                    {
+                        if (quest.Name == dgvQuests.CurrentCell.Value.ToString())
+                        {
+                            selectedQuest = quest;
+                        }
+                    }
+
+                    System.Windows.Forms.MessageBox.Show(selectedQuest.Description, selectedQuest.Name, MessageBoxButtons.OK);
+                }
+            }
+            catch
+            {
+
+            }
+        }
 
         //
         // Timer Configurations

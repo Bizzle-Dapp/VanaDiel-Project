@@ -1,146 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Engine;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+
+namespace Engine.Controller
 {
-
-
-    public static class _World
+    public static partial class _World //locations
     {
-        //Game list initialisation
-        public static readonly List<Item> Items = new List<Item>();
-        public static readonly List<Monster> Monsters = new List<Monster>();
-        public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
-
-        #region Items
-        //Item Grouping
-        //Spare IDs (0-300)
-        public const int UNSELLABLE_ITEM = 0;
-        
-
-        //Weapon IDs (500-790)
-        //Swords
-        public const int ITEM_ID_ONION_SWORD = 500;
-        public const int ITEM_ID_BRONZE_SWORD = 510;
-        public const int ITEM_ID_SAPARA = 520;
-        public const int ITEM_ID_XIPHOS = 530;
-        public const int ITEM_ID_SPATHA = 540;
-        public const int ITEM_ID_ROYAL_ARCHERS_SWORD = 550;
-        public const int ITEM_ID_BILBO = 560;
-        public const int ITEM_ID_KINGDOM_SWORD = 570;
-        public const int ITEM_ID_SANDORIAN_SIGNET_SWORD = 580;
-        public const int ITEM_ID_MYTHRIL_SWORD = 590;
-        public const int ITEM_ID_ANCIENT_SWORD = 600;
-        public const int ITEM_ID_SAVE_THE_QUEEN = 610;
-
-        //Great Swords
-        public const int ITEM_ID_RUSTY_GREATSWORD = 620;
-        public const int ITEM_ID_CLAYMORE = 630;
-        public const int ITEM_ID_VULCAN_CLAYMORE = 640;
-        public const int ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE = 650;
-        public const int ITEM_ID_COBRA_UNIT_CLAYMORE = 660;
-        public const int ITEM_ID_DARKSTEEL_CLAYMORE = 670;
-        public const int ITEM_ID_MYTHRIL_CLAYMORE = 680;
-        public const int ITEM_ID_FLAME_CLAYMORE = 690;
-        public const int ITEM_ID_RAGNAROK = 700;
-
-        //Bows
-        public const int ITEM_ID_SHORTBOW = 710;
-        public const int ITEM_ID_FREESWORD_BOW = 720;
-        public const int ITEM_ID_POWER_BOW = 730;
-        public const int ITEM_ID_PLATOON_BOW = 740;
-        public const int ITEM_ID_KINGDOM_BOW = 750;
-        public const int ITEM_ID_GREAT_BOW = 760;
-        public const int ITEM_ID_BATTLE_BOW = 770;
-        public const int ITEM_ID_LIGHTNING_BOW = 780;
-
-
-        //Potion IDs (900-990)
-        public const int ITEM_ID_POTION = 900;
-        public const int ITEM_ID_HI_POTION = 910;
-        public const int ITEM_ID_HI_POTION_PLUS = 920;
-        public const int ITEM_ID_MEGA_POTION = 930;
-        public const int ITEM_ID_MEGA_POTION_PLUS = 940;
-        public const int ITEM_ID_X_POTION = 950;
-
-        //Key Item IDs (1000-1490)
-        public const int ITEM_ID_BAMBOO_FISHING_ROD = 1000;
-
-        public const int ITEM_ID_BLACKDRAGONHEAD = 1099;
-
-        //Armour IDs (1500-1590)
-        public const int ITEM_ID_COMMON_CLOTHES = 1500;
-        public const int ITEM_ID_LEATHER_ARMOUR = 1510;
-        public const int ITEM_ID_SCALE_MAIL = 1520;
-        public const int ITEM_ID_CHAIN_DOUBLET = 1530;
-
-        //Accessory IDs (1600-1690)
-        public const int ITEM_ID_SANDORIAN_RING = 1600;
-
-        //Item ID's (1700+)
-        public const int ITEM_ID_RABBIT_MEAT = 1700;
-        public const int ITEM_ID_BEASTCOIN = 1701;
-        public const int ITEM_ID_COPPER_ORE = 1710;
-        public const int ITEM_ID_RABBIT_HIDE = 1720;
-        public const int ITEM_ID_SLEEPSHROOM = 1730;
-        public const int ITEM_ID_WOOZYSHROOM = 1740;
-        public const int ITEM_ID_FLINT_STONE = 1750;
-        public const int ITEM_ID_ZINC_ORE = 1760;
-        public const int ITEM_ID_BEETLE_JAW = 1770;
-        public const int ITEM_ID_INSECT_WING = 1780;
-        public const int ITEM_ID_BEETLE_SHELL = 1790;
-        public const int ITEM_ID_GRASS_THREAD = 1800;
-        public const int ITEM_ID_GRASS_CLOTH = 1810;
-        public const int ITEM_ID_COTTON_THREAD = 1820;
-        public const int ITEM_ID_COTTON_CLOTH = 1830;
-        public const int ITEM_ID_BAT_WING = 1840;
-        public const int ITEM_ID_FIEND_BLOOD = 1850;
-        public const int ITEM_ID_ROCK_SALT = 1860;
-        public const int ITEM_ID_ORCISH_AXE = 1870;
-        public const int ITEM_ID_BOMB_ASH = 1880;
-        public const int ITEM_ID_BONE_CHIP = 1890;
-        public const int ITEM_ID_REVIVAL_TREE_ROOT = 1900;
-        public const int ITEM_ID_WOLF_HIDE = 1910;
-        #endregion
-
-        #region Monsters
-        //Monster IDs
-        //Ronfaure
-        public const int MONSTER_ID_TUNNEL_WORM = 1;
-        public const int MONSTER_ID_FOREST_RABBIT = 2;
-        public const int MONSTER_ID_FOREST_FUNGUAR = 3;
-        public const int MONSTER_ID_SCARAB_BEETLE = 4;
-        public const int MONSTER_ID_GOBLIN_WEAVER = 5;
-        public const int MONSTER_ID_DING_BAT_05 = 6;
-        public const int MONSTER_ID_ORCISH_MESMERIZER = 7;
-        public const int MONSTER_ID_MOUSE_BAT = 8;
-        public const int MONSTER_ID_RIVER_CRAB = 9;
-        public const int MONSTER_ID_ORCISH_FODDER = 10;
-        public const int MONSTER_ID_ORCISH_GRAPPLER = 11;
-        public const int MONSTER_ID_BOMB_08 = 12;
-        public const int MONSTER_ID_ENCHANTED_BONES = 13;
-        public const int MONSTER_ID_TAINTED_HOUND = 14;
-        public const int MONSTER_ID_GHOST = 15;
-
-        #endregion
-
-        #region Mission/QuestIDs
-        //Quest IDs
-        //Zone : Sandoria
-        public const int QUEST_001_EXPLOSIVE_REQUEST = 1;
-        public const int QUEST_002_FATHER_AND_SON = 2;
-        public const int QUEST_003_A_SQUIRES_TEST = 3;
-
-        //Mission IDs
-        public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
-
-
-        #endregion
 
         #region LocationIDs
         //Location IDs
@@ -280,227 +149,6 @@ namespace Engine
 
         #endregion
 
-        #region World Logic
-
-        //Setting the fields within the Items, Weapons, Monsters and Locations Lists
-        static _World()
-        {
-            PopulateItems();
-            PopulateMonsters();
-            PopulateQuests();
-            PopulateLocations();
-
-        }
-
-
-
-        private static void PopulateItems()
-        {
-            //Populate items
-            // 0 Price = Unsellable
-
-            Items.Add(new Item(ITEM_ID_BEASTCOIN, "Beastcoin", "Beastcoins", 25));
-
-            Items.Add(new Item(ITEM_ID_COPPER_ORE, "Copper Ore", "Copper Ore", 2));
-            Items.Add(new Item(ITEM_ID_RABBIT_MEAT, "Rabbit Meat", "Rabbit Meat", 2));
-            Items.Add(new Item(ITEM_ID_RABBIT_HIDE, "Rabbit Hide", "Rabbit Hides", 4));
-            Items.Add(new Item(ITEM_ID_SLEEPSHROOM, "Sleepshroom", "Sleepshrooms", 4));
-            Items.Add(new Item(ITEM_ID_WOOZYSHROOM, "Woozyshroom", "Woozyshrooms", 4));
-            Items.Add(new Item(ITEM_ID_FLINT_STONE, "Flint Stone", "Flint Stones", 2));
-            Items.Add(new Item(ITEM_ID_ZINC_ORE, "Zinc Ore", "Zinc Ore", 6));
-            Items.Add(new Item(ITEM_ID_BEETLE_JAW, "Beetle Jaw", "Beetle Jaws", 4));
-            Items.Add(new Item(ITEM_ID_INSECT_WING, "Insect Wing", "Insect Wings", 2));
-            Items.Add(new Item(ITEM_ID_BEETLE_SHELL, "Beetle Shell", "Beetle Shells", 10));
-            Items.Add(new Item(ITEM_ID_GRASS_THREAD, "Grass Thread", "Grass Thread", 20));
-            Items.Add(new Item(ITEM_ID_GRASS_CLOTH, "Grass Cloth", "Pieces of Grass Cloth", 60));
-            Items.Add(new Item(ITEM_ID_COTTON_THREAD, "Cotton Thread", "Cotton Thread", 40));
-            Items.Add(new Item(ITEM_ID_COTTON_CLOTH, "Cotton Cloth", "Pieces of Cotton Cloth", 110));
-            Items.Add(new Item(ITEM_ID_BAT_WING, "Bat Wing", "Bat Wings", 2));
-            Items.Add(new Item(ITEM_ID_FIEND_BLOOD, "Vial of Fiend Blood", "Vials of Fiend Blood", 30));
-            Items.Add(new Item(ITEM_ID_ROCK_SALT, "Rock Salt", "Chunks of Rock Salt", 2));
-            Items.Add(new Item(ITEM_ID_ORCISH_AXE, "Orcish Axe", "Orcish Axes", 36));
-            Items.Add(new Item(ITEM_ID_BOMB_ASH, "Bomb Ash", "Bomb Ashes", 120));
-            Items.Add(new Item(ITEM_ID_BONE_CHIP, "Bone Chip", "Bone Chips", 2));
-            Items.Add(new Item(ITEM_ID_REVIVAL_TREE_ROOT, "Revival Tree Root", "Revival Tree Roots", 60));
-            Items.Add(new Item(ITEM_ID_WOLF_HIDE, "Wolf Hide", "Wolf Hides", 40));
-
-
-
-            //Populate weapons
-            //Swords
-            Items.Add(new Weapon(ITEM_ID_ONION_SWORD, "Onion Sword", "Onion Swords", 1, 0, 5, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_BRONZE_SWORD, "Bronze Sword", "Bronze Swords", 5, 1, 6, 50));
-            Items.Add(new Weapon(ITEM_ID_SAPARA, "Sapara", "Saparas", 5, 4, 7, 400));
-            Items.Add(new Weapon(ITEM_ID_XIPHOS, "Xiphos", "Xiphos", 5, 5, 8, 520));
-            Items.Add(new Weapon(ITEM_ID_SPATHA, "Spatha", "Spathas", 5, 8, 14, 1000));
-            Items.Add(new Weapon(ITEM_ID_ROYAL_ARCHERS_SWORD, "Royal Archer's Sword", "Royal Archer's Swords", 5, 10, 15, 1600));
-            Items.Add(new Weapon(ITEM_ID_BILBO, "Bilbo", "Bilbos", 5, 11, 15, 1700));
-            Items.Add(new Weapon(ITEM_ID_KINGDOM_SWORD, "Kingdom Sword", "Kingdom Swords", 5, 15, 24, 3600));
-            Items.Add(new Weapon(ITEM_ID_SANDORIAN_SIGNET_SWORD, "San d'Orian Signet Sword", "San d'Orian Signet Swords", 5, 17, 27, 4600));
-            Items.Add(new Weapon(ITEM_ID_MYTHRIL_SWORD, "Mythril Sword", "Mythril Swords", 5, 22, 33, 7800));
-            Items.Add(new Weapon(ITEM_ID_ANCIENT_SWORD, "Ancient Sword", "Ancient Swords", 5, 30, 45, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_SAVE_THE_QUEEN, "Save The Queen", "Save The Queens", 5, 50, 100, UNSELLABLE_ITEM));
-
-            //Great Swords
-            Items.Add(new Weapon(ITEM_ID_RUSTY_GREATSWORD, "Rusty Greatsword", "Rusty Greatswords", 5, 0, 10, 120));
-            Items.Add(new Weapon(ITEM_ID_CLAYMORE, "Claymore", "Claymores", 5, 1, 11, 390));
-            Items.Add(new Weapon(ITEM_ID_VULCAN_CLAYMORE, "Vulcan Claymore", "Vulcan Claymores", 5, 3, 18, 700));
-            Items.Add(new Weapon(ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE, "Royal Swordsman's Claymore", "Royal Swordsman's Claymores", 5, 4, 22, 1800));
-            Items.Add(new Weapon(ITEM_ID_COBRA_UNIT_CLAYMORE, "Cobra Unit Claymore", "Cobra Unit Claymores", 5, 6, 28, 2900));
-            Items.Add(new Weapon(ITEM_ID_DARKSTEEL_CLAYMORE, "Darksteel Claymore", "Darksteel Claymores", 5, 12, 36, 6600));
-            Items.Add(new Weapon(ITEM_ID_MYTHRIL_CLAYMORE, "Mythril Claymore", "Mythril Claymores", 5, 15, 60, 10800));
-            Items.Add(new Weapon(ITEM_ID_FLAME_CLAYMORE, "Flame Claymore", "Flame Claymores", 5, 20, 70, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_RAGNAROK, "Ragnarok", "Ragnaroks", 5, 30, 150, UNSELLABLE_ITEM));
-
-            //Bows
-            Items.Add(new Weapon(ITEM_ID_SHORTBOW, "Shortbow", "Shortbows", 5, 2, 3, 30));
-            Items.Add(new Weapon(ITEM_ID_FREESWORD_BOW, "Freesword Bow", "Freesword Bows", 5, 5, 6, 700));
-            Items.Add(new Weapon(ITEM_ID_POWER_BOW, "Power Bow", "Power Bows", 5, 9, 10, 1100));
-            Items.Add(new Weapon(ITEM_ID_PLATOON_BOW, "Platoon Bow", "Platoon Bows", 5, 14, 15, 2800));
-            Items.Add(new Weapon(ITEM_ID_KINGDOM_BOW, "Kingdom Bow", "Kingdom Bows", 5, 18, 19, 4100));
-            Items.Add(new Weapon(ITEM_ID_GREAT_BOW, "Great Bow", "Great Bows", 5, 25, 26, 7600));
-            Items.Add(new Weapon(ITEM_ID_BATTLE_BOW, "The Battle Bow", "Battle Bows", 5, 37, 38, 30));
-            Items.Add(new Weapon(ITEM_ID_LIGHTNING_BOW, "Lightning Bow", "Lightning Bows", 5, 62, 68, UNSELLABLE_ITEM));
-
-
-            //Populate potions
-            Items.Add(new HealingPotion(ITEM_ID_POTION, "Potion", "Potions", 5, 10, 50));
-            Items.Add(new HealingPotion(ITEM_ID_HI_POTION, "Hi-Potion", "Hi-Potions", 15, 30, 250));
-            Items.Add(new HealingPotion(ITEM_ID_HI_POTION_PLUS, "Hi-Potion +", "Hi-Potion Plus'", 21, 36, 450));
-            Items.Add(new HealingPotion(ITEM_ID_MEGA_POTION, "Mega Potion", "Mega Potions", 45, 70, 1100));
-            Items.Add(new HealingPotion(ITEM_ID_MEGA_POTION_PLUS, "Mega Potion +", "Mega Potion Plus'", 55, 80, 1600));
-            Items.Add(new HealingPotion(ITEM_ID_X_POTION, "X-Potion", "X-Potions", 100, 200, 5000));
-
-
-
-            //Populate key items
-            Items.Add(new Item(ITEM_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
-            Items.Add(new Item(ITEM_ID_BLACKDRAGONHEAD, "Black Dragon head", "Black Dragon heads", UNSELLABLE_ITEM));
-
-            //Populate Armour
-            Items.Add(new Armour(ITEM_ID_COMMON_CLOTHES, "Common Clothes", "Common Clothes", 0, 0, UNSELLABLE_ITEM));
-
-            //Populate Accessories
-            Items.Add(new Accessory(ITEM_ID_SANDORIAN_RING, "San d'Orian Ring", "San d'Orian Rings", 1, 0, 0, UNSELLABLE_ITEM));
-
-        }
-
-        private static void PopulateMonsters()
-        {
-            //By Area
-
-            //Ronfaure
-
-            Monster tunnelWorm = new Monster(MONSTER_ID_TUNNEL_WORM, "Tunnel Worm", 0, 5, 3, 10, false, 3, 3);
-            tunnelWorm.LootTable.Add(new LootItem(ItemByID(ITEM_ID_COPPER_ORE), 60, false));
-            tunnelWorm.LootTable.Add(new LootItem(ItemByID(ITEM_ID_FLINT_STONE), 60, false));
-            tunnelWorm.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ZINC_ORE), 20, false));
-
-            Monster forestRabbit = new Monster(MONSTER_ID_FOREST_RABBIT, "Forest Rabbit", 1, 4, 3, 0, false, 4, 4);
-            forestRabbit.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RABBIT_MEAT), 60, false));
-            forestRabbit.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RABBIT_HIDE), 40, false));
-
-            Monster forestFunguar = new Monster(MONSTER_ID_FOREST_FUNGUAR, "Forest Funguar", 5, 5, 3, 0, false, 6, 6);
-            forestFunguar.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SLEEPSHROOM), 40, false));
-            forestFunguar.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOOZYSHROOM), 40, false));
-
-            Monster scarabBeetle = new Monster(MONSTER_ID_SCARAB_BEETLE, "Scarab Beetle", 5, 7, 5, 0, false, 10, 10);
-            scarabBeetle.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEETLE_JAW), 30, false));
-            scarabBeetle.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEETLE_SHELL), 20, false));
-            scarabBeetle.LootTable.Add(new LootItem(ItemByID(ITEM_ID_INSECT_WING), 50, false));
-
-            Monster goblinWeaver = new Monster(MONSTER_ID_GOBLIN_WEAVER, "Goblin Weaver", 15, 7, 10, 44, false, 12, 12);
-            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GRASS_THREAD), 40, false));
-            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_GRASS_CLOTH), 20, false));
-            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_COTTON_THREAD), 30, false));
-            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_COTTON_CLOTH), 10, false));
-            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 30, false));
-
-            Monster dingBat05 = new Monster(MONSTER_ID_DING_BAT_05, "Ding Bat", 15, 4, 5, 0, false, 6, 6);
-            dingBat05.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BAT_WING), 40, false));
-
-            Monster orcishMesmerizer = new Monster(MONSTER_ID_ORCISH_MESMERIZER, "Orcish Mesmerizer", 5, 10, 10, 6, false, 10, 10);
-            orcishMesmerizer.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 30, false));
-
-            Monster mouseBat = new Monster(MONSTER_ID_MOUSE_BAT, "Mouse Bat", 15, 6, 8, 0, false, 7, 7);
-            mouseBat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BAT_WING), 40, false));
-
-            Monster riverCrab = new Monster(MONSTER_ID_RIVER_CRAB, "River Crab", 1, 6, 6, 0, false, 13, 13);
-            riverCrab.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ROCK_SALT), 50, false));
-
-            Monster orcishFodder = new Monster(MONSTER_ID_ORCISH_FODDER, "Orcish Fodder", 5, 10, 10, 9, false, 12, 12);
-            orcishFodder.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 30, false));
-            orcishFodder.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ORCISH_AXE), 30, false));
-
-            Monster orcishGrappler = new Monster(MONSTER_ID_ORCISH_GRAPPLER, "Orcish Grappler", 10, 8, 12, 9, false, 12, 12);
-            orcishGrappler.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 35, false));
-
-            Monster bomb08 = new Monster(MONSTER_ID_BOMB_08, "Bomb", 5, 8, 12, 0, false, 15, 15);
-            bomb08.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BOMB_ASH), 20, false));
-
-            Monster enchantedBones = new Monster(MONSTER_ID_ENCHANTED_BONES, "Enchanted Bones", 5, 10, 14, 0, false, 15, 15);
-            enchantedBones.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BONE_CHIP), 60, false));
-
-            Monster taintedHound = new Monster(MONSTER_ID_TAINTED_HOUND, "Tainted Hound", 25, 6, 15, 0, false, 12, 12);
-            taintedHound.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOLF_HIDE), 30, false));
-
-            Monster Ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
-            Ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
-
-
-            //static list
-            Monsters.Add(tunnelWorm);
-            Monsters.Add(forestRabbit);
-            Monsters.Add(forestFunguar);
-            Monsters.Add(scarabBeetle);
-            Monsters.Add(dingBat05);
-            Monsters.Add(orcishMesmerizer);
-            Monsters.Add(mouseBat);
-            Monsters.Add(riverCrab);
-            Monsters.Add(orcishFodder);
-            Monsters.Add(orcishGrappler);
-            Monsters.Add(bomb08);
-            Monsters.Add(enchantedBones);
-            Monsters.Add(taintedHound);
-            Monsters.Add(Ghost);
-
-        }
-
-        private static void PopulateQuests()
-        {
-            // Sandoria Quests
-            //001 Explosive Request
-            Quest explosiveRequest = new Quest(QUEST_001_EXPLOSIVE_REQUEST, "Explosive Request", "You've been asked to retrieve Bomb Ash from a Bomb and return it to the Lion Springs", 200, 90);
-            explosiveRequest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BOMB_ASH), 1));
-            explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
-            //002 Father and Son
-            Quest fatherAndSon = new Quest(QUEST_002_FATHER_AND_SON, "Father and Son", "A gentleman named Ailbeche approaches you and asks if you have seen his son. He mentions he carries a fishing rod everywhere he goes - a gift from his Grandfather in Selbina.", 100, 0);
-            fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BAMBOO_FISHING_ROD), 1));
-            //003 A Squire's Test
-            Quest aSquiresTest = new Quest(QUEST_003_A_SQUIRES_TEST, "A Squire's Test", "A knight named Balasiel is openly declaring that the first adventurer to bring him a Revival Tree Root will recieve his sword as thanks.", 330, 350);
-            aSquiresTest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 1));
-            aSquiresTest.RewardItem = ItemByID(ITEM_ID_SPATHA);
-            aSquiresTest.RequiredLevel = 4;
-
-            // Sandoria Missions
-            //M01 Smash The Orcish Scouts
-            Quest smashTheOrcishScouts = new Quest(MISSION_01_SMASH_THE_ORCISH_SCOUTS, "Smash The Orcish Scouts", "The San d'orian Guard have requested you to thin the ranks of the Orcish found roaming Ronfaure. Return with an Orcish Axe as proof of your deeds.", 200, 50);
-            smashTheOrcishScouts.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ORCISH_AXE), 1));
-            smashTheOrcishScouts.RankUpValue = 1;
-            smashTheOrcishScouts.RequiredRank = 0;
-
-
-
-            // Quests To List
-            Quests.Add(explosiveRequest);
-            Quests.Add(fatherAndSon);
-            Quests.Add(aSquiresTest);
-
-            // Missions To List
-            Quests.Add(smashTheOrcishScouts);
-
-        }
-
         private static void PopulateLocations()
         {
             ////////////
@@ -547,7 +195,7 @@ namespace Engine
             Location sandoriaStreets9 = new Location(LOCATION_ID_SANDORIA_STREETS_9, "Streets of San d'Oria - East Gate Rendevous Point", "The archway of the East Gate lays to the South. Two San d'Orian guards stand with spears keeping watch. " + Environment.NewLine + "To the North lays the cobbled archway to the trade stands of Cavalry Way.", 0);
             //Initial Ranked Missions Available Here
             sandoriaStreets9.QuestAvailableHere = QuestByID(MISSION_01_SMASH_THE_ORCISH_SCOUTS);
-            
+
 
             Location sandoriaEastGate = new Location(LOCATION_ID_SANDORIA_EASTGATE_10, "San d'Oria East Gate", "Tall, mossy stone walls protect the city of San d'Oria. The city it tucked on the outskirts of a mountain range and in turn is a well defended capital." + Environment.NewLine + "To the South the forest of Ronfaure crawls with an ever constant flow of deadly beasts and occassionally a stray Orcish Scout hoping to waylay an unprepared adventurer." + Environment.NewLine + "(Recommended Level: 1-4)", 0);
             Location sandoriaStreets11 = new Location(LOCATION_ID_SANDORIA_STREETS_11, "Streets if San d'Oria - Victory Square SE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
@@ -565,7 +213,7 @@ namespace Engine
 
 
             sandoriaAuctionHouse.VendorWorkingHere = sandoriaAuctionHouseSales;
-            
+
 
             Location sandoriaStreets13 = new Location(LOCATION_ID_SANDORIA_STREETS_13, "Streets of San d'Oria - Victory Square SW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets14 = new Location(LOCATION_ID_SANDORIA_STREETS_14, "Streets of San d'Oria - Victory Square NW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
@@ -578,7 +226,7 @@ namespace Engine
             Location sandoriaStreets19 = new Location(LOCATION_ID_SANDORIA_STREETS_19, "Streets of San d'Oria - Guild Walk", "Curved steps connects the West Gate Rendevous Point to the South with the guild walk to the West.", 0);
             Location sandoriaStreets20 = new Location(LOCATION_ID_SANDORIA_STREETS_20, "Streets of San d'Oria - Guild Walk", "An avenue connects Taumila's Saundries to the West with curved steps leading South to the East.", 0);
             Location sandoriaTaumilaSaundries = new Location(LOCATION_ID_SANDORIA_TAUMILAS_SUNDRIES_21, "Taumila's Saundries", "Taumila was formerly an adventurer who served the San d'Orian King during the Crystal War. Now retired, he runs a store that provides key resources to adventurers." + Environment.NewLine + "Inside the shop, Taumila sits quietly reading a book awaiting customers." + Environment.NewLine + "To the North, an alley leads to the San d'Orian Knights training grounds." + Environment.NewLine + "The building connected on the West is the San d'Orian Tanners' Guild.", 0);
-            Location sandoriaTannersGuild = new Location(LOCATION_ID_SANDORIA_TANNERS_GUILD_22, "Tanners' Guild", "The Tanners Guild is an ancient guild almost as old as San d'Oria itself. Since long before San d'oria was a bustling city of trade and fortune the area of Ronfaure was a prime location of hunting for animal resource that could be used by folk."  + Environment.NewLine + "Inside the ground floor is the guild merchant. Armour and Accessories line the counter which are available for purchase." + Environment.NewLine + "To the North is Pikeman's Way." + Environment.NewLine + "To the East is Taumila's Sundries.", 0);
+            Location sandoriaTannersGuild = new Location(LOCATION_ID_SANDORIA_TANNERS_GUILD_22, "Tanners' Guild", "The Tanners Guild is an ancient guild almost as old as San d'Oria itself. Since long before San d'oria was a bustling city of trade and fortune the area of Ronfaure was a prime location of hunting for animal resource that could be used by folk." + Environment.NewLine + "Inside the ground floor is the guild merchant. Armour and Accessories line the counter which are available for purchase." + Environment.NewLine + "To the North is Pikeman's Way." + Environment.NewLine + "To the East is Taumila's Sundries.", 0);
             Location sandoriaStreets23 = new Location(LOCATION_ID_SANDORIA_STREETS_23, "Streets of San d'Oria - Knight's Grounds Training Grounds", "Here Knights of San d'Oria casually practice the finest swordsmanship in Vana'diel. Straw dummies accept blows and arrows without protest." + Environment.NewLine + "To the South a roofed alleyway leads back out onto the guild walk outside Taumila's Sundries" + Environment.NewLine + "To the West through another roofed alleyway lays a section of Pikeman's Way", 0);
             sandoriaStreets23.QuestAvailableHere = QuestByID(QUEST_003_A_SQUIRES_TEST);
 
@@ -587,7 +235,7 @@ namespace Engine
             Location sandoriaStreets26 = new Location(LOCATION_ID_SANDORIA_STREETS_26, "Streets of San d'Oria - Pikeman's Way", "Here the road connects Count Caffaule's Manor to the East with the rest of Pikeman's Way." + Environment.NewLine + "A stone wall seperates the front garden of the Manor from the rest of the area with large wooden doors as the entry way.", 0);
             Location sandoriaCountCaffaulesManor27 = new Location(LOCATION_ID_SANDORIA_COUNT_CAFFAULES_MANOR_27, "Count Caffaule's Manor", "The Manor is large, with a paired staircase leading up to the communial room of the Manor." + Environment.NewLine + "Iron chandeliers hang from the rafters and the floor is topped with a soft, red rug that follows the walkways.", 0);
             Location sandoriaPalace28 = new Location(LOCATION_ID_SANDORIA_PALACE_28, "San d'Oria Palace", "The doors are closed...", 0);
-            
+
             ////////////
             //Ronfaure//
             ////////////
@@ -1327,57 +975,7 @@ namespace Engine
             Locations.Add(krt32);
 
         }
-        #endregion
 
-        #region Binding IDs
-
-        public static Item ItemByID(int id)
-        {
-            foreach (Item item in Items)
-            {
-                if (item.ID == id)
-                {
-                    return item;
-                }
-            }
-            return null;
-        }
-
-        public static Monster MonsterByID(int id)
-        {
-            foreach (Monster monster in Monsters)
-            {
-                if (monster.ID == id)
-                {
-                    return monster;
-                }
-            }
-            return null;
-        }
-
-        public static Quest QuestByID(int id)
-        {
-            foreach (Quest quest in Quests)
-            {
-                if (quest.ID == id)
-                {
-                    return quest;
-                }
-            }
-            return null;
-        }
-
-        public static Location LocationByID(int id)
-        {
-            foreach (Location location in Locations)
-            {
-                if (location.ID == id)
-                {
-                    return location;
-                }
-            }
-            return null;
-        }
-        #endregion
     }
+
 }
