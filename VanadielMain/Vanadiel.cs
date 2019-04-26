@@ -148,31 +148,7 @@ namespace Vanadiel
 
         }
 
-        private void DgvQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            Quest selectedQuest = null;
-            List<Quest> questArchive = _World.Quests;
-            try
-            {
-                if(dgvQuests.CurrentCell != null)
-                {
-                    dgvQuests.CurrentCell = dgvQuests.Rows[e.RowIndex].Cells[0];
-                    foreach(Quest quest in questArchive)
-                    {
-                        if (quest.Name == dgvQuests.CurrentCell.Value.ToString())
-                        {
-                            selectedQuest = quest;
-                        }
-                    }
-
-                    System.Windows.Forms.MessageBox.Show(selectedQuest.Description, selectedQuest.Name, MessageBoxButtons.OK);
-                }
-            }
-            catch 
-            {
-                
-            }
-        }
+        
 
         private void UpdatePlayerLevelText()
         {
@@ -985,6 +961,31 @@ namespace Vanadiel
             rtbMessages.ScrollToCaret();
         }
 
+        private void DgvQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Quest selectedQuest = null;
+            List<Quest> questArchive = _World.Quests;
+            try
+            {
+                if (dgvQuests.CurrentCell != null)
+                {
+                    dgvQuests.CurrentCell = dgvQuests.Rows[e.RowIndex].Cells[0];
+                    foreach (Quest quest in questArchive)
+                    {
+                        if (quest.Name == dgvQuests.CurrentCell.Value.ToString())
+                        {
+                            selectedQuest = quest;
+                        }
+                    }
+
+                    System.Windows.Forms.MessageBox.Show(selectedQuest.Description, selectedQuest.Name, MessageBoxButtons.OK);
+                }
+            }
+            catch
+            {
+
+            }
+        }
 
         //
         // Timer Configurations
