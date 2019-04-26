@@ -126,7 +126,7 @@ namespace Vanadiel
 
             dgvQuests.RowHeadersVisible = false;
             dgvQuests.AutoGenerateColumns = false;
-            dgvQuests.CellContentClick += DgvQuests_CellContentClick;
+            dgvQuests.CellMouseClick += DgvQuests_CellMouseClick;
 
             dgvQuests.DataSource = _player.Quests;
 
@@ -148,18 +148,31 @@ namespace Vanadiel
 
         }
 
-        private void DgvQuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvQuests_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            Quest selectedQuest = null;
+            List<Quest> questArchive = _World.Quests;
             try
             {
-                System.Windows.Forms.MessageBox.Show(e.ToString());
+                if(dgvQuests.CurrentCell != null)
+                {
+                    dgvQuests.CurrentCell = dgvQuests.Rows[e.RowIndex].Cells[0];
+                    foreach(Quest quest in questArchive)
+                    {
+                        if (quest.Name == dgvQuests.CurrentCell.Value.ToString())
+                        {
+                            selectedQuest = quest;
+                        }
+                    }
+
+                    System.Windows.Forms.MessageBox.Show(selectedQuest.Description, selectedQuest.Name, MessageBoxButtons.OK);
+                }
             }
-            catch
+            catch 
             {
-                throw new NotImplementedException();
+                
             }
         }
-
 
         private void UpdatePlayerLevelText()
         {
