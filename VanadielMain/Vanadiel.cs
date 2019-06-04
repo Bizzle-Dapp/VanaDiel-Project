@@ -27,9 +27,6 @@ namespace Vanadiel
         private Monster _currentMonster;
         private const string PLAYER_DATA_FILE_NAME = "PlayerData.xml";
         
-
-        
-        
         public Vanadiel()
         {
             //Player initialisation
