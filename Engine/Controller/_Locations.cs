@@ -203,13 +203,13 @@ namespace Engine.Controller
 
             Location sandoriaAuctionHouse = new Location(LOCATION_ID_SANDORIA_AUCTION_HOUSE_12, "Streets of San d'Oria - Victory Square Auction House", "Trade windows line the front of the huge stone building, open all day and all night - all of the time." + Environment.NewLine + "Surrounding the auction house is the expanse of Victory Square.", 0);
             Vendor sandoriaAuctionHouseSales = new Vendor("San d'Oria Auction House");
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_POTION), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_SHORTBOW), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_BRONZE_SWORD), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_RUSTY_GREATSWORD), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_FREESWORD_BOW), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_SAPARA), 10);
-            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(ITEM_ID_CLAYMORE), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(POTION_ID_POTION), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(BOW_ID_SHORTBOW), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(SWD_ID_BRONZE_SWORD), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(GSWD_ID_RUSTY_GREATSWORD), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(BOW_ID_FREESWORD_BOW), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(SWD_ID_SAPARA), 10);
+            sandoriaAuctionHouseSales.AddItemToInventory(ItemByID(GSWD_ID_CLAYMORE), 10);
 
 
             sandoriaAuctionHouse.VendorWorkingHere = sandoriaAuctionHouseSales;
@@ -217,7 +217,7 @@ namespace Engine.Controller
 
             Location sandoriaStreets13 = new Location(LOCATION_ID_SANDORIA_STREETS_13, "Streets of San d'Oria - Victory Square SW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
             Location sandoriaStreets14 = new Location(LOCATION_ID_SANDORIA_STREETS_14, "Streets of San d'Oria - Victory Square NW", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);
-            sandoriaStreets14.NPCHere = new NPC("Ailbeche's Son", QuestByID(QUEST_002_FATHER_AND_SON), "A young child holding a fishing rod approaches you. You explain his father is looking for him and he assures you he is fine, he asks for you to take his fishing rod to his father as he wishes to buy a gift for him and cannot carry it.", ItemByID(ITEM_ID_BAMBOO_FISHING_ROD));
+            sandoriaStreets14.NPCHere = new NPC("Ailbeche's Son", QuestByID(QUEST_002_FATHER_AND_SON), "A young child holding a fishing rod approaches you. You explain his father is looking for him and he assures you he is fine, he asks for you to take his fishing rod to his father as he wishes to buy a gift for him and cannot carry it.", ItemByID(KI_ID_BAMBOO_FISHING_ROD));
 
             Location sandoriaStreets15 = new Location(LOCATION_ID_SANDORIA_STREETS_15, "Streets of San d'Oria - Victory Square N", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area." + Environment.NewLine + "To the North of here is the draw bridge which leads to the San d'Orian Palace. Only renown adventurers with invitations, noble knights and royality may enter.", 0);
             Location sandoriaStreets16 = new Location(LOCATION_ID_SANDORIA_STREETS_16, "Streets of San d'Oria - Victory Square NE", "Victory Square is a place of trade. The auction house lays at the Central South of this large open area.", 0);

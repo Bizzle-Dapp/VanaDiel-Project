@@ -139,13 +139,13 @@ namespace Engine
             Player player = new Player(10, 10, 20, 0, 1, 2, 1);
 
             player.CurrentLocation = _World.LocationByID(_World.LOCATION_ID_MOG_HOUSE_MH);
-            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ITEM_ID_ONION_SWORD), 1));
+            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.SWD_ID_ONION_SWORD), 1));
 
-            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ITEM_ID_POTION), 1));
+            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.POTION_ID_POTION), 1));
 
-            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ITEM_ID_COMMON_CLOTHES), 1));
+            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ARMOUR_ID_COMMON_CLOTHES), 1));
 
-            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ITEM_ID_SANDORIAN_RING), 1));
+            player.Inventory.Add(new InventoryItem(_World.ItemByID(_World.ACCESSORY_ID_SANDORIAN_RING), 1));
             return player;
         }
 

@@ -32,11 +32,11 @@ namespace Engine.Controller
             explosiveRequest.RewardItem = ItemByID(ITEM_ID_FIEND_BLOOD);
             //002 Father and Son
             Quest fatherAndSon = new Quest(QUEST_002_FATHER_AND_SON, "Father and Son", "A gentleman named Ailbeche approaches you and asks if you have seen his son. He mentions he carries a fishing rod everywhere he goes - a gift from his Grandfather in Selbina.", 100, 0);
-            fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_BAMBOO_FISHING_ROD), 1));
+            fatherAndSon.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(KI_ID_BAMBOO_FISHING_ROD), 1));
             //003 A Squire's Test
             Quest aSquiresTest = new Quest(QUEST_003_A_SQUIRES_TEST, "A Squire's Test", "A knight named Balasiel is openly declaring that the first adventurer to bring him a Revival Tree Root will recieve his sword as thanks.", 330, 350);
             aSquiresTest.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 1));
-            aSquiresTest.RewardItem = ItemByID(ITEM_ID_SPATHA);
+            aSquiresTest.RewardItem = ItemByID(SWD_ID_SPATHA);
             aSquiresTest.RequiredLevel = 4;
 
             // Sandoria Missions
