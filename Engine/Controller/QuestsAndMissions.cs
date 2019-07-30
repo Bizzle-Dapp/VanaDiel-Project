@@ -17,6 +17,7 @@ namespace Engine.Controller
         public const int QUEST_002_FATHER_AND_SON = 2;
         public const int QUEST_003_A_SQUIRES_TEST = 3;
 
+
         //Mission IDs
         public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
 
@@ -39,14 +40,13 @@ namespace Engine.Controller
             aSquiresTest.RewardItem = ItemByID(SWD_ID_SPATHA);
             aSquiresTest.RequiredLevel = 4;
 
+
             // Sandoria Missions
             //M01 Smash The Orcish Scouts
             Quest smashTheOrcishScouts = new Quest(MISSION_01_SMASH_THE_ORCISH_SCOUTS, "Smash The Orcish Scouts", "The San d'orian Guard have requested you to thin the ranks of the Orcish found roaming Ronfaure. Return with an Orcish Axe as proof of your deeds.", 200, 50);
             smashTheOrcishScouts.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_ORCISH_AXE), 1));
             smashTheOrcishScouts.RankUpValue = 1;
             smashTheOrcishScouts.RequiredRank = 0;
-
-
 
             // Quests To List
             Quests.Add(explosiveRequest);

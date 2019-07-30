@@ -90,9 +90,15 @@ namespace Vanadiel
 
 
             MoveTo(_player.CurrentLocation);
+
+            //Player Stats Databind
+
             lblHitPoints.DataBindings.Add("Text", _player, "CurrentHitPoints");
             lblGold.DataBindings.Add("Text", _player, "Gold");
             lblExperience.DataBindings.Add("Text", _player, "ExperiencePoints");
+            pbar_PlayerHP.Maximum = _player.MaximumHitPoints;
+            pbar_PlayerHP.Value = _player.CurrentHitPoints;
+
 
             if (!_player.Potions.Any())
             {
@@ -566,6 +572,9 @@ namespace Vanadiel
 
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
+            pbar_PlayerHP.Maximum = _player.MaximumHitPoints;
+            pbar_PlayerHP.Value = _player.CurrentHitPoints < 0 ? 0 : _player.CurrentHitPoints;
+
             if(propertyChangedEventArgs.PropertyName == "Weapons")
             {
                 cboWeapons.DataSource = _player.Weapons;
