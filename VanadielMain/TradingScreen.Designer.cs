@@ -82,6 +82,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnClose.Location = new System.Drawing.Point(28, 335);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
@@ -106,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(635, 366);
+            this.ClientSize = new System.Drawing.Size(631, 362);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
@@ -115,13 +116,14 @@
             this.Controls.Add(this.lblVendorInventory);
             this.Controls.Add(this.lblMyInventory);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TradingScreen";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trade";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendorItems)).EndInit();

@@ -983,7 +983,7 @@ namespace Vanadiel
             }
             catch
             {
-
+                // We do nothing, display nothing, say nothing, just quietly catch and leave it.
             }
         }
 

@@ -61,8 +61,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblRank = new System.Windows.Forms.Label();
             this.gbPlayerStats = new System.Windows.Forms.GroupBox();
+            this.Player_Tab = new System.Windows.Forms.TabControl();
+            this.tab_Player_Inv = new System.Windows.Forms.TabPage();
+            this.tab_Player_Quests = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
+            this.Player_Tab.SuspendLayout();
+            this.tab_Player_Inv.SuspendLayout();
+            this.tab_Player_Quests.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -274,7 +280,7 @@
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
             this.rtbMessages.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtbMessages.Size = new System.Drawing.Size(441, 597);
+            this.rtbMessages.Size = new System.Drawing.Size(441, 608);
             this.rtbMessages.TabIndex = 18;
             this.rtbMessages.Text = "";
             this.rtbMessages.TextChanged += new System.EventHandler(this.rtbMessages_TextChanged);
@@ -287,12 +293,12 @@
             this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvInventory.Location = new System.Drawing.Point(16, 130);
+            this.dgvInventory.Location = new System.Drawing.Point(6, 6);
             this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RowHeadersVisible = false;
-            this.dgvInventory.Size = new System.Drawing.Size(312, 309);
+            this.dgvInventory.Size = new System.Drawing.Size(312, 458);
             this.dgvInventory.TabIndex = 19;
             // 
             // dgvQuests
@@ -303,11 +309,11 @@
             this.dgvQuests.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvQuests.Location = new System.Drawing.Point(16, 446);
+            this.dgvQuests.Location = new System.Drawing.Point(6, 6);
             this.dgvQuests.MultiSelect = false;
             this.dgvQuests.Name = "dgvQuests";
             this.dgvQuests.RowHeadersVisible = false;
-            this.dgvQuests.Size = new System.Drawing.Size(312, 186);
+            this.dgvQuests.Size = new System.Drawing.Size(312, 458);
             this.dgvQuests.TabIndex = 20;
             // 
             // btnTrade
@@ -423,6 +429,38 @@
             this.gbPlayerStats.TabStop = false;
             this.gbPlayerStats.Text = "Statistics:";
             // 
+            // Player_Tab
+            // 
+            this.Player_Tab.Controls.Add(this.tab_Player_Inv);
+            this.Player_Tab.Controls.Add(this.tab_Player_Quests);
+            this.Player_Tab.Location = new System.Drawing.Point(3, 130);
+            this.Player_Tab.Name = "Player_Tab";
+            this.Player_Tab.SelectedIndex = 0;
+            this.Player_Tab.Size = new System.Drawing.Size(336, 497);
+            this.Player_Tab.TabIndex = 31;
+            // 
+            // tab_Player_Inv
+            // 
+            this.tab_Player_Inv.Controls.Add(this.dgvInventory);
+            this.tab_Player_Inv.Location = new System.Drawing.Point(4, 22);
+            this.tab_Player_Inv.Name = "tab_Player_Inv";
+            this.tab_Player_Inv.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Player_Inv.Size = new System.Drawing.Size(328, 471);
+            this.tab_Player_Inv.TabIndex = 0;
+            this.tab_Player_Inv.Text = "Inventory";
+            this.tab_Player_Inv.UseVisualStyleBackColor = true;
+            // 
+            // tab_Player_Quests
+            // 
+            this.tab_Player_Quests.Controls.Add(this.dgvQuests);
+            this.tab_Player_Quests.Location = new System.Drawing.Point(4, 22);
+            this.tab_Player_Quests.Name = "tab_Player_Quests";
+            this.tab_Player_Quests.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Player_Quests.Size = new System.Drawing.Size(328, 471);
+            this.tab_Player_Quests.TabIndex = 1;
+            this.tab_Player_Quests.Text = "Quests";
+            this.tab_Player_Quests.UseVisualStyleBackColor = true;
+            // 
             // Vanadiel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,8 +468,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnEast;
-            this.ClientSize = new System.Drawing.Size(1184, 651);
+            this.ClientSize = new System.Drawing.Size(1180, 647);
+            this.Controls.Add(this.Player_Tab);
             this.Controls.Add(this.lblRank);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cboAccessory);
@@ -441,9 +479,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.btnTrade);
-            this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
             this.Controls.Add(this.rtbLocation);
             this.Controls.Add(this.btnWest);
@@ -465,6 +501,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbPlayerStats);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 690);
@@ -475,6 +512,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vanadiel_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
+            this.Player_Tab.ResumeLayout(false);
+            this.tab_Player_Inv.ResumeLayout(false);
+            this.tab_Player_Quests.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,6 +554,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblRank;
         private System.Windows.Forms.GroupBox gbPlayerStats;
+        private System.Windows.Forms.TabControl Player_Tab;
+        private System.Windows.Forms.TabPage tab_Player_Inv;
+        private System.Windows.Forms.TabPage tab_Player_Quests;
     }
 }
 
