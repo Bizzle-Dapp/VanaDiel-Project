@@ -60,16 +60,24 @@
             this.cboAccessory = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblRank = new System.Windows.Forms.Label();
-            this.gbPlayerStats = new System.Windows.Forms.GroupBox();
+            this.Player_Tab = new System.Windows.Forms.TabControl();
+            this.tab_Player_Stats = new System.Windows.Forms.TabPage();
+            this.pbar_PlayerHP = new System.Windows.Forms.ProgressBar();
+            this.tab_Player_Inv = new System.Windows.Forms.TabPage();
+            this.tab_Player_Quests = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
+            this.Player_Tab.SuspendLayout();
+            this.tab_Player_Stats.SuspendLayout();
+            this.tab_Player_Inv.SuspendLayout();
+            this.tab_Player_Quests.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Location = new System.Drawing.Point(11, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -79,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(18, 46);
+            this.label2.Location = new System.Drawing.Point(11, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 13);
             this.label2.TabIndex = 1;
@@ -89,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(18, 74);
+            this.label3.Location = new System.Drawing.Point(10, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 2;
@@ -99,7 +107,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(18, 100);
+            this.label4.Location = new System.Drawing.Point(11, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
@@ -108,37 +116,41 @@
             // lblHitPoints
             // 
             this.lblHitPoints.AutoSize = true;
-            this.lblHitPoints.BackColor = System.Drawing.SystemColors.Info;
-            this.lblHitPoints.Location = new System.Drawing.Point(110, 19);
+            this.lblHitPoints.BackColor = System.Drawing.Color.Transparent;
+            this.lblHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHitPoints.Location = new System.Drawing.Point(103, 15);
             this.lblHitPoints.Name = "lblHitPoints";
-            this.lblHitPoints.Size = new System.Drawing.Size(0, 13);
+            this.lblHitPoints.Size = new System.Drawing.Size(0, 17);
             this.lblHitPoints.TabIndex = 4;
             // 
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.BackColor = System.Drawing.SystemColors.Info;
-            this.lblGold.Location = new System.Drawing.Point(110, 45);
+            this.lblGold.BackColor = System.Drawing.Color.Transparent;
+            this.lblGold.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGold.Location = new System.Drawing.Point(103, 41);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(0, 13);
+            this.lblGold.Size = new System.Drawing.Size(0, 17);
             this.lblGold.TabIndex = 5;
             // 
             // lblExperience
             // 
             this.lblExperience.AutoSize = true;
-            this.lblExperience.BackColor = System.Drawing.SystemColors.Info;
-            this.lblExperience.Location = new System.Drawing.Point(110, 73);
+            this.lblExperience.BackColor = System.Drawing.Color.Transparent;
+            this.lblExperience.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExperience.Location = new System.Drawing.Point(102, 68);
             this.lblExperience.Name = "lblExperience";
-            this.lblExperience.Size = new System.Drawing.Size(0, 13);
+            this.lblExperience.Size = new System.Drawing.Size(0, 17);
             this.lblExperience.TabIndex = 6;
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.BackColor = System.Drawing.SystemColors.Info;
-            this.lblLevel.Location = new System.Drawing.Point(110, 99);
+            this.lblLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lblLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.Location = new System.Drawing.Point(103, 96);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(0, 13);
+            this.lblLevel.Size = new System.Drawing.Size(0, 17);
             this.lblLevel.TabIndex = 7;
             // 
             // label5
@@ -274,7 +286,7 @@
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
             this.rtbMessages.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtbMessages.Size = new System.Drawing.Size(441, 597);
+            this.rtbMessages.Size = new System.Drawing.Size(441, 608);
             this.rtbMessages.TabIndex = 18;
             this.rtbMessages.Text = "";
             this.rtbMessages.TextChanged += new System.EventHandler(this.rtbMessages_TextChanged);
@@ -287,12 +299,12 @@
             this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvInventory.Location = new System.Drawing.Point(16, 130);
+            this.dgvInventory.Location = new System.Drawing.Point(6, 6);
             this.dgvInventory.MultiSelect = false;
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RowHeadersVisible = false;
-            this.dgvInventory.Size = new System.Drawing.Size(312, 309);
+            this.dgvInventory.Size = new System.Drawing.Size(312, 570);
             this.dgvInventory.TabIndex = 19;
             // 
             // dgvQuests
@@ -303,11 +315,11 @@
             this.dgvQuests.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvQuests.Location = new System.Drawing.Point(16, 446);
+            this.dgvQuests.Location = new System.Drawing.Point(6, 6);
             this.dgvQuests.MultiSelect = false;
             this.dgvQuests.Name = "dgvQuests";
             this.dgvQuests.RowHeadersVisible = false;
-            this.dgvQuests.Size = new System.Drawing.Size(312, 186);
+            this.dgvQuests.Size = new System.Drawing.Size(312, 570);
             this.dgvQuests.TabIndex = 20;
             // 
             // btnTrade
@@ -398,7 +410,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(179, 20);
+            this.label11.Location = new System.Drawing.Point(11, 123);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 28;
@@ -407,21 +419,74 @@
             // lblRank
             // 
             this.lblRank.AutoSize = true;
-            this.lblRank.BackColor = System.Drawing.SystemColors.Info;
-            this.lblRank.Location = new System.Drawing.Point(248, 20);
+            this.lblRank.BackColor = System.Drawing.Color.Transparent;
+            this.lblRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRank.Location = new System.Drawing.Point(103, 123);
             this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(0, 13);
+            this.lblRank.Size = new System.Drawing.Size(0, 17);
             this.lblRank.TabIndex = 29;
             // 
-            // gbPlayerStats
+            // Player_Tab
             // 
-            this.gbPlayerStats.BackColor = System.Drawing.Color.Transparent;
-            this.gbPlayerStats.Location = new System.Drawing.Point(16, 3);
-            this.gbPlayerStats.Name = "gbPlayerStats";
-            this.gbPlayerStats.Size = new System.Drawing.Size(312, 121);
-            this.gbPlayerStats.TabIndex = 30;
-            this.gbPlayerStats.TabStop = false;
-            this.gbPlayerStats.Text = "Statistics:";
+            this.Player_Tab.Controls.Add(this.tab_Player_Stats);
+            this.Player_Tab.Controls.Add(this.tab_Player_Inv);
+            this.Player_Tab.Controls.Add(this.tab_Player_Quests);
+            this.Player_Tab.Location = new System.Drawing.Point(3, 19);
+            this.Player_Tab.Name = "Player_Tab";
+            this.Player_Tab.SelectedIndex = 0;
+            this.Player_Tab.Size = new System.Drawing.Size(336, 608);
+            this.Player_Tab.TabIndex = 31;
+            // 
+            // tab_Player_Stats
+            // 
+            this.tab_Player_Stats.Controls.Add(this.pbar_PlayerHP);
+            this.tab_Player_Stats.Controls.Add(this.lblRank);
+            this.tab_Player_Stats.Controls.Add(this.label1);
+            this.tab_Player_Stats.Controls.Add(this.label11);
+            this.tab_Player_Stats.Controls.Add(this.lblHitPoints);
+            this.tab_Player_Stats.Controls.Add(this.label2);
+            this.tab_Player_Stats.Controls.Add(this.lblGold);
+            this.tab_Player_Stats.Controls.Add(this.label3);
+            this.tab_Player_Stats.Controls.Add(this.lblExperience);
+            this.tab_Player_Stats.Controls.Add(this.label4);
+            this.tab_Player_Stats.Controls.Add(this.lblLevel);
+            this.tab_Player_Stats.Location = new System.Drawing.Point(4, 22);
+            this.tab_Player_Stats.Name = "tab_Player_Stats";
+            this.tab_Player_Stats.Size = new System.Drawing.Size(328, 582);
+            this.tab_Player_Stats.TabIndex = 2;
+            this.tab_Player_Stats.Text = "Statistics";
+            this.tab_Player_Stats.UseVisualStyleBackColor = true;
+            // 
+            // pbar_PlayerHP
+            // 
+            this.pbar_PlayerHP.BackColor = System.Drawing.Color.Black;
+            this.pbar_PlayerHP.ForeColor = System.Drawing.Color.Green;
+            this.pbar_PlayerHP.Location = new System.Drawing.Point(145, 11);
+            this.pbar_PlayerHP.Name = "pbar_PlayerHP";
+            this.pbar_PlayerHP.Size = new System.Drawing.Size(163, 23);
+            this.pbar_PlayerHP.TabIndex = 0;
+            // 
+            // tab_Player_Inv
+            // 
+            this.tab_Player_Inv.Controls.Add(this.dgvInventory);
+            this.tab_Player_Inv.Location = new System.Drawing.Point(4, 22);
+            this.tab_Player_Inv.Name = "tab_Player_Inv";
+            this.tab_Player_Inv.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Player_Inv.Size = new System.Drawing.Size(328, 582);
+            this.tab_Player_Inv.TabIndex = 0;
+            this.tab_Player_Inv.Text = "Inventory";
+            this.tab_Player_Inv.UseVisualStyleBackColor = true;
+            // 
+            // tab_Player_Quests
+            // 
+            this.tab_Player_Quests.Controls.Add(this.dgvQuests);
+            this.tab_Player_Quests.Location = new System.Drawing.Point(4, 22);
+            this.tab_Player_Quests.Name = "tab_Player_Quests";
+            this.tab_Player_Quests.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Player_Quests.Size = new System.Drawing.Size(328, 582);
+            this.tab_Player_Quests.TabIndex = 1;
+            this.tab_Player_Quests.Text = "Quests";
+            this.tab_Player_Quests.UseVisualStyleBackColor = true;
             // 
             // Vanadiel
             // 
@@ -430,10 +495,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnEast;
-            this.ClientSize = new System.Drawing.Size(1184, 651);
-            this.Controls.Add(this.lblRank);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(1180, 647);
+            this.Controls.Add(this.Player_Tab);
             this.Controls.Add(this.cboAccessory);
             this.Controls.Add(this.cboArmour);
             this.Controls.Add(this.label10);
@@ -441,9 +504,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.btnTrade);
-            this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.rtbMessages);
             this.Controls.Add(this.rtbLocation);
             this.Controls.Add(this.btnWest);
@@ -455,16 +516,8 @@
             this.Controls.Add(this.cboPotions);
             this.Controls.Add(this.cboWeapons);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblLevel);
-            this.Controls.Add(this.lblExperience);
-            this.Controls.Add(this.lblGold);
-            this.Controls.Add(this.lblHitPoints);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.gbPlayerStats);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1200, 690);
@@ -475,6 +528,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vanadiel_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
+            this.Player_Tab.ResumeLayout(false);
+            this.tab_Player_Stats.ResumeLayout(false);
+            this.tab_Player_Stats.PerformLayout();
+            this.tab_Player_Inv.ResumeLayout(false);
+            this.tab_Player_Quests.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,7 +571,11 @@
         private System.Windows.Forms.ComboBox cboAccessory;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblRank;
-        private System.Windows.Forms.GroupBox gbPlayerStats;
+        private System.Windows.Forms.TabControl Player_Tab;
+        private System.Windows.Forms.TabPage tab_Player_Inv;
+        private System.Windows.Forms.TabPage tab_Player_Quests;
+        private System.Windows.Forms.TabPage tab_Player_Stats;
+        private System.Windows.Forms.ProgressBar pbar_PlayerHP;
     }
 }
 

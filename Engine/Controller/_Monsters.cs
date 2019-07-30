@@ -89,8 +89,8 @@ namespace Engine.Controller
             Monster taintedHound = new Monster(MONSTER_ID_TAINTED_HOUND, "Tainted Hound", 25, 6, 15, 0, false, 12, 12);
             taintedHound.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOLF_HIDE), 30, false));
 
-            Monster Ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
-            Ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
+            Monster ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
+            ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
 
 
             //static list
@@ -107,7 +107,7 @@ namespace Engine.Controller
             Monsters.Add(bomb08);
             Monsters.Add(enchantedBones);
             Monsters.Add(taintedHound);
-            Monsters.Add(Ghost);
+            Monsters.Add(ghost);
 
         }
     }

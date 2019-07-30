@@ -18,62 +18,61 @@ namespace Engine.Controller
 
         //Weapon IDs (500-790)
         //Swords
-        public const int ITEM_ID_ONION_SWORD = 500;
-        public const int ITEM_ID_BRONZE_SWORD = 510;
-        public const int ITEM_ID_SAPARA = 520;
-        public const int ITEM_ID_XIPHOS = 530;
-        public const int ITEM_ID_SPATHA = 540;
-        public const int ITEM_ID_ROYAL_ARCHERS_SWORD = 550;
-        public const int ITEM_ID_BILBO = 560;
-        public const int ITEM_ID_KINGDOM_SWORD = 570;
-        public const int ITEM_ID_SANDORIAN_SIGNET_SWORD = 580;
-        public const int ITEM_ID_MYTHRIL_SWORD = 590;
-        public const int ITEM_ID_ANCIENT_SWORD = 600;
-        public const int ITEM_ID_SAVE_THE_QUEEN = 610;
+        public const int SWD_ID_ONION_SWORD = 500;
+        public const int SWD_ID_BRONZE_SWORD = 510;
+        public const int SWD_ID_SAPARA = 520;
+        public const int SWD_ID_XIPHOS = 530;
+        public const int SWD_ID_SPATHA = 540;
+        public const int SWD_ID_ROYAL_ARCHERS_SWORD = 550;
+        public const int SWD_ID_BILBO = 560;
+        public const int SWD_ID_KINGDOM_SWORD = 570;
+        public const int SWD_ID_SANDORIAN_SIGNET_SWORD = 580;
+        public const int SWD_ID_MYTHRIL_SWORD = 590;
+        public const int SWD_ID_ANCIENT_SWORD = 600;
+        public const int SWD_ID_SAVE_THE_QUEEN = 610;
 
         //Great Swords
-        public const int ITEM_ID_RUSTY_GREATSWORD = 620;
-        public const int ITEM_ID_CLAYMORE = 630;
-        public const int ITEM_ID_VULCAN_CLAYMORE = 640;
-        public const int ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE = 650;
-        public const int ITEM_ID_COBRA_UNIT_CLAYMORE = 660;
-        public const int ITEM_ID_DARKSTEEL_CLAYMORE = 670;
-        public const int ITEM_ID_MYTHRIL_CLAYMORE = 680;
-        public const int ITEM_ID_FLAME_CLAYMORE = 690;
-        public const int ITEM_ID_RAGNAROK = 700;
+        public const int GSWD_ID_RUSTY_GREATSWORD = 620;
+        public const int GSWD_ID_CLAYMORE = 630;
+        public const int GSWD_ID_VULCAN_CLAYMORE = 640;
+        public const int GSWD_ID_ROYAL_SWORDSMAN_CLAYMORE = 650;
+        public const int GSWD_ID_COBRA_UNIT_CLAYMORE = 660;
+        public const int GSWD_ID_DARKSTEEL_CLAYMORE = 670;
+        public const int GSWD_ID_MYTHRIL_CLAYMORE = 680;
+        public const int GSWD_ID_FLAME_CLAYMORE = 690;
+        public const int GSWD_ID_RAGNAROK = 700;
 
         //Bows
-        public const int ITEM_ID_SHORTBOW = 710;
-        public const int ITEM_ID_FREESWORD_BOW = 720;
-        public const int ITEM_ID_POWER_BOW = 730;
-        public const int ITEM_ID_PLATOON_BOW = 740;
-        public const int ITEM_ID_KINGDOM_BOW = 750;
-        public const int ITEM_ID_GREAT_BOW = 760;
-        public const int ITEM_ID_BATTLE_BOW = 770;
-        public const int ITEM_ID_LIGHTNING_BOW = 780;
+        public const int BOW_ID_SHORTBOW = 710;
+        public const int BOW_ID_FREESWORD_BOW = 720;
+        public const int BOW_ID_POWER_BOW = 730;
+        public const int BOW_ID_PLATOON_BOW = 740;
+        public const int BOW_ID_KINGDOM_BOW = 750;
+        public const int BOW_ID_GREAT_BOW = 760;
+        public const int BOW_ID_BATTLE_BOW = 770;
+        public const int BOW_ID_LIGHTNING_BOW = 780;
 
 
         //Potion IDs (900-990)
-        public const int ITEM_ID_POTION = 900;
-        public const int ITEM_ID_HI_POTION = 910;
-        public const int ITEM_ID_HI_POTION_PLUS = 920;
-        public const int ITEM_ID_MEGA_POTION = 930;
-        public const int ITEM_ID_MEGA_POTION_PLUS = 940;
-        public const int ITEM_ID_X_POTION = 950;
+        public const int POTION_ID_POTION = 900;
+        public const int POTION_ID_HI_POTION = 910;
+        public const int POTION_ID_HI_POTION_PLUS = 920;
+        public const int POTION_ID_MEGA_POTION = 930;
+        public const int POTION_ID_MEGA_POTION_PLUS = 940;
+        public const int POTION_ID_X_POTION = 950;
 
         //Key Item IDs (1000-1490)
-        public const int ITEM_ID_BAMBOO_FISHING_ROD = 1000;
-
-        public const int ITEM_ID_BLACKDRAGONHEAD = 1099;
+        public const int KI_ID_BAMBOO_FISHING_ROD = 1000;
+        public const int KI_ID_BLACKDRAGONHEAD = 1099;
 
         //Armour IDs (1500-1590)
-        public const int ITEM_ID_COMMON_CLOTHES = 1500;
-        public const int ITEM_ID_LEATHER_ARMOUR = 1510;
-        public const int ITEM_ID_SCALE_MAIL = 1520;
-        public const int ITEM_ID_CHAIN_DOUBLET = 1530;
+        public const int ARMOUR_ID_COMMON_CLOTHES = 1500;
+        public const int ARMOUR_ID_LEATHER_ARMOUR = 1510;
+        public const int ARMOUR_ID_SCALE_MAIL = 1520;
+        public const int ARMOUR_ID_CHAIN_DOUBLET = 1530;
 
         //Accessory IDs (1600-1690)
-        public const int ITEM_ID_SANDORIAN_RING = 1600;
+        public const int ACCESSORY_ID_SANDORIAN_RING = 1600;
 
         //Item ID's (1700+)
         public const int ITEM_ID_RABBIT_MEAT = 1700;
@@ -134,60 +133,64 @@ namespace Engine.Controller
 
             //Populate weapons
             //Swords
-            Items.Add(new Weapon(ITEM_ID_ONION_SWORD, "Onion Sword", "Onion Swords", 1, 0, 5, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_BRONZE_SWORD, "Bronze Sword", "Bronze Swords", 5, 1, 6, 50));
-            Items.Add(new Weapon(ITEM_ID_SAPARA, "Sapara", "Saparas", 5, 4, 7, 400));
-            Items.Add(new Weapon(ITEM_ID_XIPHOS, "Xiphos", "Xiphos", 5, 5, 8, 520));
-            Items.Add(new Weapon(ITEM_ID_SPATHA, "Spatha", "Spathas", 5, 8, 14, 1000));
-            Items.Add(new Weapon(ITEM_ID_ROYAL_ARCHERS_SWORD, "Royal Archer's Sword", "Royal Archer's Swords", 5, 10, 15, 1600));
-            Items.Add(new Weapon(ITEM_ID_BILBO, "Bilbo", "Bilbos", 5, 11, 15, 1700));
-            Items.Add(new Weapon(ITEM_ID_KINGDOM_SWORD, "Kingdom Sword", "Kingdom Swords", 5, 15, 24, 3600));
-            Items.Add(new Weapon(ITEM_ID_SANDORIAN_SIGNET_SWORD, "San d'Orian Signet Sword", "San d'Orian Signet Swords", 5, 17, 27, 4600));
-            Items.Add(new Weapon(ITEM_ID_MYTHRIL_SWORD, "Mythril Sword", "Mythril Swords", 5, 22, 33, 7800));
-            Items.Add(new Weapon(ITEM_ID_ANCIENT_SWORD, "Ancient Sword", "Ancient Swords", 5, 30, 45, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_SAVE_THE_QUEEN, "Save The Queen", "Save The Queens", 5, 50, 100, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(SWD_ID_ONION_SWORD, "Onion Sword", "Onion Swords", 1, 0, 5, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(SWD_ID_BRONZE_SWORD, "Bronze Sword", "Bronze Swords", 5, 1, 6, 50));
+            Items.Add(new Weapon(SWD_ID_SAPARA, "Sapara", "Saparas", 5, 4, 7, 400));
+            Items.Add(new Weapon(SWD_ID_XIPHOS, "Xiphos", "Xiphos", 5, 5, 8, 520));
+            Items.Add(new Weapon(SWD_ID_SPATHA, "Spatha", "Spathas", 5, 8, 14, 1000));
+            Items.Add(new Weapon(SWD_ID_ROYAL_ARCHERS_SWORD, "Royal Archer's Sword", "Royal Archer's Swords", 5, 10, 15, 1600));
+            Items.Add(new Weapon(SWD_ID_BILBO, "Bilbo", "Bilbos", 5, 11, 15, 1700));
+            Items.Add(new Weapon(SWD_ID_KINGDOM_SWORD, "Kingdom Sword", "Kingdom Swords", 5, 15, 24, 3600));
+            Items.Add(new Weapon(SWD_ID_SANDORIAN_SIGNET_SWORD, "San d'Orian Signet Sword", "San d'Orian Signet Swords", 5, 17, 27, 4600));
+            Items.Add(new Weapon(SWD_ID_MYTHRIL_SWORD, "Mythril Sword", "Mythril Swords", 5, 22, 33, 7800));
+            Items.Add(new Weapon(SWD_ID_ANCIENT_SWORD, "Ancient Sword", "Ancient Swords", 5, 30, 45, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(SWD_ID_SAVE_THE_QUEEN, "Save The Queen", "Save The Queens", 5, 50, 100, UNSELLABLE_ITEM));
 
             //Great Swords
-            Items.Add(new Weapon(ITEM_ID_RUSTY_GREATSWORD, "Rusty Greatsword", "Rusty Greatswords", 5, 0, 10, 120));
-            Items.Add(new Weapon(ITEM_ID_CLAYMORE, "Claymore", "Claymores", 5, 1, 11, 390));
-            Items.Add(new Weapon(ITEM_ID_VULCAN_CLAYMORE, "Vulcan Claymore", "Vulcan Claymores", 5, 3, 18, 700));
-            Items.Add(new Weapon(ITEM_ID_ROYAL_SWORDSMAN_CLAYMORE, "Royal Swordsman's Claymore", "Royal Swordsman's Claymores", 5, 4, 22, 1800));
-            Items.Add(new Weapon(ITEM_ID_COBRA_UNIT_CLAYMORE, "Cobra Unit Claymore", "Cobra Unit Claymores", 5, 6, 28, 2900));
-            Items.Add(new Weapon(ITEM_ID_DARKSTEEL_CLAYMORE, "Darksteel Claymore", "Darksteel Claymores", 5, 12, 36, 6600));
-            Items.Add(new Weapon(ITEM_ID_MYTHRIL_CLAYMORE, "Mythril Claymore", "Mythril Claymores", 5, 15, 60, 10800));
-            Items.Add(new Weapon(ITEM_ID_FLAME_CLAYMORE, "Flame Claymore", "Flame Claymores", 5, 20, 70, UNSELLABLE_ITEM));
-            Items.Add(new Weapon(ITEM_ID_RAGNAROK, "Ragnarok", "Ragnaroks", 5, 30, 150, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(GSWD_ID_RUSTY_GREATSWORD, "Rusty Greatsword", "Rusty Greatswords", 5, 0, 10, 120));
+            Items.Add(new Weapon(GSWD_ID_CLAYMORE, "Claymore", "Claymores", 5, 1, 11, 390));
+            Items.Add(new Weapon(GSWD_ID_VULCAN_CLAYMORE, "Vulcan Claymore", "Vulcan Claymores", 5, 3, 18, 700));
+            Items.Add(new Weapon(GSWD_ID_ROYAL_SWORDSMAN_CLAYMORE, "Royal Swordsman's Claymore", "Royal Swordsman's Claymores", 5, 4, 22, 1800));
+            Items.Add(new Weapon(GSWD_ID_COBRA_UNIT_CLAYMORE, "Cobra Unit Claymore", "Cobra Unit Claymores", 5, 6, 28, 2900));
+            Items.Add(new Weapon(GSWD_ID_DARKSTEEL_CLAYMORE, "Darksteel Claymore", "Darksteel Claymores", 5, 12, 36, 6600));
+            Items.Add(new Weapon(GSWD_ID_MYTHRIL_CLAYMORE, "Mythril Claymore", "Mythril Claymores", 5, 15, 60, 10800));
+            Items.Add(new Weapon(GSWD_ID_FLAME_CLAYMORE, "Flame Claymore", "Flame Claymores", 5, 20, 70, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(GSWD_ID_RAGNAROK, "Ragnarok", "Ragnaroks", 5, 30, 150, UNSELLABLE_ITEM));
 
             //Bows
-            Items.Add(new Weapon(ITEM_ID_SHORTBOW, "Shortbow", "Shortbows", 5, 2, 3, 30));
-            Items.Add(new Weapon(ITEM_ID_FREESWORD_BOW, "Freesword Bow", "Freesword Bows", 5, 5, 6, 700));
-            Items.Add(new Weapon(ITEM_ID_POWER_BOW, "Power Bow", "Power Bows", 5, 9, 10, 1100));
-            Items.Add(new Weapon(ITEM_ID_PLATOON_BOW, "Platoon Bow", "Platoon Bows", 5, 14, 15, 2800));
-            Items.Add(new Weapon(ITEM_ID_KINGDOM_BOW, "Kingdom Bow", "Kingdom Bows", 5, 18, 19, 4100));
-            Items.Add(new Weapon(ITEM_ID_GREAT_BOW, "Great Bow", "Great Bows", 5, 25, 26, 7600));
-            Items.Add(new Weapon(ITEM_ID_BATTLE_BOW, "The Battle Bow", "Battle Bows", 5, 37, 38, 30));
-            Items.Add(new Weapon(ITEM_ID_LIGHTNING_BOW, "Lightning Bow", "Lightning Bows", 5, 62, 68, UNSELLABLE_ITEM));
+            Items.Add(new Weapon(BOW_ID_SHORTBOW, "Shortbow", "Shortbows", 5, 2, 3, 30));
+            Items.Add(new Weapon(BOW_ID_FREESWORD_BOW, "Freesword Bow", "Freesword Bows", 5, 5, 6, 700));
+            Items.Add(new Weapon(BOW_ID_POWER_BOW, "Power Bow", "Power Bows", 5, 9, 10, 1100));
+            Items.Add(new Weapon(BOW_ID_PLATOON_BOW, "Platoon Bow", "Platoon Bows", 5, 14, 15, 2800));
+            Items.Add(new Weapon(BOW_ID_KINGDOM_BOW, "Kingdom Bow", "Kingdom Bows", 5, 18, 19, 4100));
+            Items.Add(new Weapon(BOW_ID_GREAT_BOW, "Great Bow", "Great Bows", 5, 25, 26, 7600));
+            Items.Add(new Weapon(BOW_ID_BATTLE_BOW, "The Battle Bow", "Battle Bows", 5, 37, 38, 30));
+            Items.Add(new Weapon(BOW_ID_LIGHTNING_BOW, "Lightning Bow", "Lightning Bows", 5, 62, 68, UNSELLABLE_ITEM));
 
 
             //Populate potions
-            Items.Add(new HealingPotion(ITEM_ID_POTION, "Potion", "Potions", 5, 10, 50));
-            Items.Add(new HealingPotion(ITEM_ID_HI_POTION, "Hi-Potion", "Hi-Potions", 15, 30, 250));
-            Items.Add(new HealingPotion(ITEM_ID_HI_POTION_PLUS, "Hi-Potion +", "Hi-Potion Plus'", 21, 36, 450));
-            Items.Add(new HealingPotion(ITEM_ID_MEGA_POTION, "Mega Potion", "Mega Potions", 45, 70, 1100));
-            Items.Add(new HealingPotion(ITEM_ID_MEGA_POTION_PLUS, "Mega Potion +", "Mega Potion Plus'", 55, 80, 1600));
-            Items.Add(new HealingPotion(ITEM_ID_X_POTION, "X-Potion", "X-Potions", 100, 200, 5000));
+            Items.Add(new HealingPotion(POTION_ID_POTION, "Potion", "Potions", 5, 10, 50));
+            Items.Add(new HealingPotion(POTION_ID_HI_POTION, "Hi-Potion", "Hi-Potions", 15, 30, 250));
+            Items.Add(new HealingPotion(POTION_ID_HI_POTION_PLUS, "Hi-Potion +", "Hi-Potion Plus'", 21, 36, 450));
+            Items.Add(new HealingPotion(POTION_ID_MEGA_POTION, "Mega Potion", "Mega Potions", 45, 70, 1100));
+            Items.Add(new HealingPotion(POTION_ID_MEGA_POTION_PLUS, "Mega Potion +", "Mega Potion Plus'", 55, 80, 1600));
+            Items.Add(new HealingPotion(POTION_ID_X_POTION, "X-Potion", "X-Potions", 100, 200, 5000));
 
 
 
             //Populate key items
-            Items.Add(new Item(ITEM_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
-            Items.Add(new Item(ITEM_ID_BLACKDRAGONHEAD, "Black Dragon head", "Black Dragon heads", UNSELLABLE_ITEM));
+            Items.Add(new Item(KI_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
+            Items.Add(new Item(KI_ID_BLACKDRAGONHEAD, "Black Dragon head", "Black Dragon heads", UNSELLABLE_ITEM));
 
             //Populate Armour
-            Items.Add(new Armour(ITEM_ID_COMMON_CLOTHES, "Common Clothes", "Common Clothes", 0, 0, UNSELLABLE_ITEM));
+            Items.Add(new Armour(ARMOUR_ID_COMMON_CLOTHES, "Common Clothes", "Common Clothes", 0, 0, UNSELLABLE_ITEM));
+            Items.Add(new Armour(ARMOUR_ID_LEATHER_ARMOUR, "Leather Armour", "Leather Armour", 1, 2, 120));
+            Items.Add(new Armour(ARMOUR_ID_SCALE_MAIL, "Scalemail", "Scalemail", 3, 0, 360));
+            Items.Add(new Armour(ARMOUR_ID_CHAIN_DOUBLET, "Chain Doublet", "Chain Doublets", 2, 2, 400));
+
 
             //Populate Accessories
-            Items.Add(new Accessory(ITEM_ID_SANDORIAN_RING, "San d'Orian Ring", "San d'Orian Rings", 1, 0, 0, UNSELLABLE_ITEM));
+            Items.Add(new Accessory(ACCESSORY_ID_SANDORIAN_RING, "San d'Orian Ring", "San d'Orian Rings", 1, 0, 0, UNSELLABLE_ITEM));
 
         }
 
