@@ -20,7 +20,7 @@ namespace Engine.Controller
 
         //Mission IDs
         public const int MISSION_01_SMASH_THE_ORCISH_SCOUTS = 1001;
-
+        public const int MISSION_02_INVESTIGATE_KRT = 1002;
 
         #endregion
 
@@ -48,6 +48,12 @@ namespace Engine.Controller
             smashTheOrcishScouts.RankUpValue = 1;
             smashTheOrcishScouts.RequiredRank = 0;
 
+            Quest investigateKRT = new Quest(MISSION_02_INVESTIGATE_KRT, "Investigate Ranperre's Tomb", "The San d'orian Guard have reports of graverobbers operating in the ancient tomb of King Ranperre. In order to fully investigate you'll need a seal to get past the gate, " +
+                                                                        "however the guard dropped this on the east side of Ronfaure while fleeing from a group of Orcish. Recover the seal, investigate the deeper part of the tomb and return with any evidence you may find...", 290, 200);
+            investigateKRT.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(KI_ID_GRAVEROBBERS_NOTES), 1));
+            investigateKRT.RankUpValue = 1;
+            investigateKRT.RequiredRank = 2;
+
             // Quests To List
             Quests.Add(explosiveRequest);
             Quests.Add(fatherAndSon);
@@ -55,6 +61,7 @@ namespace Engine.Controller
 
             // Missions To List
             Quests.Add(smashTheOrcishScouts);
+            Quests.Add(investigateKRT);
 
         }
     }
