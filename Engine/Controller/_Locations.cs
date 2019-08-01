@@ -324,7 +324,7 @@ namespace Engine.Controller
             Location ronfaure47 = new Location(LOCATION_ID_RONFAURE_47_77, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure47.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
             Location ronfaure48 = new Location(LOCATION_ID_RONFAURE_48_78, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
-            ronfaure48.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT);
+            ronfaure48.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FLEXER);
             Location ronfaure49 = new Location(LOCATION_ID_RONFAURE_49_79, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
             ronfaure49.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT);
             Location ronfaure50 = new Location(LOCATION_ID_RONFAURE_50_80, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);

@@ -64,6 +64,7 @@ namespace Engine.Controller
         //Key Item IDs (1000-1490)
         public const int KI_ID_BAMBOO_FISHING_ROD = 1000;
         public const int KI_ID_KRT_SEAL = 1099;
+        public const int KI_ID_GRAVEROBBERS_NOTES = 1001;
 
         //Armour IDs (1500-1590)
         public const int ARMOUR_ID_COMMON_CLOTHES = 1500;
@@ -181,6 +182,7 @@ namespace Engine.Controller
             //Populate key items
             Items.Add(new Item(KI_ID_BAMBOO_FISHING_ROD, "Bamboo Fishing Rod", "Bamboo Fishing Rods", UNSELLABLE_ITEM));
             Items.Add(new Item(KI_ID_KRT_SEAL, "Seal of Ranperre", "Seals of Ranperre", UNSELLABLE_ITEM));
+            Items.Add(new Item(KI_ID_GRAVEROBBERS_NOTES, "Graverobber's Notes", "Graverobber's Notes", UNSELLABLE_ITEM));
 
             //Populate Armour
             Items.Add(new Armour(ARMOUR_ID_COMMON_CLOTHES, "Common Clothes", "Common Clothes", 0, 0, UNSELLABLE_ITEM));

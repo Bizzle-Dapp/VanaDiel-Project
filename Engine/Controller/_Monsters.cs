@@ -28,10 +28,11 @@ namespace Engine.Controller
         public const int MONSTER_ID_ENCHANTED_BONES = 13;
         public const int MONSTER_ID_TAINTED_HOUND = 14;
         public const int MONSTER_ID_GHOST = 15;
+        public const int MONSTER_ID_ORCISH_FLEXER = 16;
 
-        public const int MONSTER_ID_MOUSE_BAT2 = 16;
-        public const int MONSTER_ID_TAINTED_HOUND2 = 17;
-        public const int MONSTER_ID_GHOST2 = 18;
+        public const int MONSTER_ID_MOUSE_BAT2 = 17;
+        public const int MONSTER_ID_TAINTED_HOUND2 = 18;
+        public const int MONSTER_ID_GHOST2 = 19;
         #endregion
 
         private static void PopulateMonsters()
@@ -103,6 +104,9 @@ namespace Engine.Controller
 
             Monster ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
             ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
+
+            Monster orcishFlexer = new Monster(MONSTER_ID_ORCISH_FLEXER, "Orcish Flexer", 5, 10, 25, 78, true, 17, 17);
+            orcishFlexer.LootTable.Add(new LootItem(ItemByID(KI_ID_KRT_SEAL), 100, true));
 
             // King Ranperre's Tomb
 
