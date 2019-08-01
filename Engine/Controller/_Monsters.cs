@@ -18,22 +18,28 @@ namespace Engine.Controller
         public const int MONSTER_ID_FOREST_FUNGUAR = 3;
         public const int MONSTER_ID_SCARAB_BEETLE = 4;
         public const int MONSTER_ID_GOBLIN_WEAVER = 5;
-        public const int MONSTER_ID_DING_BAT_05 = 6;
+        public const int MONSTER_ID_DING_BAT = 6;
         public const int MONSTER_ID_ORCISH_MESMERIZER = 7;
         public const int MONSTER_ID_MOUSE_BAT = 8;
         public const int MONSTER_ID_RIVER_CRAB = 9;
         public const int MONSTER_ID_ORCISH_FODDER = 10;
         public const int MONSTER_ID_ORCISH_GRAPPLER = 11;
-        public const int MONSTER_ID_BOMB_08 = 12;
+        public const int MONSTER_ID_BOMB = 12;
         public const int MONSTER_ID_ENCHANTED_BONES = 13;
         public const int MONSTER_ID_TAINTED_HOUND = 14;
         public const int MONSTER_ID_GHOST = 15;
 
+        public const int MONSTER_ID_MOUSE_BAT2 = 16;
+        public const int MONSTER_ID_TAINTED_HOUND2 = 17;
+        public const int MONSTER_ID_GHOST2 = 18;
         #endregion
 
         private static void PopulateMonsters()
         {
-            //By Area
+            /////////////////
+            //// By Area ////
+            /////////////////
+            
             //Ronfaure
 
             Monster tunnelWorm = new Monster(MONSTER_ID_TUNNEL_WORM, "Tunnel Worm", 0, 5, 3, 10, false, 3, 3);
@@ -60,8 +66,9 @@ namespace Engine.Controller
             goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_COTTON_THREAD), 30, false));
             goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_COTTON_CLOTH), 10, false));
             goblinWeaver.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 30, false));
+            goblinWeaver.LootTable.Add(new LootItem(ItemByID(ARMOUR_ID_LEATHER_ARMOUR), 5, false));
 
-            Monster dingBat05 = new Monster(MONSTER_ID_DING_BAT_05, "Ding Bat", 15, 4, 5, 0, false, 6, 6);
+            Monster dingBat05 = new Monster(MONSTER_ID_DING_BAT, "Ding Bat", 15, 4, 5, 0, false, 6, 6);
             dingBat05.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BAT_WING), 40, false));
 
             Monster orcishMesmerizer = new Monster(MONSTER_ID_ORCISH_MESMERIZER, "Orcish Mesmerizer", 5, 10, 10, 6, false, 10, 10);
@@ -76,15 +83,20 @@ namespace Engine.Controller
             Monster orcishFodder = new Monster(MONSTER_ID_ORCISH_FODDER, "Orcish Fodder", 5, 10, 10, 9, false, 12, 12);
             orcishFodder.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 30, false));
             orcishFodder.LootTable.Add(new LootItem(ItemByID(ITEM_ID_ORCISH_AXE), 30, false));
+            orcishFodder.LootTable.Add(new LootItem(ItemByID(ARMOUR_ID_SCALE_MAIL), 5, false));
+            orcishFodder.LootTable.Add(new LootItem(ItemByID(POTION_ID_POTION), 12, false));
 
             Monster orcishGrappler = new Monster(MONSTER_ID_ORCISH_GRAPPLER, "Orcish Grappler", 10, 8, 12, 9, false, 12, 12);
             orcishGrappler.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BEASTCOIN), 35, false));
+            orcishGrappler.LootTable.Add(new LootItem(ItemByID(POTION_ID_POTION), 12, false));
 
-            Monster bomb08 = new Monster(MONSTER_ID_BOMB_08, "Bomb", 5, 8, 12, 0, false, 15, 15);
+            Monster bomb08 = new Monster(MONSTER_ID_BOMB, "Bomb", 5, 8, 12, 0, false, 15, 15);
             bomb08.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BOMB_ASH), 20, false));
 
             Monster enchantedBones = new Monster(MONSTER_ID_ENCHANTED_BONES, "Enchanted Bones", 5, 10, 14, 0, false, 15, 15);
             enchantedBones.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BONE_CHIP), 60, false));
+            enchantedBones.LootTable.Add(new LootItem(ItemByID(GSWD_ID_RUSTY_GREATSWORD), 6, false));
+            enchantedBones.LootTable.Add(new LootItem(ItemByID(POTION_ID_POTION), 10, false));
 
             Monster taintedHound = new Monster(MONSTER_ID_TAINTED_HOUND, "Tainted Hound", 25, 6, 15, 0, false, 12, 12);
             taintedHound.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOLF_HIDE), 30, false));
@@ -92,6 +104,17 @@ namespace Engine.Controller
             Monster ghost = new Monster(MONSTER_ID_GHOST, "Ghost", 25, 6, 22, 0, false, 10, 10);
             ghost.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
 
+            // King Ranperre's Tomb
+
+            Monster mouseBat2 = new Monster(MONSTER_ID_MOUSE_BAT2, "Mouse Bat", 16, 7, 9, 0, false, 9, 9);
+            mouseBat2.LootTable.Add(new LootItem(ItemByID(ITEM_ID_BAT_WING), 50, false));
+
+            Monster taintedHound2 = new Monster(MONSTER_ID_TAINTED_HOUND2, "Tainted Hound", 25, 6, 15, 0, false, 12, 12);
+            taintedHound2.LootTable.Add(new LootItem(ItemByID(ITEM_ID_WOLF_HIDE), 30, false));
+
+            Monster ghost2 = new Monster(MONSTER_ID_GHOST2, "Ghost", 25, 8, 31, 0, false, 14, 14);
+            ghost2.LootTable.Add(new LootItem(ItemByID(ITEM_ID_REVIVAL_TREE_ROOT), 60, false));
+            ghost2.LootTable.Add(new LootItem(ItemByID(POTION_ID_HI_POTION), 9, false));
 
             //static list
             Monsters.Add(tunnelWorm);
@@ -108,6 +131,10 @@ namespace Engine.Controller
             Monsters.Add(enchantedBones);
             Monsters.Add(taintedHound);
             Monsters.Add(ghost);
+
+            Monsters.Add(mouseBat2);
+            Monsters.Add(taintedHound2);
+            Monsters.Add(ghost2);
 
         }
     }

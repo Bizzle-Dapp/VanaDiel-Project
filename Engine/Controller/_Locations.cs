@@ -315,7 +315,7 @@ namespace Engine.Controller
             Location ronfaure42 = new Location(LOCATION_ID_RONFAURE_42_72, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
             ronfaure42.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_MESMERIZER);
             Location ronfaure43 = new Location(LOCATION_ID_RONFAURE_43_73, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 4);
-            ronfaure43.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
+            ronfaure43.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT);
             Location ronfaureToWestRonfaureN = new Location(LOCATION_ID_RONFAURE_44_TO_WEST_RONFAURE_N_74, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 0);
             Location ronfaure45 = new Location(LOCATION_ID_RONFAURE_45_75, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure45.MonsterLivingHere = MonsterByID(MONSTER_ID_FOREST_RABBIT);
@@ -324,9 +324,9 @@ namespace Engine.Controller
             Location ronfaure47 = new Location(LOCATION_ID_RONFAURE_47_77, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure47.MonsterLivingHere = MonsterByID(MONSTER_ID_RIVER_CRAB);
             Location ronfaure48 = new Location(LOCATION_ID_RONFAURE_48_78, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
-            ronfaure48.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
+            ronfaure48.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT);
             Location ronfaure49 = new Location(LOCATION_ID_RONFAURE_49_79, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 3);
-            ronfaure49.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT_05);
+            ronfaure49.MonsterLivingHere = MonsterByID(MONSTER_ID_DING_BAT);
             Location ronfaure50 = new Location(LOCATION_ID_RONFAURE_50_80, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
             ronfaure50.MonsterLivingHere = MonsterByID(MONSTER_ID_ORCISH_FODDER);
             Location ronfaure51 = new Location(LOCATION_ID_RONFAURE_51_81, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 2);
@@ -353,7 +353,7 @@ namespace Engine.Controller
             Location ronfaure62 = new Location(LOCATION_ID_RONFAURE_62_92, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 4);
             ronfaure62.MonsterLivingHere = MonsterByID(MONSTER_ID_TAINTED_HOUND);
             Location ronfaure63 = new Location(LOCATION_ID_RONFAURE_63_93, "East Ronfaure", "The thick, dense woodland blocks the sunshine. The carpet of the forest softens footsteps and provides a perfect environment for many kinds of predator." + Environment.NewLine + " ", 1);
-            ronfaure63.MonsterLivingHere = MonsterByID(MONSTER_ID_BOMB_08);
+            ronfaure63.MonsterLivingHere = MonsterByID(MONSTER_ID_BOMB);
             Location ronfaureEntranceToKingRanperresTomb = new Location(LOCATION_ID_RONFAURE_64_ENTRANCE_TO_KING_RANPERRES_TOMB_94, "East Ronfaure - Entrance to King Ranperres Tomb", "<At the moment, you may travel no further...>", 0);
 
             ////////////////////////
@@ -361,22 +361,30 @@ namespace Engine.Controller
             ////////////////////////
             Location krt1 = new Location(LOCATION_ID_KRT_1_TO_EAST_RONFAURE_1, "King Ranperre's Tomb Entrance", "The high stone walls have an open roof and lead into a maze like pattern of walled in undergrowth.\n To the North is the dense forest of East Ronfaure", 0);
             Location krt2 = new Location(LOCATION_ID_KRT_2, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            krt2.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT2);
             Location krt3 = new Location(LOCATION_ID_KRT_3, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
-            Location krt4 = new Location(LOCATION_ID_KRT_4, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
+            krt3.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT2);
+            Location krt4 = new Location(LOCATION_ID_KRT_4, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 2);
+            krt4.MonsterLivingHere = MonsterByID(MONSTER_ID_MOUSE_BAT2);
             Location krt5 = new Location(LOCATION_ID_KRT_5, "King Ranperre's Tomb", "The ground here is dense with shrubs and ferns, the area above is open to the sky and elements.", 1);
             Location krt6 = new Location(LOCATION_ID_KRT_6, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            krt6.MonsterLivingHere = MonsterByID(MONSTER_ID_GHOST);
             Location krt7 = new Location(LOCATION_ID_KRT_7, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            krt7.MonsterLivingHere = MonsterByID(MONSTER_ID_GHOST2);
             Location krt8 = new Location(LOCATION_ID_KRT_8, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            krt8.MonsterLivingHere = MonsterByID(MONSTER_ID_TAINTED_HOUND2);
             Location krt9 = new Location(LOCATION_ID_KRT_9, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
             Location krt10 = new Location(LOCATION_ID_KRT_10, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
             Location krt11 = new Location(LOCATION_ID_KRT_11, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
             Location krt12 = new Location(LOCATION_ID_KRT_12, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
             Location krt13 = new Location(LOCATION_ID_KRT_13, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
-            Location krt14 = new Location(LOCATION_ID_KRT_14, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt14 = new Location(LOCATION_ID_KRT_14, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 3);
+            krt14.MonsterLivingHere = MonsterByID(MONSTER_ID_GHOST2);
             Location krt15 = new Location(LOCATION_ID_KRT_15, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
-            Location krt16 = new Location(LOCATION_ID_KRT_16, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
+            Location krt16 = new Location(LOCATION_ID_KRT_16, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area. To the north stands a door with a hole in the centre...", 1);
             Location krt17 = new Location(LOCATION_ID_KRT_17, "King Ranperre's Tomb", "Gravestones are scattered throughout this area. Some have been opened by grave robbers while others remain untouched. Nature has made it's mark in force across what was once a well serviced area.", 1);
             Location krt18 = new Location(LOCATION_ID_KRT_18, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
+            krt18.ItemRequiredToEnter = ItemByID(KI_ID_KRT_SEAL);
             Location krt19 = new Location(LOCATION_ID_KRT_19, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
             Location krt20 = new Location(LOCATION_ID_KRT_20, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
             Location krt21 = new Location(LOCATION_ID_KRT_21, "King Ranperre's Tomb", "Dark, damp cave walls surround you. Sounds echo deep in various directons. You have a deep feeling of uncertainty here - this place is ancient.", 1);
