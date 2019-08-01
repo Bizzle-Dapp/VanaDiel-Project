@@ -15,8 +15,6 @@ using Engine.Controller;
 
 namespace Vanadiel
 {
-   
-    //comment 
     public partial class Vanadiel : Form
     {
         //
@@ -151,16 +149,14 @@ namespace Vanadiel
 
         }
 
-        
-
         private void UpdatePlayerLevelText()
         {
             //Updates labels for player statistic
             lblLevel.Text = _player.Level.ToString();
             lblRank.Text = _player.Rank.ToString();
-
         }
 
+        #region PlayerLevel
         private void UpdatePlayerLevel()
         {
             //Lvl 2
@@ -291,7 +287,7 @@ namespace Vanadiel
 
         }
 
-
+        #endregion
 
         //
         //Move buttons parameters
@@ -303,7 +299,6 @@ namespace Vanadiel
             rtbMessages.Text = " ";
             rtbLocation.Text = " ";
             moveButtonTimer(_player.CurrentLocation.LocationToNorth);
-            
         }
 
         private void btnWest_Click(object sender, EventArgs e)
@@ -326,11 +321,6 @@ namespace Vanadiel
             rtbLocation.Text = " ";
             moveButtonTimer(_player.CurrentLocation.LocationToSouth);
         }
-
-
-
-
-
 
 
         //The moveTo Function, handles what happens when move buttons call for a change of location
@@ -387,7 +377,6 @@ namespace Vanadiel
             //Display current location name and description
             rtbLocation.Text = newLocation.Name + Environment.NewLine + Environment.NewLine;
             rtbLocation.Text += newLocation.Description + Environment.NewLine;
-
             
             //Check if an NPC is here and if so whether the player already has their key item
             if (newLocation.NPCHere != null && _player.DisplayNPCDialog(newLocation.NPCHere))
@@ -402,7 +391,6 @@ namespace Vanadiel
 
                 }
             }
-            
 
             //Quest available here?
             if (newLocation.QuestAvailableHere != null)
@@ -494,7 +482,6 @@ namespace Vanadiel
                             _player.Quests.Add(new PlayerQuest(newLocation.QuestAvailableHere));
                         }
                     }
-                
             }
 
             if (newLocation.MonsterLivingHere != null && newLocation.MonstersRemaining > 0)
@@ -532,7 +519,6 @@ namespace Vanadiel
                 {
                     _currentMonster.LootTable.Add(lootItem);
                 }
-
                     
                 btnUseWeapon.Visible = true;
                     
@@ -546,7 +532,6 @@ namespace Vanadiel
 
                     
                 btnUseWeapon.Visible = false;
-                    
 
             //Show/Hide available movement buttons
             btnNorth.Visible = (newLocation.LocationToNorth != null);
@@ -563,8 +548,6 @@ namespace Vanadiel
                 _player.CurrentHitPoints = _player.MaximumHitPoints;
                 lblHitPoints.Text = _player.CurrentHitPoints.ToString();
                 }
-
-
         }
 
         private void PlayerOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
@@ -621,12 +604,8 @@ namespace Vanadiel
         // WEAPON BUTTON CLICK!!!
         //
         //
-
-
         private void btnUseWeapon_Click(object sender, EventArgs e)
         {
-
-
             // Get currently selected weapon from the cboWeapons cbo
             Weapon currentWeapon = (Weapon)cboWeapons.SelectedItem;
             Armour currentArmour = (Armour)cboArmour.SelectedItem;
@@ -728,7 +707,6 @@ namespace Vanadiel
                 //Reduce Monsters at location by 1
                 currentAreaMonstersRemaining--;
 
-
                 //Move player to current location (if more enemies are available)
                 if(currentAreaMonstersRemaining >= 1)
                 {
@@ -754,7 +732,6 @@ namespace Vanadiel
 
                 if(monsterHitChance > playerEvadeChance)
                 {
-
                     //Determine if accessory will proc
                     int accessoryProc = RandomNumberGenerator.NumberBetween(0, 100);
                     int accessoryReduction = 0;
@@ -841,9 +818,6 @@ namespace Vanadiel
         // POTION BUTTON CLICK!!!
         //
         //
-
-
-
         private void btnUsePotion_Click(object sender, EventArgs e)
         {
             //Get the currently selected potion from the potion cbo
@@ -996,7 +970,6 @@ namespace Vanadiel
         //
         // Timer Configurations
         //
-
         //The main TimerOn variable (Stops double click of button being recognised during 1 second click delay.)
         public bool timerOn = false;
 
