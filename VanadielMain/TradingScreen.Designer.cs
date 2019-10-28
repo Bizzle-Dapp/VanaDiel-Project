@@ -116,7 +116,7 @@
             this.Controls.Add(this.lblVendorInventory);
             this.Controls.Add(this.lblMyInventory);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -124,7 +124,8 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Trade";
+            this.Text = "Trading...";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendorItems)).EndInit();
             this.ResumeLayout(false);
