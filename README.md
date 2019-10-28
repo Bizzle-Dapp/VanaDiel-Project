@@ -1,6 +1,6 @@
 # VanaDiel-Project
 
-![Alt text](VanadielMain/Images/ExampleImage.PNG?raw=true "Example Image")
+![Alt text](VanadielMain/Images/ExampleImage.png?raw=true "Example Image")
 
 ## To build the application you'll need:
 Access to the .net WindowsForms library, and an IDE.
